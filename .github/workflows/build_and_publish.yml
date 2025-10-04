@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: bioconductor/bioconductor_docker
+    env:
+      R_LIBS_USER: ~/.R/library
 
     steps:
       - name: Check out repository
