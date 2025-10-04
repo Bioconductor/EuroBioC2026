@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://eurobioc2025.bioconductor.org/index.html</loc>
-    <lastmod>2025-10-04T10:24:13.691Z</lastmod>
+    <loc>https://eurobioc2025.bioconductor.org/pages/organizers.html</loc>
+    <lastmod>2025-10-04T10:47:10.951Z</lastmod>
   </url>
   <url>
     <loc>https://eurobioc2025.bioconductor.org/pages/past-events.html</loc>
-    <lastmod>2025-10-04T10:24:13.691Z</lastmod>
+    <lastmod>2025-10-04T10:47:10.951Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eurobioc2025.bioconductor.org/index.html</loc>
+    <lastmod>2025-10-04T10:47:10.951Z</lastmod>
   </url>
   <url>
     <loc>https://eurobioc2025.bioconductor.org/pages/code-of-conduct.html</loc>
-    <lastmod>2025-10-04T10:24:13.691Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eurobioc2025.bioconductor.org/pages/organizers.html</loc>
-    <lastmod>2025-10-04T10:24:13.691Z</lastmod>
+    <lastmod>2025-10-04T10:47:10.951Z</lastmod>
   </url>
 </urlset>
