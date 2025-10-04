@@ -1,5 +1,5 @@
 ---
-pagetitle: "European Bioconductor Conference 2025"
+pagetitle: "European Bioconductor Conference 2026"
 page-layout: custom
 section-divs: false
 editor: source
@@ -7,8 +7,8 @@ sidebar: false
 search: false
 repo-actions: false
 description: |
-  The European Bioconductor Conference (EuroBioC2025) will take place on September 17th to 19th, 2025, in Barcelona, Spain. EuroBioC2025 will bring together the Bioconductor community to showcase the latest cutting-edge developments on the Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.
-image: images/bioclogo.svg
+  The European Bioconductor Conference (EuroBioC2026) will take place on June 3rd to 5th, 2026, in Turku, Finland EuroBioC2026 will bring together the Bioconductor community to showcase the latest cutting-edge developments on the Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.
+image: images/logos/bioconductor.svg
 toc: false
 ---
 
@@ -20,22 +20,16 @@ toc: false
 
 ::: {.column width="43%"}
 ::: {.img-float}
-![](images/EuroBioC2025logo_500x532.png){style="width: 33%; float: left; margin: 5px;"}
+![](images/logos/bioconductor_sticker.gif){style="width: 33%; float: left; margin: 5px;"}
 :::
 \
 \
-The European Bioconductor Conference (EuroBioC2025) will take place on
-**September 17-19, 2025**, at the Barcelona Biomedical Research Park
-([PRBB](https://www.prbb.org)), in **Barcelona, Spain**. EuroBioC2025 will
+The European Bioconductor Conference (EuroBioC2026) will take place on
+**June 3-5, 2026**, in **Turku, Finland**. EuroBioC2026 will
 bring together the Bioconductor community to showcase the latest cutting-edge
 developments on Bioconductor software packages, as well as on broader emerging
 technologies impacting computational biology.
 
-  
-
-Check out the information on
-[traveling, accommodation and conference venue](pages/travel-information.qmd), and
-the [conference dinner](pages/conference-dinner.qmd).
 :::
 
 ::: {.column width="4%"}
@@ -48,16 +42,8 @@ the [conference dinner](pages/conference-dinner.qmd).
 **Important dates**
 :::
 
-- ~~**February 19**: Call for abstracts opens~~
-- ~~**April 24**: Call for abstracts closes~~
-- ~~**May 9**: Notification of decision~~
-- ~~**May 16**: Registration opens for all participants~~
-- ~~**June 20th**: Call for late-breaking poster abstract opens~~
-- ~~**July 11th**: Call for late-breaking poster abstract closes~~
-- ~~**July 15th**: Notification of decision for late-breaking posters~~
-- ~~**August 28 (or earlier if places are sold out)**: Registration closes~~
-- ~~**September 15-16**: [Bioconductor Carpentry Workshops](pages/carpentryworkshops.qmd)~~
-- ~~**September 17-19**: The EuroBioC2025 Conference!~~
+- **June 1-2**: Bioconductor Carpentry Workshops
+- **June 3-5**: The EuroBioC2026 Conference!
 :::
 
 ::: {.column width="5%"}
@@ -67,95 +53,13 @@ the [conference dinner](pages/conference-dinner.qmd).
 ::::
 
 ```{r}
+#| label: carousel
 #| classes: '.g-col-lg-6 .g-col-12 .g-col-md-12'
 #| warning: false
 #| echo: false
-source("carousel.R")
+source("R/carousel.R")
 carousel(
     "gallery-carousel", 
     5555, # flip time in ms
-    yaml.load_file("carousel.yml"))
+    yaml.load_file("data/carousel.yml"))
 ```
-
-<!--![](images/prbb_beach.png){fig-alt="EuroBioC2025 venue at the PRBB"}-->
-
-# \ \ \ Sponsored by
-
-:::: {.columns}
-::: {.column width="10%"}
-:::
-
-::: {.column width="80%"}
-
-:::: {.columns}
-::: {.column width="24%"}
-[![](images/sponsors/MELISMdM-Logo-1000x358.png){width=100%}](https://www.upf.edu/web/biomed/mdm){target="_blank"}
-:::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="24%"}
-[![](images/sponsors/Seqera-Logo-1000x358.png){width=100%}](https://seqera.io){target="_blank"}
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="24%"}
-[![](images/sponsors/CZI-Logo-1000x358.png){width=100%}](https://chanzuckerberg.com){target="_blank"}
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="24%"}
-[![](images/sponsors/ISGLOBALSO-Logo-1000x358.png){width=100%}](https://www.isglobal.org/en/severo-ochoa){target="_blank"}
-:::
-::::
-
-:::
-
-::: {.column width="10%"}
-:::
-
-::::
-
-:::: {.columns}
-::: {.column width="10%"}
-:::
-
-::: {.column width="80%"}
-
-:::: {.columns}
-::: {.column width="24%"}
-[![](images/sponsors/RConsortium-Logo-1000x358.png){width=100%}](https://r-consortium.org){target="_blank"}
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="24%"}
-[![](images/sponsors/Bigomics-Logo-1000x358.png){width=100%}](https://bigomics.ch){target="_blank"}
-:::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="24%"}
-[![](images/sponsors/MedBioinformatics-Logo-1000x358.png){width=100%}](https://medbioinformatics.com){target="_blank"}
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="24%"}
-[![](images/sponsors/Physalia-Logo-1000x358.png){width=100%}](https://www.physalia-courses.org){target="_blank"}
-::::
-
-:::
-
-::: {.column width="10%"}
-:::
-
-::::
