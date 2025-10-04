@@ -11,7 +11,7 @@ create_organizer_table <- function(
     ){
     # Read organizer table
     organizers <- read.csv(table.path, stringsAsFactors = FALSE)
-    organizers[["file_path"]] <- file.path(img.path, organizers[["file_path"]])
+    organizers[["img_path"]] <- file.path(img.path, organizers[["img_path"]])
 
     # Normalize order: if missing/blank, treat as Inf
     organizers <- organizers |>
@@ -29,7 +29,7 @@ create_organizer_table <- function(
             filter(group == grp) |>
             arrange(order, name) |>
             mutate(
-                img = sprintf("![](%s){height=150}", file_path),
+                img = sprintf("![](%s){height=150}", img_path),
                 label = name
             )
 
@@ -40,7 +40,7 @@ create_organizer_table <- function(
                 name = rep("", n_missing),
                 local = rep(FALSE, n_missing),
                 order = rep(Inf, n_missing),
-                file_path = rep("", n_missing),
+                img_path = rep("", n_missing),
                 group = rep(grp, n_missing),
                 img = rep("", n_missing),
                 label = rep("", n_missing)
