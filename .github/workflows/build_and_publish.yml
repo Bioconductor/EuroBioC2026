@@ -1,4 +1,4 @@
-name: Quarto Publish
+name: Build and publish
 
 on:
   push:
@@ -14,8 +14,6 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: "latest"
 
       - name: Install R
         uses: r-lib/actions/setup-r@v2
