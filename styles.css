@@ -1,0 +1,65 @@
+/* css styles */
+
+/* right-hand table of contents */
+.sidebar nav[role="doc-toc"] ul > li > a {
+    color: grey !important;
+}
+
+/* highlighting currently active entry */
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+    font-weight: bold;
+    background-color: #f3fae9;
+}
+
+b,strong {
+  font-weight: bold;
+  color: black;
+}
+
+.navbar-logo {
+  width: auto;
+  max-height: 100%;
+  align-items: baseline;
+}
+
+.nav-link{
+  color:white !important;
+  text-color:white !important;
+}
+
+.navbar{
+  text-color: white;
+  background-image: linear-gradient(to right,white,#0087af,#18a603);
+}
+
+/* unfold hamburger menu on the right */
+.navbar-collapse {
+  text-align: right;
+}
+
+/* footer text-color & background */
+.nav-footer{
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  align-items: center;
+  color: black !important;
+  background-image: linear-gradient(to right,white,#ebf4f7,#0087af);
+}
+
+/* footer icons */
+.nav-footer li.nav-item a.nav-link{
+  color: black !important;
+}
+
+/* footer links */
+.nav-footer a:link{
+  color: black !important;
+}
+
+/* vertically center, from https://github.com/quarto-dev/quarto-cli/discussions/1386 */
+.v-center-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
