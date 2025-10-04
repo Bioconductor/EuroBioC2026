@@ -1,0 +1,9 @@
+Package: EuroBioC2026
+Title: EuroBioC2026 Website
+Description: Quarto site for EuroBioC2026 conference
+Depends: R (>= 4.3.0)
+Imports:
+    dplyr,
+    kableExtra,
+    knitr,
+    readr

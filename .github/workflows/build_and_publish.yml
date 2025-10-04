@@ -20,9 +20,11 @@ jobs:
         with:
           r-version: "release"
 
+      - name: Install devtools
+        run: Rscript -e 'install.packages("devtools")'
+
       - name: Install dependencies
-        run: |
-          Rscript -e 'install.packages(c("dplyr", "readr", "knitr", "kableExtra"))'
+        run: Rscript -e 'devtools::install_deps(dependencies = TRUE)'
 
       - name: Render site
         run: quarto render

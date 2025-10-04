@@ -1,6 +1,6 @@
 # Organizers
 
-```{r results="asis", echo=FALSE}
+```{r results="asis"}
 #| label: organizer_table
 #| warning: false
 #| echo: false
