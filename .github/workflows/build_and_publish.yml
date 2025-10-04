@@ -19,6 +19,10 @@ jobs:
           fetch-depth: 0
           ref: devel
 
+      - name: Fetch gh-pages branch
+        run: |
+          git fetch origin gh-pages:gh-pages
+
       - name: Install GitHub CLI and jq
         run: |
           sudo apt-get update
