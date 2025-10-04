@@ -2,39 +2,44 @@ name: Build and publish
 
 on:
   push:
-    branches: [devel]
+    branches: [devel]   # Run this workflow only when pushing to the 'devel' branch
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     container:
-      image: bioconductor/bioconductor_docker
+      image: bioconductor/bioconductor_docker  # Use Bioconductor Docker image for R environment
     env:
-      R_LIBS_USER: ~/.R/library
+      R_LIBS_USER: ~/.R/library                # Set library path for caching installed R packages
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-          ref: devel
+          fetch-depth: 0   # Ensure full git history is available (needed for Quarto publishing)
+          ref: devel       # Explicitly check out the 'devel' branch
 
-
+      # Fixes "dubious ownership" error when running inside container
       - name: Mark repo as safe for git
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
+      # Makes sure 'gh-pages' branch exists locally so Quarto can publish to it
       - name: Fetch gh-pages branch
-        run: |
-          git fetch origin gh-pages:gh-pages
+        run: git fetch origin gh-pages:gh-pages
 
+      # We could specify Quarto version, but if we want to always use the latest
+      # one, we need the following libraries to get the information on what is
+      # the latest Quarto version.
       - name: Install GitHub CLI and jq
         run: |
           sudo apt-get update
           sudo apt-get install -y gh jq
 
+      # Install Quarto
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      # Cache previously installed R packages to speed up future builds
       - name: Cache R packages
         uses: actions/cache@v3
         with:
@@ -43,12 +48,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-r-
 
+      # Install all R dependencies defined in DESCRIPTION file
       - name: Install dependencies
         run: Rscript -e 'devtools::install_deps(dependencies = TRUE)'
 
+      # Build the Quarto project into HTML
       - name: Render site
         run: quarto render
 
+      # Push the rendered site to the gh-pages branch for GitHub Pages hosting
       - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
