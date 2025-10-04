@@ -3,3 +3,6 @@
 .Rproj.user
 EuroBioC2026.Rproj
 .quarto
+docs/
+README.html
+README_files
