@@ -55,7 +55,7 @@ create_organizer_table <- function(
         tbl <- data.frame(rbind(img_mtx, name_mtx)[ij, ])
 
         kable(tbl, format = "html", align = align, col.names = NULL, escape = FALSE,
-              table.attr = 'class="organizers-table table table-borderless"') |>
+              ) |>
             kable_styling(full_width = FALSE, position = "left") |>
             print()
 
