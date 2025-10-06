@@ -25,8 +25,8 @@ jobs:
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
       # Makes sure 'gh-pages' branch exists locally so Quarto can publish to it
-      - name: Fetch gh-pages branch
-        run: git fetch origin gh-pages:gh-pages
+      # - name: Fetch gh-pages branch
+      #   run: git fetch origin gh-pages:gh-pages
 
       # We could specify Quarto version, but if we want to always use the latest
       # one, we need the following libraries to get the information on what is
