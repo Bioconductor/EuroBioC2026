@@ -55,7 +55,9 @@ jobs:
 
       # Install all R dependencies defined in DESCRIPTION file
       - name: Install dependencies
-        run: Rscript -e 'devtools::install_deps(dependencies = TRUE)'
+        run: |
+          Rscript -e "install.packages('devtools')"
+          Rscript -e "devtools::install_deps(dependencies = TRUE)"
 
       # Build the Quarto project into HTML
       - name: Render site
