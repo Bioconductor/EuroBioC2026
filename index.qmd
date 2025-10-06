@@ -59,7 +59,8 @@ technologies impacting computational biology.
 #| echo: false
 source("R/carousel.R")
 carousel(
-    "gallery-carousel", 
+    "gallery-carousel",
     5555, # flip time in ms
-    yaml.load_file("data/carousel.yml"))
+    yaml.load_file("data/carousel.yml")
+)
 ```
