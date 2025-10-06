@@ -39,6 +39,10 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      # Ensure that the caching directory is available
+      - name: Ensure R library directory exists
+        run: mkdir -p $R_LIBS_USER
+
       # Cache previously installed R packages to speed up future builds
       - name: Cache R packages
         uses: actions/cache@v3
