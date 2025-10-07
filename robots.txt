@@ -1,1 +1,1 @@
-Sitemap: https://Bioconductor.github.io/EuroBioC2026/sitemap.xml
+Sitemap: https://eurobioc2026.bioconductor.org/sitemap.xml
