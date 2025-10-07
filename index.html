@@ -293,7 +293,7 @@ The European Bioconductor Conference (EuroBioC2026) will take place on <strong>J
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/eurobioc2026\.bioconductor\.org");
+        var filterRegex = new RegExp("https:\/\/Bioconductor\.github\.io\/EuroBioC2026\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
