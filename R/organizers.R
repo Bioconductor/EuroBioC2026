@@ -3,12 +3,10 @@ library(dplyr)
 library(knitr)
 library(kableExtra)
 
-create_organizer_table <- function(
-        table.path = file.path("..", "data", "organizers.csv"),
-        img.path = file.path("..", "images", "organizers"),
-        ncol = 5L,
-        align = "l"
-    ){
+create_organizer_table <- function(table.path = file.path("..", "data", "organizers.csv"),
+                                   img.path = file.path("..", "images", "organizers"),
+                                   ncol = 5L,
+                                   align = "l") {
     # Read organizer table
     organizers <- read.csv(table.path, stringsAsFactors = FALSE)
     organizers[["img_path"]] <- file.path(img.path, organizers[["img_path"]])
@@ -62,4 +60,3 @@ create_organizer_table <- function(
         cat("\n\n")
     }
 }
-

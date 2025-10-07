@@ -36,7 +36,7 @@ website:
       <br>[eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org)
       <br>[Code of Conduct](https://www.bioconductor.org/about/code-of-conduct)
     right:
-      - href: https://github.com/Bioconductor/EuroBioC2025
+      - href: https://github.com/Bioconductor/EuroBioC2026
         icon: github
         aria-label: GitHub
       - href: https://bsky.app/profile/bioconductor.bsky.social
