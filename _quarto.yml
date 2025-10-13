@@ -19,7 +19,7 @@ website:
       #- href: pages/registration.qmd
       #- href: pages/carpentry-workshops.qmd
       #- href: pages/hexwall.qmd
-      #- href: pages/sponsors.qmd
+      - href: pages/partners.qmd
       - text: About
         menu:
           - href: pages/organizers.qmd
