@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://eurobioc2026.bioconductor.org/pages/organizers.html</loc>
-    <lastmod>2025-10-07T13:45:56.571Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eurobioc2026.bioconductor.org/pages/past-events.html</loc>
-    <lastmod>2025-10-07T13:45:56.571Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eurobioc2026.bioconductor.org/index.html</loc>
-    <lastmod>2025-10-07T13:45:56.570Z</lastmod>
+    <loc>https://eurobioc2026.bioconductor.org/pages/partners.html</loc>
+    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
   </url>
   <url>
     <loc>https://eurobioc2026.bioconductor.org/pages/code-of-conduct.html</loc>
-    <lastmod>2025-10-07T13:45:56.571Z</lastmod>
+    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eurobioc2026.bioconductor.org/index.html</loc>
+    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eurobioc2026.bioconductor.org/pages/past-events.html</loc>
+    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eurobioc2026.bioconductor.org/pages/organizers.html</loc>
+    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
   </url>
 </urlset>
