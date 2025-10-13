@@ -1,7 +1,14 @@
 - image: "images/carousel/aurajoki.jpg"
   link: "https://en.visitturku.fi/"
 
-- image: "images/carousel/group_picture.png"
+- image: "images/carousel/eurobioc2025_group.jpg"
+
+- image: "images/carousel/eurobioc2025_1.jpg"
+
+- image: "images/carousel/eurobioc2025_2.jpg"
+
+- image: "images/carousel/EuroBioC2025.png"
+  link: "https://eurobioc2025.bioconductor.org"
 
 - image: "images/carousel/EuroBioC2024.png"
   link: "https://eurobioc2024.bioconductor.org"
