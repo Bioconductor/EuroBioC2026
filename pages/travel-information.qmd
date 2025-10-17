@@ -3,7 +3,7 @@
 ## Conference venue
 
 
-The European Bioconductor Conference 2025 will be held in **Turku, Finland**.
+The European Bioconductor Conference 2026 will be held in **Turku, Finland**.
 
 The venue is **[BioCity Turku](https://biocity.turku.fi)**.
 

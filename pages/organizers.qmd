@@ -4,7 +4,7 @@
 #| label: organizer_table
 #| warning: false
 #| echo: false
-#source(file.path("..", "R", "organizers.R"))
-#create_organizer_table()
+source(file.path("..", "R", "organizers.R"))
+create_organizer_table()
 ```
 
