@@ -25,7 +25,7 @@ website:
           - href: pages/organizers.qmd
           - href: pages/past-events.qmd
           - href: pages/code-of-conduct.qmd
-          #- href: pages/travel-information.qmd
+          - href: pages/travel-information.qmd
           #- href: pages/conference-dinner.qmd
   page-footer:
     left: |
