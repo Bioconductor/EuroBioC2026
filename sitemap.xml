@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://eurobioc2026.bioconductor.org/pages/partners.html</loc>
-    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
+    <lastmod>2025-10-20T08:33:25.453Z</lastmod>
   </url>
   <url>
     <loc>https://eurobioc2026.bioconductor.org/pages/code-of-conduct.html</loc>
-    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eurobioc2026.bioconductor.org/index.html</loc>
-    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eurobioc2026.bioconductor.org/pages/past-events.html</loc>
-    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
+    <lastmod>2025-10-20T08:33:25.453Z</lastmod>
   </url>
   <url>
     <loc>https://eurobioc2026.bioconductor.org/pages/organizers.html</loc>
-    <lastmod>2025-10-13T15:46:39.856Z</lastmod>
+    <lastmod>2025-10-20T08:33:25.453Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eurobioc2026.bioconductor.org/index.html</loc>
+    <lastmod>2025-10-20T08:33:25.453Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eurobioc2026.bioconductor.org/pages/past-events.html</loc>
+    <lastmod>2025-10-20T08:33:25.453Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eurobioc2026.bioconductor.org/pages/travel-information.html</loc>
+    <lastmod>2025-10-20T08:33:25.453Z</lastmod>
   </url>
 </urlset>
