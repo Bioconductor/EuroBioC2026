@@ -92,22 +92,16 @@ lighten <- function(col, factor = 0.7) {
 input_dir <- file.path("images", "carousel", "original")
 output_dir <- file.path("images", "carousel")
 
-img_names <- c(
-    "EuroBioC2022.png", "EuroBioC2023.png",
-    "EuroBioC2024.png", "EuroBioC2025.png",
-    "group_picture.jpg", "aurajoki.jpg"
-)
-
 df <- data.frame(
     name = c(
         "EuroBioC2022.png", "EuroBioC2023.png",
         "EuroBioC2024.png", "EuroBioC2025.png",
         "eurobioc2025_group.jpg", "eurobioc2025_1.jpg", "eurobioc2025_2.jpg",
-        "aurajoki.jpg"
+        "aurajoki.jpg", "posankka.jpg"
     ),
-    edge_fade = c(60, 60, 60, 60, 60, 60, 60, 60),
-    center_fade = c(20, 20, 20, 20, 20, 20, 20, 20),
-    glow_fade = c(20, 20, 20, 20, 0.0001, 0.0001, 0.0001, 0.0001)
+    edge_fade = c(60, 60, 60, 60, 60, 60, 60, 60, 60),
+    center_fade = c(20, 20, 20, 20, 20, 20, 20, 20, 20),
+    glow_fade = c(20, 20, 20, 20, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001)
 )
 
 for (i in seq_len(nrow(df))) {

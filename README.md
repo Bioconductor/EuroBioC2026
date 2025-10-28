@@ -35,3 +35,5 @@ To hamonize the width of images, one can run [the script](https://github.com/Bio
 It automatically adds blue/green borders.
 
 Without the harmonized widths and heights, the carousel would not look as good.
+
+Update the [carousel.yml](https://github.com/Bioconductor/EuroBioC2026/blob/devel/data/carousel.yml).

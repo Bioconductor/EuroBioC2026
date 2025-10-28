@@ -7,7 +7,11 @@ sidebar: false
 search: false
 repo-actions: false
 description: |
-  The European Bioconductor Conference (EuroBioC2026) will take place on June 3rd to 5th, 2026, in Turku, Finland EuroBioC2026 will bring together the Bioconductor community to showcase the latest cutting-edge developments on the Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.
+  The European Bioconductor Conference (EuroBioC2026) will take place on June
+  3rd to 5th, 2026, in Turku, Finland EuroBioC2026 will bring together the
+  Bioconductor community to showcase the latest cutting-edge developments on the
+  Bioconductor software packages, as well as on broader emerging technologies
+  impacting computational biology.
 image: images/logos/bioconductor.svg
 toc: false
 ---
