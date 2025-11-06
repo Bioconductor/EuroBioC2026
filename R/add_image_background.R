@@ -97,11 +97,11 @@ df <- data.frame(
         "EuroBioC2022.png", "EuroBioC2023.png",
         "EuroBioC2024.png", "EuroBioC2025.png",
         "eurobioc2025_group.jpg", "eurobioc2025_1.jpg", "eurobioc2025_2.jpg",
-        "aurajoki.jpg", "posankka.jpg"
+        "aurajoki.jpg", "posankka.png"
     ),
     edge_fade = c(60, 60, 60, 60, 60, 60, 60, 60, 60),
     center_fade = c(20, 20, 20, 20, 20, 20, 20, 20, 20),
-    glow_fade = c(20, 20, 20, 20, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001)
+    glow_fade = c(20, 20, 20, 20, 0.0001, 0.0001, 0.0001, 0.0001, 20)
 )
 
 for (i in seq_len(nrow(df))) {
