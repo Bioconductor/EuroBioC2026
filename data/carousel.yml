@@ -1,8 +1,20 @@
 - image: "images/carousel/posankka.png"
   link: "https://en.wikipedia.org/wiki/Posankka"
 
+- image: "images/carousel/tuomiokirkko-kesa-2023-1.jpg"
+  link: "https://en.wikipedia.org/wiki/Turku_Cathedral"
+
+- image: "images/carousel/Föri_NETTIKOKO.jpg"
+  link: "https://en.wikipedia.org/wiki/F%C3%B6ri"
+
+- image: "images/carousel/Turku_Castle.jpg"
+  link: "https://en.wikipedia.org/wiki/Turku_Castle"
+
+- image: "images/carousel/Suomen Joutsen_NETTIKOKO.jpg"
+  link: "https://en.wikipedia.org/wiki/Suomen_Joutsen"
+
 - image: "images/carousel/aurajoki.jpg"
-  link: "https://en.visitturku.fi/"
+  link: "https://en.wikipedia.org/wiki/Aurajoki"
 
 - image: "images/carousel/eurobioc2025_group.jpg"
 
