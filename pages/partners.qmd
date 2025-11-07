@@ -14,7 +14,7 @@ in Turku, Finland, at the [University of Turku](https://www.utu.fi/en) on 3-5
 June 2026. We expect over 150 participants from the European and global
 bioinformatics community, coming from academia and industry.
 We are welcoming bioinformaticians, method developers, practitioners
-incorporating R/Bioconductor into robust workflows, and researchers using these
+incorporating Bioconductor into robust workflows, and researchers using these
 tools for biological and biomedical discovery.
 
 **Why partner with us?** Your brand will gain high **visibility**
