@@ -31,6 +31,7 @@ website:
     left: |
       [![](/images/logos/utu.png){width=25%}](https://www.utu.fi/en){target="_blank"}
       [![](/images/logos/complifesci.png){width=25%}](https://biocityturku.fi/research-programs/complifesci/){target="_blank"}
+      [![](/images/logos/finnish_bioinfo.png){width=25%}](https://www.bioinf.fi/){target="_blank"}
     center: |
       Copyright &copy; 2026 Bioconductor
       <br>[eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org)
