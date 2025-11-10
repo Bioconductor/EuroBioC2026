@@ -18,7 +18,7 @@ website:
       #- href: pages/submissions.qmd
       #- href: pages/registration.qmd
       #- href: pages/carpentry-workshops.qmd
-      #- href: pages/hexwall.qmd
+      - href: pages/hexwall.qmd
       - href: pages/partners.qmd
       - text: About
         menu:
