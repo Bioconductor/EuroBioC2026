@@ -52,7 +52,7 @@ from the top of the image.
 <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
 
 <a href="https://eurobioc2025.bioconductor.org" target="_blank">
-  <img src="../images/logos/EuroBioC2025.png" style="width: 150px;">
+  <img src="../images/logos/EuroBioC2025.png" style="width: 170px;">
 </a>
 
 <a href="https://eurobioc2024.bioconductor.org" target="_blank">
