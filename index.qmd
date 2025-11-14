@@ -45,9 +45,10 @@ technologies impacting computational biology.
 **Important dates**
 :::
 
+- **January 31**: Sticker Design Contest deadline
 - **June 1-2**: Bioconductor Carpentry Workshops
 - **June 3-5**: The EuroBioC2026 Conference!
-- **January 31st, 2026**: Sticker Design Contest deadline
+
 :::
 
 ::: {.column width="5%"}
