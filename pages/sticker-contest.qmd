@@ -1,7 +1,6 @@
-# Sticker Contest
+# Sticker contest
 
-
-## Sticker Contest Rules:
+## Sticker contest rules
 
 - Participation in the EuroBioC2026 sticker contest is voluntary.
 - The contest winner will receive a registration fee waiver for the European
@@ -30,7 +29,8 @@ vision.
 However, please be prepared to make any minor tweaks requested by the organising
 committee.
 
-## Sticker Contest Guidelines:
+## Sticker contest guidelines
+
 - Submit your design by **January 31st, 2026** (in PDF or SVG) through the
 submission form. Maximum file size: 5MB.
 - Designs should be relevant to the EuroBioC2026 conference. Previous conference
@@ -45,4 +45,26 @@ stickers repo
 - Ideally, the position of the conference name text (bottom line) should be 18mm
 from the top of the image.
 - Some suggestions for color definitions:
-[http://www.flatuicolorpicker.com/category/all](http://www.flatuicolorpicker.com/category/all) .
+[http://www.flatuicolorpicker.com/category/all](http://www.flatuicolorpicker.com/category/all).
+
+## Stickers from previous conferences
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+
+<a href="https://eurobioc2025.bioconductor.org" target="_blank">
+  <img src="../images/logos/EuroBioC2025.png" style="width: 150px;">
+</a>
+
+<a href="https://eurobioc2024.bioconductor.org" target="_blank">
+  <img src="../images/logos/EuroBioC2024.png" style="width: 150px;">
+</a>
+
+<a href="https://eurobioc2023.bioconductor.org" target="_blank">
+  <img src="../images/logos/EuroBioC2023.png" style="width: 150px;">
+</a>
+
+<a href="https://eurobioc2022.bioconductor.org" target="_blank">
+  <img src="../images/logos/EuroBioC2022.png" style="width: 150px;">
+</a>
+
+</div>
