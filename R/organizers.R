@@ -3,40 +3,39 @@ library(dplyr)
 library(knitr)
 library(kableExtra)
 
-create_organizer_table <- function(organizers.path = file.path("..", "data", "organizers.csv"),
-                                   roles.path = file.path("..", "data", "roles.csv"),
+create_organizer_table <- function(table.path = file.path("..", "data", "organizers.csv"),
                                    img.path = file.path("..", "images", "organizers"),
                                    ncol = 5L,
                                    align = "l") {
+  # Read the combined organizers table
+  organizers <- read.csv(table.path, stringsAsFactors = FALSE)
 
-  # Read both tables
-  organizers <- read.csv(organizers.path, stringsAsFactors = FALSE)
-  roles <- read.csv(roles.path, stringsAsFactors = FALSE)
-
-  # Merge the data
-  df <- merge(organizers, roles, by = "name", all = TRUE)
-
-  # Add full image path
-  df[["img_path"]] <- ifelse(
-    !is.na(df[["img_path"]]) & df[["img_path"]] != "",
-    file.path(img.path, df[["img_path"]]),
+  # Add full image paths (handle missing paths)
+  organizers[["full_img_path"]] <- ifelse(
+    !is.na(organizers[["img_path"]]) & organizers[["img_path"]] != "",
+    file.path(img.path, organizers[["img_path"]]),
     ""
   )
 
   # Normalize order: if missing/blank, treat as Inf
-  df <- df |>
+  organizers <- organizers |>
     mutate(order = ifelse(is.na(order) | order == "", Inf, as.numeric(order)))
 
   # Get unique committees (excluding NA/empty)
-  committees <- unique(df$committee)
+  committees <- unique(organizers$committee)
   committees <- committees[!is.na(committees) & committees != ""]
+
+  # Sort committees: Local first, then others
+  if ("Local" %in% committees) {
+    committees <- c("Local", setdiff(committees, "Local"))
+  }
 
   # Process each committee
   for(committee_name in committees) {
     cat(paste0("\n## ", committee_name, "\n\n"))
 
     # Filter for current committee
-    df_comm <- df |>
+    df_comm <- organizers |>
       filter(committee == committee_name) |>
       arrange(order, name)
 
@@ -44,8 +43,8 @@ create_organizer_table <- function(organizers.path = file.path("..", "data", "or
     df_comm <- df_comm |>
       mutate(
         img = ifelse(
-          !is.na(img_path) & img_path != "",
-          sprintf("![](%s){height=150}", img_path),
+          full_img_path != "",
+          sprintf("![](%s){height=150}", full_img_path),
           ""
         ),
         label = ifelse(
@@ -62,8 +61,10 @@ create_organizer_table <- function(organizers.path = file.path("..", "data", "or
         name = rep("", n_missing),
         committee = rep("", n_missing),
         role = rep("", n_missing),
-        img_path = rep("", n_missing),
+        local = rep(FALSE, n_missing),
         order = rep(Inf, n_missing),
+        img_path = rep("", n_missing),
+        full_img_path = rep("", n_missing),
         img = rep("", n_missing),
         label = rep("", n_missing),
         stringsAsFactors = FALSE
