@@ -18,7 +18,7 @@ and licensed under the CC0 1.0 Universal (CC0 1.0) Public Domain License.
 - The EuroBioC2026 organising committee will vote for the winning design based
 on relevance and creativity.
 - All non-winning designs relevant to the conference may be displayed on the
-Gallery page (should we create one) of the EuroBioC2025 website with
+Gallery page of the EuroBioC2026 website with
 attributions to the submitter. All participants have the opportunity to opt out
 of their submissions being shared in the Gallery.
 - As part of our collaborative process, if your design is selected, we may
@@ -46,6 +46,11 @@ stickers repo
 from the top of the image.
 - Some suggestions for color definitions:
 [http://www.flatuicolorpicker.com/category/all](http://www.flatuicolorpicker.com/category/all).
+
+::: {.callout-tip icon=false}
+## Submit your sticker here!
+[Open the submission form](https://forms.gle/PJKJfLFAgbN7nskB7)
+:::
 
 ## Stickers from previous conferences
 

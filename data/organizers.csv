@@ -1,32 +1,28 @@
-"name","committee","role","local","order","img_path"
-"Leo Lahti","Community","",TRUE,1,"Leo Lahti.jpg"
-"Tuomas Borman","Community","General member",TRUE,2,"Tuomas Borman.jpeg"
-"Annekathrin Nedwed","Community","",FALSE,NA,"Annekathrin Nedwed.png"
-"Charlotte Soneson","Community","Scientific program",FALSE,NA,"Charlotte Soneson.jpg"
-"Dania Machlab","Community","Scientific Program",FALSE,NA,"Dania Machlab.jpg"
-"Dario Righelli","Community","",FALSE,NA,"Dario Righelli.jpg"
-"Eliana Ibrahimi","Community","Scientific program, reviewer",FALSE,NA,"Eliana Ibrahimi.png"
-"Federico Marini","Community","",FALSE,NA,"Federico Marini.png"
-"Helena Crowell","Community","",FALSE,NA,"Helena Crowell.png"
-"James Dalgleish","Community","Partnerships, reviewer ",FALSE,NA,"James Dalgleish.png"
-"Kevin Rue-Albrecht","Community","",FALSE,NA,"Kevin Rue-Albrecht.jpg"
-"Laurent Gatto","Community","",FALSE,NA,"Laurent Gatto.jpg"
-"Lena Morrill Gavarro","Community","",FALSE,NA,"Lena Morrill Gavarro.jpg"
-"Lieven Clement","Community","",FALSE,NA,"Lieven Clement.jpeg"
-"Maria Doyle","Community","Communications",FALSE,NA,"Maria Doyle.jpeg"
-"Michael Stadler","Community","Scientific program, reviewer",FALSE,NA,"Michael Stadler.jpg"
-"Najla Abassi","Community","",FALSE,NA,"Najla Abassi.jpg"
-"Nyasita Laurah Ondari","Community","Communications",NA,NA,NA
-"Robert Castelo","Community","Partnerships",FALSE,NA,"Robert Castelo.jpeg"
-"Robert Ivánek","Community","",FALSE,NA,"Robert Ivanek.jpg"
-"Leo Lahti","Local","",TRUE,1,"Leo Lahti.jpg"
-"Tuomas Borman","Local","",TRUE,2,"Tuomas Borman.jpeg"
-"Julia Mathlin","Local","Partnerships, Communications",FALSE,NA,"julia_mathlin.jpeg"
-"Teemu Daniel Laajala","Local","Partnerships",FALSE,NA,"TDLaajala.jpg"
-"Anna Kaisanlahti",NA,NA,FALSE,NA,"anna_kaisanlahti.jpg"
-"Davide Risso",NA,NA,FALSE,NA,"Davide Risso.jpg"
-"Juan Ramon Gonzalez",NA,NA,FALSE,NA,"Juan Ramon Gonzalez.jpg"
-"Lluis Revilla",NA,NA,FALSE,NA,"Lluis Revilla.png"
-"Mireia Ramos",NA,NA,FALSE,NA,"Mireia Ramos.jpg"
-"Simone Bell",NA,NA,FALSE,NA,"Simone Bell.jpg"
-"Wolfgang Huber",NA,NA,FALSE,NA,"Wolfgang Huber.png"
+name,committee,role,local,order,img_path
+Leo Lahti,Community,Chair,TRUE,1,Leo Lahti.jpg
+Tuomas Borman,Community,Coordinator,TRUE,2,Tuomas Borman.jpeg
+Annekathrin Nedwed,Community,General member,FALSE,NA,Annekathrin Nedwed.png
+Charlotte Soneson,Community,Scientific program,FALSE,NA,Charlotte Soneson.jpg
+Dania Machlab,Community,Scientific Program,FALSE,NA,Dania Machlab.jpg
+Dario Righelli,Community,General member,FALSE,NA,Dario Righelli.jpg
+Eliana Ibrahimi,Community,"Scientific program, reviewer",FALSE,NA,Eliana Ibrahimi.png
+Federico Marini,Community,General member,FALSE,NA,Federico Marini.png
+Helena Crowell,Community,General member,FALSE,NA,Helena Crowell.png
+James Dalgleish,Community,"Partnerships, reviewer ",FALSE,NA,James Dalgleish.png
+Kevin Rue-Albrecht,Community,General member,FALSE,NA,Kevin Rue-Albrecht.jpg
+Laurent Gatto,Community,General member,FALSE,NA,Laurent Gatto.jpg
+Lena Morrill Gavarro,Community,General member,FALSE,NA,Lena Morrill Gavarro.jpg
+Lieven Clement,Community,General member,FALSE,NA,Lieven Clement.jpeg
+Maria Doyle,Community,Communications,FALSE,NA,Maria Doyle.jpeg
+Michael Stadler,Community,"Scientific program, reviewer",FALSE,NA,Michael Stadler.jpg
+Najla Abassi,Community,General member,FALSE,NA,Najla Abassi.jpg
+Nyasita Laurah Ondari,Community,Communications,NA,NA,NA
+Robert Castelo,Community,Partnerships,FALSE,NA,Robert Castelo.jpeg
+Robert Ivánek,Community,General member,FALSE,NA,Robert Ivanek.jpg
+Leo Lahti,Local,Chair,TRUE,1,Leo Lahti.jpg
+Tuomas Borman,Local,Co-chair,TRUE,2,Tuomas Borman.jpeg
+Julia Mathlin,Local,"Partnerships, Communications",FALSE,NA,julia_mathlin.jpeg
+Teemu Daniel Laajala,Local,Partnerships,FALSE,NA,TDLaajala.jpg
+Anna Kaisanlahti,Local,Partnerships,FALSE,NA,anna_kaisanlahti.jpg
+Davide Risso,Community,General member,FALSE,NA,Davide Risso.jpg
+Lluis Revilla,Community,General member,FALSE,NA,Lluis Revilla.png
