@@ -46,8 +46,8 @@ technologies impacting computational biology.
 :::
 
 - **November 24**: Call for abstracts opens
-- **January 30**: Call for abstracts closes
-- **January 31**: Sticker Design Contest deadline
+- <span class="deadline"><strong>January 30:</strong> Call for abstracts closes</span>
+- <span class="deadline"><strong>January 31:</strong> Sticker Design Contest deadline</span>
 - **June 1-2**: Bioconductor Carpentry Workshops
 - **June 3-5**: The EuroBioC2026 Conference!
 
