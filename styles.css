@@ -64,3 +64,8 @@ b,strong {
   height: 90%;
 }
 
+.deadline {
+  color: #d73027;
+  font-size: 1.15em;
+  font-weight: 600;
+}
