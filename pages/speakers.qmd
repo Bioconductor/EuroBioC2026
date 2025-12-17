@@ -1,0 +1,50 @@
+# Keynote speakers
+
+```{css, echo = FALSE}
+.justify {
+  text-align: justify !important
+}
+```
+
+```{r results="asis", echo=FALSE}
+# Read the CSV data
+speakers <- read.csv(file.path("..", "data", "keynote_speakers.csv"))
+
+# Sort by order if specified
+if ("order" %in% colnames(speakers)) {
+  speakers <- speakers[order(speakers$order), ]
+}
+
+# Loop through each speaker
+for (i in 1:nrow(speakers)) {
+  x <- speakers[i, ]
+  
+  cat(":::: {.columns}\n")
+  cat("##", x$name, "\n")
+  
+  # 1st column (text)
+  cat("::: {.column width=60%}\n")
+  if (!is.na(x$position) && x$position != "") {
+    cat("**", x$position, "**\n\n", sep="")
+  }
+  cat("::: {.justify}\n")
+  cat(x$txt, "\n:::\n")
+  if (!is.na(x$web) && x$web != "") {
+    cat(sprintf("<%s>", x$web), "\n")
+  }
+  cat(":::\n")
+  
+  # horizontal spacing
+  cat("::: {.column width=1%}\n:::\n")
+  
+  # 2nd column (image)
+  cat("::: {.column width=30%}\n")
+  if (!is.na(x$img_path) && x$img_path != "") {
+    cat(sprintf("![](../images/keynote_speakers/%s)", x$img_path), "\n")
+  } else {
+    cat("<!-- Image will appear here when added -->\n")
+  }
+  cat(":::\n")
+  cat("::::\n\n")
+}
+```
