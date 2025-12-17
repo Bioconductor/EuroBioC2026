@@ -34,6 +34,16 @@ Around 1.5 hour hands-on interactive workshop illustrating the use of a software
 package or workflow, where participants are expected to have the time and
 opportunity to follow along and perform analysis themselves.
 
+## Pre-conference workshops
+
+On-site workshops on June 1–2, 2026, in Turku, Finland, prior to the main
+conference. Please note that these workshops are **separate from the main
+conference workshops**.
+
+If you’re interested in hosting a workshop, please submit your interest
+[here](https://docs.google.com/forms/d/e/1FAIpQLScYOBMs0JsmoZY21mCSnWSBObm-OX7NtZi6NEjY9zNdhsqL5w/viewform) (deadline 30 January 2026). Selections will be based on relevance and
+alignment with the workshop and conference themes.
+
 ## Questions?
 
 Do not hesitate to contact the [organizers](organizers.html) at
