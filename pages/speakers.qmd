@@ -8,7 +8,7 @@
 
 ```{r results="asis", echo=FALSE}
 # Read the CSV data
-speakers <- read.csv("../data/keynote_speakers.csv")
+speakers <- read.csv(file.path("..", "data", "keynote_speakers.csv"))
 
 # Sort by order if specified
 if ("order" %in% colnames(speakers)) {
@@ -24,7 +24,9 @@ for (i in 1:nrow(speakers)) {
   
   # 1st column (text)
   cat("::: {.column width=60%}\n")
-  cat("**", x$position, "**\n\n", sep="")
+  if (!is.na(x$position) && x$position != "") {
+    cat("**", x$position, "**\n\n", sep="")
+  }
   cat("::: {.justify}\n")
   cat(x$txt, "\n:::\n")
   if (!is.na(x$web) && x$web != "") {
