@@ -40,11 +40,11 @@ for (i in 1:nrow(speakers)) {
   # 2nd column (image)
   cat("::: {.column width=30%}\n")
   if (!is.na(x$img_path) && x$img_path != "") {
-    cat(sprintf("![](../images/keynote_speakers/%s)", x$img_path), "\n")
+    cat(sprintf("![](../images/keynote_speakers/%s){.speaker}", x$img_path))
   } else {
     cat("<!-- Image will appear here when added -->\n")
   }
-  cat(":::\n")
+  cat("\n")
   cat("::::\n\n")
 }
 ```
