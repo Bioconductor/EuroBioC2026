@@ -1,28 +1,25 @@
-name,committee,role,local,order,img_path
-Leo Lahti,Community,Chair,TRUE,1,Leo Lahti.jpg
-Tuomas Borman,Community,Coordinator,TRUE,2,Tuomas Borman.jpeg
-Annekathrin Nedwed,Community,General member,FALSE,NA,Annekathrin Nedwed.png
-Charlotte Soneson,Community,Scientific program,FALSE,NA,Charlotte Soneson.jpg
-Dania Machlab,Community,Scientific Program,FALSE,NA,Dania Machlab.jpg
-Dario Righelli,Community,General member,FALSE,NA,Dario Righelli.jpg
-Eliana Ibrahimi,Community,"Scientific program, reviewer",FALSE,NA,Eliana Ibrahimi.png
-Federico Marini,Community,General member,FALSE,NA,Federico Marini.png
-Helena Crowell,Community,General member,FALSE,NA,Helena Crowell.png
-James Dalgleish,Community,"Partnerships, reviewer ",FALSE,NA,James Dalgleish.png
-Kevin Rue-Albrecht,Community,General member,FALSE,NA,Kevin Rue-Albrecht.jpg
-Laurent Gatto,Community,General member,FALSE,NA,Laurent Gatto.jpg
-Lena Morrill Gavarro,Community,General member,FALSE,NA,Lena Morrill Gavarro.jpg
-Lieven Clement,Community,General member,FALSE,NA,Lieven Clement.jpeg
-Maria Doyle,Community,Communications,FALSE,NA,Maria Doyle.jpeg
-Michael Stadler,Community,"Scientific program, reviewer",FALSE,NA,Michael Stadler.jpg
-Najla Abassi,Community,General member,FALSE,NA,Najla Abassi.jpg
-Nyasita Laurah Ondari,Community,Communications,NA,NA,NA
-Robert Castelo,Community,Partnerships,FALSE,NA,Robert Castelo.jpeg
-Robert Ivánek,Community,General member,FALSE,NA,Robert Ivanek.jpg
-Leo Lahti,Local,Chair,TRUE,1,Leo Lahti.jpg
-Tuomas Borman,Local,Co-chair,TRUE,2,Tuomas Borman.jpeg
-Julia Mathlin,Local,"Partnerships, Communications",FALSE,NA,julia_mathlin.jpeg
-Teemu Daniel Laajala,Local,Partnerships,FALSE,NA,TDLaajala.jpg
-Anna Kaisanlahti,Local,Partnerships,FALSE,NA,anna_kaisanlahti.jpg
-Davide Risso,Community,General member,FALSE,NA,Davide Risso.jpg
-Lluis Revilla,Community,General member,FALSE,NA,Lluis Revilla.png
+name,committee,role,order,img_path
+Leo Lahti,Community,Chair,1,Leo Lahti.jpg
+Tuomas Borman,Community,Coordinator,2,Tuomas Borman.jpeg
+Annekathrin Nedwed,Community,General member,NA,Annekathrin Nedwed.png
+Charlotte Soneson,Community,Scientific program,NA,Charlotte Soneson.jpg
+Dania Machlab,Community,Scientific Program,NA,Dania Machlab.jpg
+Dario Righelli,Community,General member,NA,Dario Righelli.jpg
+Eliana Ibrahimi,Community,"Scientific program, reviewer",NA,Eliana Ibrahimi.png
+Federico Marini,Community,General member,NA,Federico Marini.png
+James Dalgleish,Community,"Partnerships, reviewer ",NA,James Dalgleish.png
+Kevin Rue-Albrecht,Community,General member,NA,Kevin Rue-Albrecht.jpg
+Laurent Gatto,Community,General member,NA,Laurent Gatto.jpg
+Lieven Clement,Community,General member,NA,Lieven Clement.jpeg
+Maria Doyle,Community,Communications,NA,Maria Doyle.jpeg
+Michael Stadler,Community,"Scientific program, reviewer",NA,Michael Stadler.jpg
+Najla Abassi,Community,General member,NA,Najla Abassi.jpg
+Nyasita Laurah Ondari,Community,Communications,NA,NA
+Robert Castelo,Community,Partnerships,NA,Robert Castelo.jpeg
+Robert Ivánek,Community,General member,NA,Robert Ivanek.jpg
+Leo Lahti,Local,Chair,1,Leo Lahti.jpg
+Tuomas Borman,Local,Co-chair,2,Tuomas Borman.jpeg
+Julia Mathlin,Local,"Partnerships, Communications",NA,julia_mathlin.jpeg
+Teemu Daniel Laajala,Local,Partnerships,NA,TDLaajala.jpg
+Anna Kaisanlahti,Local,Partnerships,NA,anna_kaisanlahti.jpg
+Minna Vulli,Local,Partnerships,NA,NA
