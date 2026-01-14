@@ -7,3 +7,181 @@ The European Bioconductor Conference 2026 will be held in **Turku, Finland**.
 The venue is **[BioCity Turku](https://biocityturku.fi/)**.
 
 <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=22.29103982448578%2C60.448813382240864%2C22.29458034038544%2C60.450019815404964&amp;layer=mapnik&amp;marker=60.44941660442382%2C22.292810082435608" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=60.449417&amp;mlon=22.292810#map=19/60.449417/22.292810">View Larger Map</a></small>
+
+## How to travel to Turku
+
+In Turku and the Southwest Finland region, it’s easy for travellers to get
+around using public transportation. Cities and towns have efficient local
+transit systems, and longer distances can comfortably be covered by
+long-distance buses and trains. Turku also has a passenger ferry terminal and an
+international airport.
+
+### Helsinki Airport
+
+If you arrive via **Helsinki Airport**, there are two good options to reach
+Turku:
+
+- **Direct bus from the airport:** Direct buses to Turku
+(travel time: 2–2.5 hours) are operated by Matkahuolto and leave approximately
+every second hour. The tickets can be bought from Matkahuolto website or from
+buses. See [time table](https://www.matkahuolto.fi/en/).
+
+- **Train:** Take a commuter train from the airport to Pasila Station in
+Helsinki, then transfer to a direct train to Turku. Trains run about once an
+hour between 5:00 a.m. and 8:30 p.m. Total travel time is around 2.5 hours. The
+tickets can be bought from [VR website](https://www.vr.fi/en) or from kiosk
+from train platform. The train stops at Kupittaa station, next to
+Original Sokos Hotel Kupittaa hotel and the conference venue.
+
+- **Travel to Helsinki and take bus to Turku:** As direct bus connections are
+limited, you might consider taking a train or bus to Helsinki city centre where
+buses leave frequently to Turku. See [HSL website](https://www.hsl.fi/en)
+for connections and tickets to Helsinki city centre. Then consult
+[Matkahuolto website](https://www.matkahuolto.fi/en/) for buses to Turku.
+
+::: callout-tip
+Flying to Helsinki is likely the easiest and most convenient option. Then
+you can take the train that stops at Kupittaa station; next to
+Original Sokos Hotel Kupittaa hotel and the conference venue.
+:::
+
+### Turku Airport
+
+Turku has an international airport with flights from cities such as Stockholm,
+Copenhagen, Riga, Bucharest, Vilnius, and Gdansk. From the airport (approx. 8 km
+from the city centre), bus no. 1 runs approximately every 20 minutes.
+
+- Tickets cost €3.15 (€4.15 between 11 p.m. and 4 a.m.)
+- Tickets are available via the mobile app or with contactless payment from the
+driver.
+
+More information about bus tickets from the airport can be found
+[here](https://www.foli.fi/en/tickets).
+
+A taxi to the city centre costs approximately €20. All taxis accept credit and
+debit cards.
+
+**Taxi Turku:** [+358 200 10041](tel:+35820010041)  
+There are several taxi stands in the city centre.
+
+### Ferry
+
+From Stockholm, Sweden, you can travel to Turku by ferry through one of the
+most beautiful archipelagos in the world. Daily services between Stockholm and
+Turku are operated by [Tallink Silja](en.tallink.com/book-a-cruise) and
+[Viking Line](https://www.sales.vikingline.com/). The journey takes
+approximately 10 hours. Another option is Finnlines, offering comfortable ferry
+travel between Kapellskär (Sweden) and Naantali (located only 15 km from Turku
+and easily reached by car or taxi).
+
+From Turku harbour, bus line no. 1 operates regularly (every 10–20 minutes)
+to the city centre (approx. 3 km). A single ticket cost €3.15 (€4.15 between
+11 p.m. and 4 a.m.) and can be purchased via the mobile app, or directly from
+the driver using contactless payment. More information can be found
+[here](https://www.foli.fi/en/tickets).
+
+From Turku Harbour, you can also take a train directly to Turku Central Railway
+Station – just a 15-minute walk from the city centre – or to Kupittaa Railway
+Station, located only a few hundred metres from the conference venue, BioCity.
+Check train schedules [here](https://www.vr.fi/en).
+
+::: callout-tip
+Flying to Stockholm and then taking a ferry to Turku is the most
+unique&mdash;and still very reasonable&mdash;option. Along the way, you can
+relax and enjoy views of the world’s largest archipelago.
+:::
+
+## Local transportation
+
+Turku is a rather small city and everything is nearby. The public
+transportation, known as Föli, is an efficient way to get around&mdash;you can
+take a bus or rent a bike. More information is available
+[here](https://www.foli.fi/en). Turku is also very walkable, and you can easily
+get around the city on foot.
+
+## Transport links  
+
+- [Air Baltic](https://www.airbaltic.com/en-FI/index)  
+  Airline information and timetables
+  
+- [Finnair](https://www.finnair.com/choose-country-language?locale=en_INT)  
+  Airline information and timetables
+  
+- [Finnlines](https://www.finnlines.com/routes/naantali-kapellskar/)  
+  Ferryboat connections from Kapellskär
+
+- [Föli](https://www.foli.fi/en)  
+  Turku public transport
+
+- [HSL](https://www.hsl.fi/en)  
+  Helsinki public transport
+  
+- [Matkahuolto](https://www.matkahuolto.fi/en/)  
+  Finnish long-distance buses
+
+- [Onnibus](https://www.onnibus.com/home)  
+  Finnish long-distance buses
+
+- [SAS](https://www.sas.fi/en/)  
+  Airline information and timetables
+  
+- [Tallink Silja](https://www.tallinksilja.com)  
+  Ferryboat connections from Stockholm
+
+- [The Finnish Rail (VR)](https://www.vr.fi/en)  
+  Timetables, train connections
+
+- [Viking Line](https://www.vikingline.fi)  
+  Ferryboat connections from Stockholm
+
+- [Wizz Air](https://wizzair.com/en-gb#/)  
+  Airline information and timetables
+
+## Staying in Turku
+
+Below is a brief introduction to a hotel offering a special room rate for
+participants of the European Bioconductor Conference 2026.
+**Please make your booking directly to the hotel**, see contact details below.
+The hotel fees include breakfast, service and VAT.
+**The hotel fee is to be paid directly to the hotel**.
+Please note that the rooms can only be booked according to the hotel’s booking
+situation and
+**we encourage you to make the hotel reservations well in advance**.
+Please be cautious of any contacts from parties claiming to arrange travel or
+accommodation for the conference participants. We mention this as a precaution
+against phishing attempts, which are common nowadays.
+We hope you will enjoy your stay in Turku!
+
+**Original Sokos Hotel Kupittaa**  
+**Joukahaisenkatu 6, 20520 Turku**  
+**+358 300 870 000**  
+[sokos.hotels@sok.fi](mailto:sokos.hotels@sok.fi)  
+[Hotel website](https://www.sokoshotels.fi/)
+
+**Original Sokos Hotel Kupittaa** is a modern hotel located right in the heart
+of Kupittaa, a fast-growing area in Turku. The atmosphere at the hotel is
+relaxed, while stylish, and the hotel staff go above and beyond to ensure your
+comfort. 
+
+After a full day at the conference, unwind in the scenic landscape sauna or take
+in the views from the Kuppis Rooftop Bar. Additional amenities include a
+fitness room, a car park, and dining options for breakfast, lunch, and dinner. 
+
+The hotel offers added convenience of direct access to the Kupittaa railway
+station.
+The city centre is easily accessible on foot, by Fölläri city bikes, or by
+local bus from the bus stop located right outside the hotel.
+
+Standard Single room € 124 per night  
+Standard Twin room € 144 per night  
+
+**Reservations** can be made using the booking code
+(**code will be sent by email for registered**) on the website, or the
+booking code by phone or email to the hotel using the contact details above.
+
+Please note that the reservations in Original Sokos Hotel Kupittaa must be made
+by 20 May 2026 or based on availability.
+
+## Tips about Turku
+
+See tips about Turku on the [About Turku](about-turku.qmd) page.
