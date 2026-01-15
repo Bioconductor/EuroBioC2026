@@ -58,7 +58,7 @@ jobs:
         run: |
           Rscript -e "install.packages('devtools')"
           Rscript -e "devtools::install_deps(dependencies = TRUE)"
-          Rscript -e "devtools::install_github('rstudio/leaflet')"
+          Rscript -e "install.packages("leaflet", repos = "https://cloud.r-project.org")"
 
       # Build the Quarto project into HTML
       - name: Render site
