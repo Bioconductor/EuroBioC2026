@@ -6,4 +6,5 @@ Imports:
     dplyr,
     kableExtra,
     knitr,
+    leaflet,
     readr
