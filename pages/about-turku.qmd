@@ -1,5 +1,14 @@
 # About Turku
 
+```{r}
+#| label: map
+#| echo: false
+#| message: false
+#| warning: false
+source(file.path("..", "R", "create_a_map.R"))
+create_a_map(show_accommodation = FALSE, show_transport = FALSE, show_attractions = TRUE)
+```
+
 Turku&mdash;located in the region of Southwest Finland, is one of Finland’s
 biggest cities. The oldest city of Finland, founded in 1229, is today the
 dynamic capital of its region, Southwest Finland, an exciting mixture of old and

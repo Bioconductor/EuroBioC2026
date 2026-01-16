@@ -4,8 +4,8 @@
 
 The European Bioconductor Conference 2026 will be held in **Turku, Finland**.
 
-The venue is **[BioCity Turku](https://biocityturku.fi/)**.
-
+The venue is **[BioCity Turku](https://biocityturku.fi/)**
+(Tykistökatu 6, Turku).
 
 ```{r}
 #| label: map
@@ -13,96 +13,8 @@ The venue is **[BioCity Turku](https://biocityturku.fi/)**.
 #| message: false
 #| warning: false
 
-library(leaflet)
-library(dplyr)
-
-places <- data.frame(
-    name = c(
-        "BioCity Turku (venue)",
-        "Kupittaa railway station",
-        "Turku Central railway station",
-        "Turku bus station"
-    ),
-    lat = c(60.449245, 60.450278, 60.456560, 60.456720),
-    lng = c(22.293052, 22.296944, 22.260760, 22.266810)
-) |>
-    mutate(is_venue = grepl("venue", name, ignore.case = TRUE))
-
-leaflet(places) |>
-    addProviderTiles("OpenStreetMap.Mapnik") |>
-    # Other places (secondary, but clearly visible)
-    addCircleMarkers(
-        data = filter(places, !is_venue),
-        ~lng, ~lat,
-        radius = 7,
-        color = "#4a5568",
-        fillColor = "#4a5568",
-        fillOpacity = 0.8,
-        stroke = FALSE
-    ) |>
-    addLabelOnlyMarkers(
-        data = filter(places, !is_venue),
-        ~lng, ~lat,
-        label = ~name,
-        labelOptions = labelOptions(
-            noHide = TRUE,
-            direction = "top",
-            textOnly = TRUE,
-            style = list(
-                "font-size" = "12px",
-                "font-weight" = "500",
-                "color" = "#2d3748",
-                "background-color" = "rgba(255,255,255,0.8)",
-                "padding" = "3px 5px",
-                "border-radius" = "4px"
-            )
-        )
-    ) |>
-    # Venue halo
-    addCircleMarkers(
-        data = filter(places, is_venue),
-        ~lng, ~lat,
-        radius = 22,
-        color = "#2b7bff",
-        fillColor = "#2b7bff",
-        fillOpacity = 0.18,
-        stroke = FALSE
-    ) |>
-    # Venue core
-    addCircleMarkers(
-        data = filter(places, is_venue),
-        ~lng, ~lat,
-        radius = 11,
-        color = "#1f5eff",
-        fillColor = "#1f5eff",
-        fillOpacity = 1,
-        stroke = FALSE
-    ) |>
-    # Venue label
-    addLabelOnlyMarkers(
-        data = filter(places, is_venue),
-        ~lng, ~lat,
-        label = ~name,
-        labelOptions = labelOptions(
-            noHide = TRUE,
-            direction = "top",
-            offset = c(0, -16),
-            textOnly = TRUE,
-            style = list(
-                "font-size" = "15px",
-                "font-weight" = "bold",
-                "color" = "#1a365d",
-                "background-color" = "rgba(255,255,255,0.95)",
-                "padding" = "5px 7px",
-                "border-radius" = "6px",
-                "box-shadow" = "0 0 6px rgba(43,123,255,0.5)"
-            )
-        )
-    ) |>
-    fitBounds(
-        lng1 = min(places$lng), lat1 = min(places$lat),
-        lng2 = max(places$lng), lat2 = max(places$lat)
-    )
+source(file.path("..", "R", "create_a_map.R"))
+create_a_map()
 ```
 
 ## How to travel to Turku
@@ -236,6 +148,8 @@ get around the city on foot.
 
 ## Staying in Turku
 
+### The nearest hotel
+
 Below is a brief introduction to a hotel offering a special room rate for
 participants of the European Bioconductor Conference 2026.
 **Please make your booking directly to the hotel**, see contact details below.
@@ -270,7 +184,7 @@ The city centre is easily accessible on foot, by Fölläri city bikes, or by
 local bus from the bus stop located right outside the hotel.
 
 Standard Single room € 124 per night  
-Standard Twin room € 144 per night  
+Standard Twin room € 144 per night
 
 **Reservations** can be made using the booking code
 (**code will be sent by email for registered**) on the website, or the
@@ -278,6 +192,50 @@ booking code by phone or email to the hotel using the contact details above.
 
 Please note that the reservations in Original Sokos Hotel Kupittaa must be made
 by 20 May 2026 or based on availability.
+
+::: callout-note
+See also the price of the day. It might be more affordable depending on how
+early you are reserving the room.
+:::
+
+### Other accommodation options
+
+In city centre, there are many other accommodation options. City centre is about
+30 minutes walk or 15 minutes bus drive away from the venue. In addition to
+hotels, [Airbnb](https://www.airbnb.co.uk/s/Turku--Suomi/homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJu9uOgYR1jEYRAMJLVVG1AAQ&location_bb=QnIe8UGzDktCcVWeQbCIEg%3D%3D&acp_id=672085f3-0188-4003-b3a5-87ffc64fb213&date_picker_type=calendar&checkin=2026-06-02&checkout=2026-06-05&search_type=unknown&_set_bev_on_new_domain=1768551078_EANDE2YWVkMzI5ZT&set_everest_cookie_on_new_domain=1768551078.EAZDZkYzc1MDA2MTBjYW.QodjEX3puOV6t4G1pAfUebDJwa6NYPM4gETauglCwoc),
+[Booking.com](https://www.booking.com/searchresults.en-gb.html?ss=Turku&ssne=Turku&ssne_untouched=Turku&label=gog235jc-10CAMoSEIFdHVya3VIDFgDaEiIAQGYATO4ARnIAQ_YAQPoAQH4AQGIAgGoAgG4Av7jp8sGwAIB0gIkMmE3Nzk2NTAtNzMzNy00NjlhLTgxOWEtY2ZkYjE5Nzk4OTA12AIB4AIB&aid=356980&lang=en-gb&sb=1&src_elem=sb&src=searchresults&dest_id=-1389822&dest_type=city&checkin=2026-06-02&checkout=2026-06-05&group_adults=2&no_rooms=1&group_children=0&soz=1&lang_changed=1)
+and other similar options are available.
+
+Below are listed some of them.
+
+- [Bore](https://cloud.hotellinx.com/NetReservationsBore/Home/Availability)  
+  Hostel in a 1960s cruise ship. In a harbour, so little bit more far away
+  (the venue can be reached in 35 minutes by bus). Unique and affordable option,
+  own cabin and breakfast included.
+
+- [Centro Hotel](https://centrohotel.com/en/)  
+  Hotel
+
+- [Forenom Aparthotel](https://www.forenom.com/aparthotels/turku/forenom-aparthotel-turku/411/?checkin=%222026-06-02%22&checkout=%222026-06-05%22&occupants=1)  
+  Aparthotel
+  
+- [Omena Hotel, Humalistonkatu](https://www.omenahotels.com/en/hotels/turku-humalistonkatu-en/)  
+  Hotel
+  
+- [Omena Hotel, Kauppiaskatu](https://www.omenahotels.com/en/services/omena-hotel-turku-kauppiaskatu/)  
+  Hotel
+
+- [Scandic Hamburger Börs](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&city=Turku&hotel=640)  
+  Hotel
+
+- [Scandic Julia](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=619)  
+  Hotel
+  
+- [Scandic Plaza](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=629)  
+  Hotel
+
+- [Sokos Hotel Wiklund](https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund9)  
+  Hotel
 
 ## Tips about Turku
 
