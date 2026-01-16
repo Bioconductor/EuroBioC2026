@@ -234,7 +234,7 @@ Below are listed some of them.
 - [Scandic Plaza](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=629)  
   Hotel
 
-- [Sokos Hotel Wiklund](https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund9)  
+- [Sokos Hotel Wiklund](https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund)  
   Hotel
 
 ## Tips about Turku
