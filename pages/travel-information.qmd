@@ -77,7 +77,7 @@ There are several taxi stands in the city centre.
 
 From Stockholm, Sweden, you can travel to Turku by ferry through one of the
 most beautiful archipelagos in the world. Daily services between Stockholm and
-Turku are operated by [Tallink Silja](en.tallink.com/book-a-cruise) and
+Turku are operated by [Tallink Silja](https://en.tallink.com/book-a-cruise) and
 [Viking Line](https://www.sales.vikingline.com/). The journey takes
 approximately 10 hours. Another option is Finnlines, offering comfortable ferry
 travel between Kapellskär (Sweden) and Naantali (located only 15 km from Turku
@@ -140,7 +140,7 @@ get around the city on foot.
 - [The Finnish Rail (VR)](https://www.vr.fi/en)  
   Timetables, train connections
 
-- [Viking Line](https://www.vikingline.fi)  
+- [Viking Line](https://www.sales.vikingline.com/)  
   Ferryboat connections from Stockholm
 
 - [Wizz Air](https://wizzair.com/en-gb#/)  
@@ -167,7 +167,7 @@ We hope you will enjoy your stay in Turku!
 **Joukahaisenkatu 6, 20520 Turku**  
 **+358 300 870 000**  
 [sokos.hotels@sok.fi](mailto:sokos.hotels@sok.fi)  
-[Hotel website](https://www.sokoshotels.fi/)
+[Hotel website](https://www.sokoshotels.fi/en)
 
 **Original Sokos Hotel Kupittaa** is a modern hotel located right in the heart
 of Kupittaa, a fast-growing area in Turku. The atmosphere at the hotel is
