@@ -8,9 +8,21 @@
 - **January 30th**: Call for abstracts closes
 
 ::: callout-important
-Submission system requires all submitters to create an account at least
-**two weeks before** the abstract deadline. Please create your profile early to
-avoid any issues.
+
+The submission system requires all submitters to create an account.
+If you do not already have an account in _OpenReview_, we strongly
+recommend doing this at least **two weeks before** the
+abstract deadline. This is especially important for non-academic
+institutions, as account verification may take some time.
+
+If you are submitting close to the deadline, you are still very
+welcome to do so! Please create your account as soon as possible.
+Academic accounts typically do not experience any delays, but early
+profile creation is encouraged for everyone.
+
+If you encounter any issues, please contact us at
+[eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org)
+
 :::
 
 [Submit your abstract here!](https://openreview.net/group?id=bioconductor.org/EuroBioC/2026/Conference){target="_blank"}
