@@ -4,7 +4,7 @@
 
 The European Bioconductor Conference 2026 will be held in **Turku, Finland**.
 
-The venue is **[BioCity Turku](https://biocityturku.fi/)**
+The venue is **[BioCity Turku](https://biocityturku.fi/){target="_blank"}**
 (Tykistökatu 6, Turku).
 
 ```{r}
@@ -33,20 +33,22 @@ Turku:
 - **Direct bus from the airport:** Direct buses to Turku
 (travel time: 2–2.5 hours) are operated by Matkahuolto and leave approximately
 every second hour. The tickets can be bought from Matkahuolto website or from
-buses. See [time table](https://www.matkahuolto.fi/en/).
+buses. See [time table](https://www.matkahuolto.fi/en/){target="_blank"}.
 
 - **Train:** Take a commuter train from the airport to Pasila Station in
 Helsinki, then transfer to a direct train to Turku. Trains run about once an
 hour between 5:00 a.m. and 8:30 p.m. Total travel time is around 2.5 hours. The
-tickets can be bought from [VR website](https://www.vr.fi/en) or from kiosk
-from train platform. The train stops at Kupittaa station, next to
+tickets can be bought from [VR website](https://www.vr.fi/en){target="_blank"}
+or from kiosk from train platform. The train stops at Kupittaa station, next to
 Original Sokos Hotel Kupittaa hotel and the conference venue.
 
 - **Travel to Helsinki and take bus to Turku:** As direct bus connections are
 limited, you might consider taking a train or bus to Helsinki city centre where
-buses leave frequently to Turku. See [HSL website](https://www.hsl.fi/en)
+buses leave frequently to Turku. See
+[HSL website](https://www.hsl.fi/en){target="_blank"}
 for connections and tickets to Helsinki city centre. Then consult
-[Matkahuolto website](https://www.matkahuolto.fi/en/) for buses to Turku.
+[Matkahuolto website](https://www.matkahuolto.fi/en/){target="_blank"}
+for buses to Turku.
 
 ::: callout-tip
 Flying to Helsinki is likely the easiest and most convenient option. Then
@@ -65,7 +67,7 @@ from the city centre), bus no. 1 runs approximately every 20 minutes.
 driver.
 
 More information about bus tickets from the airport can be found
-[here](https://www.foli.fi/en/tickets).
+[here](https://www.foli.fi/en/tickets){target="_blank"}.
 
 A taxi to the city centre costs approximately €20. All taxis accept credit and
 debit cards.
@@ -77,22 +79,22 @@ There are several taxi stands in the city centre.
 
 From Stockholm, Sweden, you can travel to Turku by ferry through one of the
 most beautiful archipelagos in the world. Daily services between Stockholm and
-Turku are operated by [Tallink Silja](https://en.tallink.com/book-a-cruise) and
-[Viking Line](https://www.sales.vikingline.com/). The journey takes
-approximately 10 hours. Another option is Finnlines, offering comfortable ferry
-travel between Kapellskär (Sweden) and Naantali (located only 15 km from Turku
-and easily reached by car or taxi).
+Turku are operated by [Tallink Silja](https://en.tallink.com/book-a-cruise){target="_blank"} and
+[Viking Line](https://www.sales.vikingline.com/){target="_blank"}. The journey
+takes approximately 10 hours. Another option is Finnlines, offering comfortable
+ferry travel between Kapellskär (Sweden) and Naantali (located only 15 km from
+Turku and easily reached by car or taxi).
 
 From Turku harbour, bus line no. 1 operates regularly (every 10–20 minutes)
 to the city centre (approx. 3 km). A single ticket cost €3.15 (€4.15 between
 11 p.m. and 4 a.m.) and can be purchased via the mobile app, or directly from
 the driver using contactless payment. More information can be found
-[here](https://www.foli.fi/en/tickets).
+[here](https://www.foli.fi/en/tickets){target="_blank"}.
 
 From Turku Harbour, you can also take a train directly to Turku Central Railway
 Station – just a 15-minute walk from the city centre – or to Kupittaa Railway
 Station, located only a few hundred metres from the conference venue, BioCity.
-Check train schedules [here](https://www.vr.fi/en).
+Check train schedules [here](https://www.vr.fi/en){target="_blank"}.
 
 ::: callout-tip
 Flying to Stockholm and then taking a ferry to Turku is the most
@@ -105,45 +107,45 @@ relax and enjoy views of the world’s largest archipelago.
 Turku is a rather small city and everything is nearby. The public
 transportation, known as Föli, is an efficient way to get around&mdash;you can
 take a bus or rent a bike. More information is available
-[here](https://www.foli.fi/en). Turku is also very walkable, and you can easily
-get around the city on foot.
+[here](https://www.foli.fi/en){target="_blank"}. Turku is also very walkable,
+and you can easily get around the city on foot.
 
 ## Transport links  
 
-- [Air Baltic](https://www.airbaltic.com/en-FI/index)  
+- [Air Baltic](https://www.airbaltic.com/en-FI/index){target="_blank"}  
   Airline information and timetables
   
-- [Finnair](https://www.finnair.com/choose-country-language?locale=en_INT)  
+- [Finnair](https://www.finnair.com/choose-country-language?locale=en_INT){target="_blank"}  
   Airline information and timetables
   
-- [Finnlines](https://www.finnlines.com/routes/naantali-kapellskar/)  
+- [Finnlines](https://www.finnlines.com/routes/naantali-kapellskar/){target="_blank"}  
   Ferryboat connections from Kapellskär
 
-- [Föli](https://www.foli.fi/en)  
+- [Föli](https://www.foli.fi/en){target="_blank"}  
   Turku public transport
 
-- [HSL](https://www.hsl.fi/en)  
+- [HSL](https://www.hsl.fi/en){target="_blank"}  
   Helsinki public transport
   
-- [Matkahuolto](https://www.matkahuolto.fi/en/)  
+- [Matkahuolto](https://www.matkahuolto.fi/en/){target="_blank"}  
   Finnish long-distance buses
 
-- [Onnibus](https://www.onnibus.com/home)  
+- [Onnibus](https://www.onnibus.com/home){target="_blank"}  
   Finnish long-distance buses
 
-- [SAS](https://www.sas.fi/en/)  
+- [SAS](https://www.sas.fi/en/){target="_blank"}  
   Airline information and timetables
   
-- [Tallink Silja](https://www.tallinksilja.com)  
+- [Tallink Silja](https://www.tallinksilja.com){target="_blank"}  
   Ferryboat connections from Stockholm
 
-- [The Finnish Rail (VR)](https://www.vr.fi/en)  
+- [The Finnish Rail (VR)](https://www.vr.fi/en){target="_blank"}  
   Timetables, train connections
 
-- [Viking Line](https://www.sales.vikingline.com/)  
+- [Viking Line](https://www.sales.vikingline.com/){target="_blank"}  
   Ferryboat connections from Stockholm
 
-- [Wizz Air](https://wizzair.com/en-gb#/)  
+- [Wizz Air](https://wizzair.com/en-gb#/){target="_blank"}  
   Airline information and timetables
 
 ## Staying in Turku
@@ -167,7 +169,7 @@ We hope you will enjoy your stay in Turku!
 **Joukahaisenkatu 6, 20520 Turku**  
 **+358 300 870 000**  
 [sokos.hotels@sok.fi](mailto:sokos.hotels@sok.fi)  
-[Hotel website](https://www.sokoshotels.fi/en)
+[Hotel website](https://www.sokoshotels.fi/en){target="_blank"}
 
 **Original Sokos Hotel Kupittaa** is a modern hotel located right in the heart
 of Kupittaa, a fast-growing area in Turku. The atmosphere at the hotel is
@@ -202,39 +204,39 @@ early you are reserving the room.
 
 In city centre, there are many other accommodation options. City centre is about
 30 minutes walk or 15 minutes bus drive away from the venue. In addition to
-hotels, [Airbnb](https://www.airbnb.co.uk/s/Turku--Suomi/homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJu9uOgYR1jEYRAMJLVVG1AAQ&location_bb=QnIe8UGzDktCcVWeQbCIEg%3D%3D&acp_id=672085f3-0188-4003-b3a5-87ffc64fb213&date_picker_type=calendar&checkin=2026-06-02&checkout=2026-06-05&search_type=unknown&_set_bev_on_new_domain=1768551078_EANDE2YWVkMzI5ZT&set_everest_cookie_on_new_domain=1768551078.EAZDZkYzc1MDA2MTBjYW.QodjEX3puOV6t4G1pAfUebDJwa6NYPM4gETauglCwoc),
-[Booking.com](https://www.booking.com/searchresults.en-gb.html?ss=Turku&ssne=Turku&ssne_untouched=Turku&label=gog235jc-10CAMoSEIFdHVya3VIDFgDaEiIAQGYATO4ARnIAQ_YAQPoAQH4AQGIAgGoAgG4Av7jp8sGwAIB0gIkMmE3Nzk2NTAtNzMzNy00NjlhLTgxOWEtY2ZkYjE5Nzk4OTA12AIB4AIB&aid=356980&lang=en-gb&sb=1&src_elem=sb&src=searchresults&dest_id=-1389822&dest_type=city&checkin=2026-06-02&checkout=2026-06-05&group_adults=2&no_rooms=1&group_children=0&soz=1&lang_changed=1)
+hotels, [Airbnb](https://www.airbnb.co.uk/s/Turku--Suomi/homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJu9uOgYR1jEYRAMJLVVG1AAQ&location_bb=QnIe8UGzDktCcVWeQbCIEg%3D%3D&acp_id=672085f3-0188-4003-b3a5-87ffc64fb213&date_picker_type=calendar&checkin=2026-06-02&checkout=2026-06-05&search_type=unknown&_set_bev_on_new_domain=1768551078_EANDE2YWVkMzI5ZT&set_everest_cookie_on_new_domain=1768551078.EAZDZkYzc1MDA2MTBjYW.QodjEX3puOV6t4G1pAfUebDJwa6NYPM4gETauglCwoc){target="_blank"},
+[Booking.com](https://www.booking.com/searchresults.en-gb.html?ss=Turku&ssne=Turku&ssne_untouched=Turku&label=gog235jc-10CAMoSEIFdHVya3VIDFgDaEiIAQGYATO4ARnIAQ_YAQPoAQH4AQGIAgGoAgG4Av7jp8sGwAIB0gIkMmE3Nzk2NTAtNzMzNy00NjlhLTgxOWEtY2ZkYjE5Nzk4OTA12AIB4AIB&aid=356980&lang=en-gb&sb=1&src_elem=sb&src=searchresults&dest_id=-1389822&dest_type=city&checkin=2026-06-02&checkout=2026-06-05&group_adults=2&no_rooms=1&group_children=0&soz=1&lang_changed=1){target="_blank"}
 and other similar options are available.
 
 Below are listed some of them.
 
-- [Bore](https://cloud.hotellinx.com/NetReservationsBore/Home/Availability)  
+- [Bore](https://cloud.hotellinx.com/NetReservationsBore/Home/Availability){target="_blank"}
   Hostel in a 1960s cruise ship. In a harbour, so little bit more far away
   (the venue can be reached in 35 minutes by bus). Unique and affordable option,
   own cabin and breakfast included.
 
-- [Centro Hotel](https://centrohotel.com/en/)  
+- [Centro Hotel](https://centrohotel.com/en/){target="_blank"}  
   Hotel
 
-- [Forenom Aparthotel](https://www.forenom.com/aparthotels/turku/forenom-aparthotel-turku/411/?checkin=%222026-06-02%22&checkout=%222026-06-05%22&occupants=1)  
+- [Forenom Aparthotel](https://www.forenom.com/aparthotels/turku/forenom-aparthotel-turku/411/?checkin=%222026-06-02%22&checkout=%222026-06-05%22&occupants=1){target="_blank"}  
   Aparthotel
   
-- [Omena Hotel, Humalistonkatu](https://www.omenahotels.com/en/hotels/turku-humalistonkatu-en/)  
+- [Omena Hotel, Humalistonkatu](https://www.omenahotels.com/en/hotels/turku-humalistonkatu-en/){target="_blank"}  
   Hotel
   
-- [Omena Hotel, Kauppiaskatu](https://www.omenahotels.com/en/services/omena-hotel-turku-kauppiaskatu/)  
+- [Omena Hotel, Kauppiaskatu](https://www.omenahotels.com/en/services/omena-hotel-turku-kauppiaskatu/){target="_blank"}  
   Hotel
 
-- [Scandic Hamburger Börs](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&city=Turku&hotel=640)  
+- [Scandic Hamburger Börs](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&city=Turku&hotel=640){target="_blank"}
   Hotel
 
-- [Scandic Julia](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=619)  
+- [Scandic Julia](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=619){target="_blank"}  
   Hotel
   
-- [Scandic Plaza](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=629)  
+- [Scandic Plaza](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=629){target="_blank"}  
   Hotel
 
-- [Sokos Hotel Wiklund](https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund)  
+- [Sokos Hotel Wiklund](https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund){target="_blank"}  
   Hotel
 
 ## Tips about Turku
