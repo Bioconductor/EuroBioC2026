@@ -32,7 +32,9 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             "Paavo Nurmi statue",
             "Vähätori",
             "Old Great Square",
-            "University hill"
+            "University Hill",
+            "Market Hall",
+            "Market Square"
         ),
         lat = c(
             # Venue
@@ -63,7 +65,9 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             60.44797690400434,
             60.4512708499933,
             60.450695164471114,
-            60.45451657365545
+            60.45451657365545,
+            60.44971949569192,
+            60.45174707388272
         ),
         lng = c(
             # Venue
@@ -94,13 +98,15 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             22.27003446911901,
             22.273037982133197,
             22.275773247373095,
-            22.284448914525427
+            22.284448914525427,
+            22.266094817521928,
+            22.26694352548474
         ),
         type = c(
             "venue",
             rep("transport", 3),
             rep("accommodation", 10),
-            rep("attraction", 11)
+            rep("attraction", 13)
         )
     )
 
