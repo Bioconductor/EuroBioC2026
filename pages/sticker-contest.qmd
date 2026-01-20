@@ -13,7 +13,7 @@ waiver cannot be deferred.
 The winning design will be selected by the EuroBioC2026 organising committee.
 - The winning sticker will be added to the Bioconductor stickers GitHub
 repository at
-[https://github.com/Bioconductor/BiocStickers](https://github.com/Bioconductor/BiocStickers)
+[https://github.com/Bioconductor/BiocStickers](https://github.com/Bioconductor/BiocStickers){target="_blank"}
 and licensed under the CC0 1.0 Universal (CC0 1.0) Public Domain License.
 - The EuroBioC2026 organising committee will vote for the winning design based
 on relevance and creativity.
@@ -40,16 +40,16 @@ designs generally include a reference to the conference location.
 Universal (CC0 1.0) Public Domain License.
 - The design should be hex-shaped. Some examples can be seen in the Bioconductor
 stickers repo
-[here](https://github.com/Bioconductor/BiocStickers?tab=readme-ov-file#stickers-for-events).
+[here](https://github.com/Bioconductor/BiocStickers?tab=readme-ov-file#stickers-for-events){target="_blank"}.
 - The height of the final image should be 5cm. 
 - Ideally, the position of the conference name text (bottom line) should be 18mm
 from the top of the image.
 - Some suggestions for color definitions:
-[http://www.flatuicolorpicker.com/category/all](http://www.flatuicolorpicker.com/category/all).
+[http://www.flatuicolorpicker.com/category/all](http://www.flatuicolorpicker.com/category/all){target="_blank"}.
 
 ::: {.callout-tip icon=false}
 ## Submit your sticker here!
-[Open the submission form](https://forms.gle/PJKJfLFAgbN7nskB7)
+[Open the submission form](https://forms.gle/PJKJfLFAgbN7nskB7){target="_blank"}
 :::
 
 ## Stickers from previous conferences

@@ -2,16 +2,16 @@
 
 ## About partnering with EuroBioC2026
 
-[Bioconductor](https://bioconductor.org) is a non-profit organisation that
-supports one of the most widely used data analysis ecosystems in genomics.
-Software packages are contributed by more than 1,200 community developers
+[Bioconductor](https://bioconductor.org){target="_blank"} is a non-profit
+organisation that supports one of the most widely used data analysis ecosystems
+in genomics. Software packages are contributed by more than 1,200 community developers
 worldwide, totaling over 55 million downloads by
-[about 1.5 million distinct IP addresses](https://www.bioconductor.org/packages/stats/bioc/index.html)
+[about 1.5 million distinct IP addresses](https://www.bioconductor.org/packages/stats/bioc/index.html){target="_blank"}
 last year. 
 
 The next edition of the European Bioconductor Conference (EuroBioC) will be held
-in Turku, Finland, at the [University of Turku](https://www.utu.fi/en) on 3-5
-June 2026. We expect over 150 participants from the European and global
+in Turku, Finland, at the [University of Turku](https://www.utu.fi/en){target="_blank"}
+on 3-5 June 2026. We expect over 150 participants from the European and global
 bioinformatics community, coming from academia and industry.
 We are welcoming bioinformaticians, method developers, practitioners
 incorporating Bioconductor into robust workflows, and researchers using these
