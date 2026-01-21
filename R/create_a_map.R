@@ -1,5 +1,6 @@
-library(leaflet)
 library(dplyr)
+library(leaflet)
+library(leaflet.extras)
 
 create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_accommodation = TRUE){
     places <- data.frame(
