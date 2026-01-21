@@ -36,7 +36,8 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             "Old Great Square",
             "University Hill",
             "Market Hall",
-            "Market Square"
+            "Market Square",
+            "Moomin World"
         ),
         link = c(
             # Venue
@@ -70,7 +71,8 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             "https://en.wikipedia.org/wiki/Old_Great_Square_(Turku)",
             "https://en.wikipedia.org/wiki/University_of_Turku",
             "https://en.wikipedia.org/wiki/Turku_Market_Hall",
-            "https://en.wikipedia.org/wiki/Market_Square,_Turku"
+            "https://en.wikipedia.org/wiki/Market_Square,_Turku",
+            "https://en.wikipedia.org/wiki/Moomin_World"
         ),
         lat = c(
             # Venue
@@ -104,7 +106,8 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             60.450695164471114,
             60.45451657365545,
             60.44971949569192,
-            60.45174707388272
+            60.45174707388272,
+            60.4729759154997
         ),
         lng = c(
             # Venue
@@ -138,13 +141,14 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             22.275773247373095,
             22.284448914525427,
             22.266094817521928,
-            22.26694352548474
+            22.26694352548474,
+            22.005152259847435
         ),
         type = c(
             "venue",
             rep("transport", 4),
             rep("accommodation", 10),
-            rep("attraction", 13)
+            rep("attraction", 14)
         )
     )
 
