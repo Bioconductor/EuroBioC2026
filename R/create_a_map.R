@@ -36,6 +36,39 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             "Market Hall",
             "Market Square"
         ),
+        link = c(
+            # Venue
+            "https://biocityturku.fi/",
+            # Transport
+            "https://www.vr.fi/en",
+            "https://www.vr.fi/en",
+            "https://www.foli.fi/en",
+            # Accommodation
+            "https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-kupittaa",
+            "https://cloud.hotellinx.com/NetReservationsBore/Home/Availability",
+            "https://centrohotel.com/en/",
+            "https://www.forenom.com/aparthotels/turku/forenom-aparthotel-turku/411/?checkin=%222026-06-02%22&checkout=%222026-06-05%22&occupants=1",
+            "https://www.omenahotels.com/en/hotels/turku-humalistonkatu-en/",
+            "https://www.omenahotels.com/en/services/omena-hotel-turku-kauppiaskatu/",
+            "https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&city=Turku&hotel=640",
+            "https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=619",
+            "https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=629",
+            "https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund",
+            # Attractions
+            "https://en.wikipedia.org/wiki/F%C3%B6ri",
+            "https://en.wikipedia.org/wiki/Luostarinm%C3%A4kii",
+            "https://en.wikipedia.org/wiki/Posankka",
+            "https://en.wikipedia.org/wiki/Suomen_Joutsen",
+            "https://en.wikipedia.org/wiki/Turku_Castle",
+            "https://en.wikipedia.org/wiki/Turku_Cathedrall",
+            "https://en.wikipedia.org/wiki/Ruissalo",
+            "https://en.wikipedia.org/wiki/Paavo_Nurmi_statue",
+            NA,
+            "https://en.wikipedia.org/wiki/Old_Great_Square_(Turku)",
+            "https://en.wikipedia.org/wiki/University_of_Turku",
+            "https://en.wikipedia.org/wiki/Turku_Market_Hall",
+            "https://en.wikipedia.org/wiki/Market_Square,_Turku"
+        ),
         lat = c(
             # Venue
             60.449245,
@@ -110,6 +143,15 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
         )
     )
 
+    places[["popup"]] <- ifelse(
+        is.na(places[["link"]]),
+        places[["name"]],  # If no link, show just the name
+        paste0(
+            "<b>", places[["name"]], "</b><br>",
+            "<a href='", places[["link"]], "' target='_blank'>More information</a>"
+        )
+    )
+
     # Add attractions color
     type_colors <- c(
         venue = "#1f5eff",
@@ -132,7 +174,8 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
         fillColor = type_colors["transport"],
         fillOpacity = 0.85,
         stroke = FALSE,
-        group = "Transport"
+        group = "Transport",
+        popup = ~popup
     ) |>
         addLabelOnlyMarkers(
             data = filter(places, type == "transport"),
@@ -165,7 +208,8 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
         fillColor = type_colors["accommodation"],
         fillOpacity = 0.8,
         stroke = FALSE,
-        group = "Accommodation"
+        group = "Accommodation",
+        popup = ~popup
     ) |>
         addLabelOnlyMarkers(
             data = filter(places, type == "accommodation"),
@@ -212,7 +256,8 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
         fillColor = type_colors["venue"],
         fillOpacity = 1,
         stroke = FALSE,
-        group = "Venue"
+        group = "Venue",
+        popup = ~popup
     ) |>
 
     # ----------------------------
@@ -227,7 +272,8 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
         fillColor = type_colors["attraction"],
         fillOpacity = 0.9,
         stroke = TRUE,
-        group = "Attractions"
+        group = "Attractions",
+        popup = ~popup
     ) |>
         addLabelOnlyMarkers(
             data = filter(places, type == "attraction"),
