@@ -10,6 +10,7 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             "Kupittaa railway station",
             "Central railway station",
             "Bus station",
+            "Harbour",
             # Accommodation
             "Sokos Hotel Kupittaa",
             "Bore",
@@ -43,6 +44,7 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             "https://www.vr.fi/en",
             "https://www.vr.fi/en",
             "https://www.foli.fi/en",
+            "https://en.wikipedia.org/wiki/Port_of_Turku",
             # Accommodation
             "https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-kupittaa",
             "https://cloud.hotellinx.com/NetReservationsBore/Home/Availability",
@@ -76,6 +78,7 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             60.450278,
             60.456560,
             60.456720,
+            60.43538951132408,
             # Accommodation
             60.45064568695374,
             60.43538198015936,
@@ -109,6 +112,7 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
             22.296944,
             22.260760,
             22.266810,
+            22.221577295463362,
             # Accommodation
             22.296439684431835,
             22.234050053746845,
@@ -137,7 +141,7 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
         ),
         type = c(
             "venue",
-            rep("transport", 3),
+            rep("transport", 4),
             rep("accommodation", 10),
             rep("attraction", 13)
         )
