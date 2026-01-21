@@ -7,4 +7,5 @@ Imports:
     kableExtra,
     knitr,
     leaflet,
+    leaflet.extras,
     readr
