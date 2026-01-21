@@ -365,7 +365,7 @@ create_a_map <- function(show_attractions = FALSE, show_transport = TRUE, show_a
     map <- map |> addSearchOSM(
         options = searchOptions(
             position = "topleft",
-            zoom = 16,
+            zoom = 14,
             autoCollapse = TRUE,
             hideMarkerOnCollapse = TRUE
         )
