@@ -227,7 +227,7 @@ Below are listed some of them.
 - [Omena Hotel, Kauppiaskatu](https://www.omenahotels.com/en/services/omena-hotel-turku-kauppiaskatu/){target="_blank"}  
   Hotel
 
-- [Scandic Hamburger Börs](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&city=Turku&hotel=640){target="_blank"}
+- [Scandic Hamburger Börs](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&city=Turku&hotel=640){target="_blank"}  
   Hotel
 
 - [Scandic Julia](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=619){target="_blank"}  
