@@ -1,5 +1,17 @@
 # Sticker contest
 
+::: {.callout-tip icon=false}
+## **Sticker contest open**
+
+**Important dates**
+
+- **10 November**: Call for stickers opens
+- **31 January**: Call for stickers closes
+
+[Submit your design here!](https://forms.gle/PJKJfLFAgbN7nskB7){target="_blank"}
+
+:::
+
 ## Sticker contest rules
 
 - Participation in the EuroBioC2026 sticker contest is voluntary.
@@ -46,11 +58,6 @@ stickers repo
 from the top of the image.
 - Some suggestions for color definitions:
 [http://www.flatuicolorpicker.com/category/all](http://www.flatuicolorpicker.com/category/all){target="_blank"}.
-
-::: {.callout-tip icon=false}
-## Submit your sticker here!
-[Open the submission form](https://forms.gle/PJKJfLFAgbN7nskB7){target="_blank"}
-:::
 
 ## Stickers from previous conferences
 

@@ -2,10 +2,17 @@
 
 ## Call for abstracts
 
+::: {.callout-tip icon=false}
+## **Abstract call open**
+
 **Important dates**
 
 - **November 24th**: Call for abstracts opens
-- **January 30th**: Call for abstracts closes
+- **February 13th**: Call for abstracts closes (final extended deadline)
+
+[Submit your abstract here!](https://openreview.net/group?id=bioconductor.org/EuroBioC/2026/Conference){target="_blank"}
+
+:::
 
 ::: callout-important
 
@@ -24,8 +31,6 @@ If you encounter any issues, please contact us at
 [eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org)
 
 :::
-
-[Submit your abstract here!](https://openreview.net/group?id=bioconductor.org/EuroBioC/2026/Conference){target="_blank"}
 
 ## Submission types
 
@@ -48,13 +53,25 @@ opportunity to follow along and perform analysis themselves.
 
 ## Pre-conference workshops
 
+::: {.callout-tip icon=false}
+## **Call for pre-conference workshops open**
+
+**Important dates**
+
+- **5 December**: Call for pre-conference workshops opens
+- **30 January**: Call for pre-conference workshops closes
+
+[Please submit your interest here!](https://docs.google.com/forms/d/e/1FAIpQLScYOBMs0JsmoZY21mCSnWSBObm-OX7NtZi6NEjY9zNdhsqL5w/viewform){target="_blank"}
+
+:::
+
 On-site workshops on June 1–2, 2026, in Turku, Finland, prior to the main
 conference. Please note that these workshops are **separate from the main
 conference workshops**.
 
-If you’re interested in hosting a workshop, please submit your interest
-[here](https://docs.google.com/forms/d/e/1FAIpQLScYOBMs0JsmoZY21mCSnWSBObm-OX7NtZi6NEjY9zNdhsqL5w/viewform){target="_blank"} (deadline 30 January 2026). Selections will be
-based on relevance and alignment with the workshop and conference themes.
+If you’re interested in hosting a workshop, please submit your interest.
+Selections will be based on relevance and alignment with the workshop and
+conference themes.
 
 ## Questions?
 
