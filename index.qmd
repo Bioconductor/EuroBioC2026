@@ -46,6 +46,7 @@ technologies impacting computational biology.
 :::
 
 - **November 24**: Call for abstracts opens
+- ~~**January 30**: Call for abstracts closes~~
 - <span class="deadline"><strong>January 31:</strong> Sticker design contest closes</span>
 - <span class="deadline"><strong>February 13:</strong> Call for abstracts closes (final extended deadline)</span>
 - **June 1-2**: Bioconductor Carpentry Workshops

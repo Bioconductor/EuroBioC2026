@@ -7,8 +7,9 @@
 
 **Important dates**
 
-- **November 24th**: Call for abstracts opens
-- **February 13th**: Call for abstracts closes (final extended deadline)
+- **November 24**: Call for abstracts opens
+- ~~**January 30**: Call for abstracts closes~~
+- **February 13**: Call for abstracts closes (final extended deadline)
 
 [Submit your abstract here!](https://openreview.net/group?id=bioconductor.org/EuroBioC/2026/Conference){target="_blank"}
 
@@ -58,8 +59,8 @@ opportunity to follow along and perform analysis themselves.
 
 **Important dates**
 
-- **5 December**: Call for pre-conference workshops opens
-- **30 January**: Call for pre-conference workshops closes
+- **December 5**: Call for pre-conference workshops opens
+- **January 30**: Call for pre-conference workshops closes
 
 [Please submit your interest here!](https://docs.google.com/forms/d/e/1FAIpQLScYOBMs0JsmoZY21mCSnWSBObm-OX7NtZi6NEjY9zNdhsqL5w/viewform){target="_blank"}
 
