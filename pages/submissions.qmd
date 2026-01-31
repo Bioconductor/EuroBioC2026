@@ -54,15 +54,17 @@ opportunity to follow along and perform analysis themselves.
 
 ## Pre-conference workshops
 
-::: {.callout-tip icon=false}
-## **Call for pre-conference workshops open**
+::: {.callout-important icon=false}
+## **Call for pre-conference workshops closed**
 
 **Important dates**
 
 - **December 5**: Call for pre-conference workshops opens
 - **January 30**: Call for pre-conference workshops closes
 
+<!--
 [Please submit your interest here!](https://docs.google.com/forms/d/e/1FAIpQLScYOBMs0JsmoZY21mCSnWSBObm-OX7NtZi6NEjY9zNdhsqL5w/viewform){target="_blank"}
+-->
 
 :::
 
