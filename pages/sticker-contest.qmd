@@ -1,14 +1,16 @@
 # Sticker contest
 
-::: {.callout-tip icon=false}
-## **Sticker contest open**
+::: {.callout-important icon=false}
+## **Sticker contest closed**
 
 **Important dates**
 
 - **November 10**: Call for stickers opens
 - **January 31**: Call for stickers closes
 
+<!--
 [Submit your design here!](https://forms.gle/PJKJfLFAgbN7nskB7){target="_blank"}
+-->
 
 :::
 
