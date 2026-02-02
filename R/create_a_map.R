@@ -7,7 +7,7 @@ create_a_map <- function(
     show_attractions = FALSE,
     show_transport = TRUE,
     show_accommodation = TRUE
-    ){
+){
 
   # read data
   places <- read.csv(data.path, stringsAsFactors = FALSE)
@@ -38,202 +38,226 @@ create_a_map <- function(
     attraction = "#e34a33"
   )
 
+  # NEW: precompute filtered dfs once (and allow empty safely)
+  transport_df     <- filter(places, type == "transport")
+  accommodation_df <- filter(places, type == "accommodation")
+  venue_df         <- filter(places, type == "venue")
+  attraction_df    <- filter(places, type == "attraction")
+
+  # NEW: only list groups that exist in the CSV
+  overlay_groups <- c()
+  if (nrow(venue_df) > 0) overlay_groups <- c(overlay_groups, "Venue")
+  if (nrow(transport_df) > 0) overlay_groups <- c(overlay_groups, "Transport")
+  if (nrow(accommodation_df) > 0) overlay_groups <- c(overlay_groups, "Accommodation")
+  if (nrow(attraction_df) > 0) overlay_groups <- c(overlay_groups, "Attractions")
+
   map <- leaflet(places) |>
-    addProviderTiles("OpenStreetMap.Mapnik") |>
+    addProviderTiles("OpenStreetMap.Mapnik")
 
-    # ----------------------------
-  # TRANSPORT
   # ----------------------------
-  addCircleMarkers(
-    data = filter(places, type == "transport"),
-    ~lng, ~lat,
-    radius = 7,
-    color = type_colors["transport"],
-    fillColor = type_colors["transport"],
-    fillOpacity = 0.85,
-    stroke = FALSE,
-    group = "Transport",
-    popup = ~popup
-  ) |>
-    addLabelOnlyMarkers(
-      data = filter(places, type == "transport"),
-      ~lng, ~lat,
-      label = ~name,
-      group = "Transport",
-      labelOptions = labelOptions(
-        noHide = TRUE,
-        direction = "top",
-        textOnly = TRUE,
-        style = list(
-          "font-size" = "12px",
-          "font-weight" = "500",
-          "color" = "#22543d",
-          "background-color" = "rgba(255,255,255,0.8)",
-          "padding" = "3px 5px",
-          "border-radius" = "4px"
+  # TRANSPORT (only if exists)
+  # ----------------------------
+  if (nrow(transport_df) > 0) {
+    map <- map |>
+      addCircleMarkers(
+        data = transport_df,
+        ~lng, ~lat,
+        radius = 7,
+        color = type_colors["transport"],
+        fillColor = type_colors["transport"],
+        fillOpacity = 0.85,
+        stroke = FALSE,
+        group = "Transport",
+        popup = ~popup
+      ) |>
+      addLabelOnlyMarkers(
+        data = transport_df,
+        ~lng, ~lat,
+        label = ~name,
+        group = "Transport",
+        labelOptions = labelOptions(
+          noHide = TRUE,
+          direction = "top",
+          textOnly = TRUE,
+          style = list(
+            "font-size" = "12px",
+            "font-weight" = "500",
+            "color" = "#22543d",
+            "background-color" = "rgba(255,255,255,0.8)",
+            "padding" = "3px 5px",
+            "border-radius" = "4px"
+          )
         )
       )
-    ) |>
+  }
 
-    # ----------------------------
-  # ACCOMMODATION
   # ----------------------------
-  addCircleMarkers(
-    data = filter(places, type == "accommodation"),
-    ~lng, ~lat,
-    radius = 7,
-    color = type_colors["accommodation"],
-    fillColor = type_colors["accommodation"],
-    fillOpacity = 0.8,
-    stroke = FALSE,
-    group = "Accommodation",
-    popup = ~popup
-  ) |>
-    addLabelOnlyMarkers(
-      data = filter(places, type == "accommodation"),
-      ~lng, ~lat,
-      label = ~name,
-      group = "Accommodation",
-      labelOptions = labelOptions(
-        noHide = TRUE,
-        direction = "top",
-        textOnly = TRUE,
-        style = list(
-          "font-size" = "12px",
-          "font-weight" = "500",
-          "color" = "#44337a",
-          "background-color" = "rgba(255,255,255,0.8)",
-          "padding" = "3px 5px",
-          "border-radius" = "4px"
+  # ACCOMMODATION (only if exists)
+  # ----------------------------
+  if (nrow(accommodation_df) > 0) {
+    map <- map |>
+      addCircleMarkers(
+        data = accommodation_df,
+        ~lng, ~lat,
+        radius = 7,
+        color = type_colors["accommodation"],
+        fillColor = type_colors["accommodation"],
+        fillOpacity = 0.8,
+        stroke = FALSE,
+        group = "Accommodation",
+        popup = ~popup
+      ) |>
+      addLabelOnlyMarkers(
+        data = accommodation_df,
+        ~lng, ~lat,
+        label = ~name,
+        group = "Accommodation",
+        labelOptions = labelOptions(
+          noHide = TRUE,
+          direction = "top",
+          textOnly = TRUE,
+          style = list(
+            "font-size" = "12px",
+            "font-weight" = "500",
+            "color" = "#44337a",
+            "background-color" = "rgba(255,255,255,0.8)",
+            "padding" = "3px 5px",
+            "border-radius" = "4px"
+          )
         )
       )
-    ) |>
+  }
 
-    # ----------------------------
-  # VENUE (HALO)
   # ----------------------------
-  addCircleMarkers(
-    data = filter(places, type == "venue"),
-    ~lng, ~lat,
-    radius = 26,
-    color = type_colors["venue"],
-    fillColor = type_colors["venue"],
-    fillOpacity = 0.18,
-    stroke = FALSE,
-    group = "Venue"
-  ) |>
-
-    # ----------------------------
-  # VENUE (CORE)
+  # VENUE (HALO + CORE + LABEL) (only if exists)
   # ----------------------------
-  addCircleMarkers(
-    data = filter(places, type == "venue"),
-    ~lng, ~lat,
-    radius = 12,
-    color = type_colors["venue"],
-    fillColor = type_colors["venue"],
-    fillOpacity = 1,
-    stroke = FALSE,
-    group = "Venue",
-    popup = ~popup
-  ) |>
-
-    # ----------------------------
-  # ATTRACTIONS (hidden by default)
-  # ----------------------------
-  addCircleMarkers(
-    data = filter(places, type == "attraction"),
-    ~lng, ~lat,
-    radius = 7,
-    color = "white",
-    weight = 2,
-    fillColor = type_colors["attraction"],
-    fillOpacity = 0.9,
-    stroke = TRUE,
-    group = "Attractions",
-    popup = ~popup
-  ) |>
-    addLabelOnlyMarkers(
-      data = filter(places, type == "attraction"),
-      ~lng, ~lat,
-      label = ~name,
-      group = "Attractions",
-      labelOptions = labelOptions(
-        noHide = TRUE,
-        direction = "top",
-        textOnly = TRUE,
-        style = list(
-          "font-size" = "12px",
-          "font-weight" = "500",
-          "color" = "#9c2c2c",
-          "background-color" = "rgba(255,255,255,0.85)",
-          "padding" = "3px 5px",
-          "border-radius" = "4px"
+  if (nrow(venue_df) > 0) {
+    map <- map |>
+      addCircleMarkers(
+        data = venue_df,
+        ~lng, ~lat,
+        radius = 26,
+        color = type_colors["venue"],
+        fillColor = type_colors["venue"],
+        fillOpacity = 0.18,
+        stroke = FALSE,
+        group = "Venue"
+      ) |>
+      addCircleMarkers(
+        data = venue_df,
+        ~lng, ~lat,
+        radius = 12,
+        color = type_colors["venue"],
+        fillColor = type_colors["venue"],
+        fillOpacity = 1,
+        stroke = FALSE,
+        group = "Venue",
+        popup = ~popup
+      ) |>
+      addLabelOnlyMarkers(
+        data = venue_df,
+        ~lng, ~lat,
+        label = ~name,
+        group = "Venue",
+        labelOptions = labelOptions(
+          noHide = TRUE,
+          direction = "top",
+          offset = c(0, -18),
+          textOnly = TRUE,
+          style = list(
+            "font-size" = "16px",
+            "font-weight" = "900",
+            "color" = "#1a365d",
+            "background-color" = "rgba(255,255,255,0.95)",
+            "padding" = "6px 8px",
+            "border-radius" = "8px",
+            "box-shadow" = "0 0 8px rgba(31,94,255,0.6)"
+          )
         )
       )
-    ) |>
+  }
 
-    # ----------------------------
-  # VENUE LABEL
   # ----------------------------
-  addLabelOnlyMarkers(
-    data = filter(places, type == "venue"),
-    ~lng, ~lat,
-    label = ~name,
-    group = "Venue",
-    labelOptions = labelOptions(
-      noHide = TRUE,
-      direction = "top",
-      offset = c(0, -18),
-      textOnly = TRUE,
-      style = list(
-        "font-size" = "16px",
-        "font-weight" = "900",
-        "color" = "#1a365d",
-        "background-color" = "rgba(255,255,255,0.95)",
-        "padding" = "6px 8px",
-        "border-radius" = "8px",
-        "box-shadow" = "0 0 8px rgba(31,94,255,0.6)"
+  # ATTRACTIONS (only if exists)
+  # ----------------------------
+  if (nrow(attraction_df) > 0) {
+    map <- map |>
+      addCircleMarkers(
+        data = attraction_df,
+        ~lng, ~lat,
+        radius = 7,
+        color = "white",
+        weight = 2,
+        fillColor = type_colors["attraction"],
+        fillOpacity = 0.9,
+        stroke = TRUE,
+        group = "Attractions",
+        popup = ~popup
+      ) |>
+      addLabelOnlyMarkers(
+        data = attraction_df,
+        ~lng, ~lat,
+        label = ~name,
+        group = "Attractions",
+        labelOptions = labelOptions(
+          noHide = TRUE,
+          direction = "top",
+          textOnly = TRUE,
+          style = list(
+            "font-size" = "12px",
+            "font-weight" = "500",
+            "color" = "#9c2c2c",
+            "background-color" = "rgba(255,255,255,0.85)",
+            "padding" = "3px 5px",
+            "border-radius" = "4px"
+          )
+        )
       )
-    )
-  ) |>
+  }
 
-    # ----------------------------
-  # LAYER CONTROL
   # ----------------------------
-  addLayersControl(
-    overlayGroups = c("Venue", "Transport", "Accommodation", "Attractions"),
-    options = layersControlOptions(collapsed = FALSE)
-  )
+  # LAYER CONTROL (only if any groups exist)
+  # ----------------------------
+  if (length(overlay_groups) > 0) {
+    map <- map |>
+      addLayersControl(
+        overlayGroups = overlay_groups,
+        options = layersControlOptions(collapsed = FALSE)
+      )
+  }
 
-  # Conditionally hide
-  if (show_attractions == FALSE) {
+  # Conditionally hide (only if group exists)
+  if (show_attractions == FALSE && "Attractions" %in% overlay_groups) {
     map <- map |> hideGroup("Attractions")
   }
-  if (show_transport == FALSE) {
+  if (show_transport == FALSE && "Transport" %in% overlay_groups) {
     map <- map |> hideGroup("Transport")
   }
-  if (show_accommodation == FALSE) {
+  if (show_accommodation == FALSE && "Accommodation" %in% overlay_groups) {
     map <- map |> hideGroup("Accommodation")
   }
 
-  # Determine which types are currently visible
-  visible_types <- c("venue")  # venue is always visible
-  if (show_transport) visible_types <- c(visible_types, "transport")
-  if (show_accommodation) visible_types <- c(visible_types, "accommodation")
-  if (show_attractions) visible_types <- c(visible_types, "attraction")
+  # Determine which types are currently visible (only types that exist)
+  visible_types <- c()
+  if (nrow(venue_df) > 0) visible_types <- c(visible_types, "venue")
+  if (show_transport && nrow(transport_df) > 0) visible_types <- c(visible_types, "transport")
+  if (show_accommodation && nrow(accommodation_df) > 0) visible_types <- c(visible_types, "accommodation")
+  if (show_attractions && nrow(attraction_df) > 0) visible_types <- c(visible_types, "attraction")
 
-  # Filter only the visible places
   visible_places <- filter(places, type %in% visible_types)
 
-  # Then fit bounds only to these
-  map <- map |>
-    fitBounds(
-      lng1 = min(visible_places$lng, na.rm = TRUE),
-      lat1 = min(visible_places$lat, na.rm = TRUE),
-      lng2 = max(visible_places$lng, na.rm = TRUE),
-      lat2 = max(visible_places$lat, na.rm = TRUE)
-    )
+  # safe fallback
+  fit_df <- if (nrow(visible_places) > 0) visible_places else places
+
+  if (nrow(fit_df) > 0) {
+    map <- map |>
+      fitBounds(
+        lng1 = min(fit_df$lng, na.rm = TRUE),
+        lat1 = min(fit_df$lat, na.rm = TRUE),
+        lng2 = max(fit_df$lng, na.rm = TRUE),
+        lat2 = max(fit_df$lat, na.rm = TRUE)
+      )
+  }
 
   # Add search bar
   map <- map |> addSearchOSM(
