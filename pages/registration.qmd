@@ -1,5 +1,12 @@
 # Registration
 
+::: {.callout-warning icon=false}
+## **Registration has not yet opened**
+
+Information will be added here soon.
+
+:::
+
 ## Fees
 
 | Type                                                                  |   Fee    |
@@ -20,7 +27,7 @@ The budget EuroBioC2026 is conceived to break even after the conference. As a
 result, the organization of the EuroBioC2026 is unable to offer individual
 refunds.
 
-## Register
+## Additional Information
 
 <!--
 **Registration for EuroBioC2025 is open at
@@ -38,9 +45,6 @@ before September due to summer holidays in Spain. If you need it earlier to
 process a payment by bank transfer, we recommend paying your registration by
 credit card.
 -->
-
-**Registration for EuroBioC2026 has not yet opened.** Information will be added
-here soon.
 
 After the conference, we will provide certificates of attendance. For further
 inquiries related to conference registration, please contact us at
