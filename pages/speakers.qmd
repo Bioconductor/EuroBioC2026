@@ -110,10 +110,6 @@ for (i in 1:nrow(speakers)) {
   web <- if (!is.na(x$web) && x$web != "") x$web else NULL
   img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else NULL
 
-  # A short preview line (first ~160 chars) for mobile friendliness
-  preview <- gsub("\\s+", " ", bio)
-  preview <- if (nchar(preview) > 160) paste0(substr(preview, 1, 160), "…") else preview
-
   cat('::: {.keynote-card}\n')
   cat('<details>\n')
 
@@ -139,9 +135,7 @@ for (i in 1:nrow(speakers)) {
   if (!is.null(position)) meta_lines <- c(meta_lines, position)
   if (length(meta_lines) > 0) {
     cat(sprintf('<div class="keynote-meta">%s</div>\n', paste(meta_lines, "<br/>")))
-  } else {
-    cat(sprintf('<div class="keynote-meta">%s</div>\n', preview))
-  }
+  } 
 
   cat('</div>\n') # keynote-head
   cat('<div class="keynote-toggle" aria-hidden="true">▾</div>\n')
