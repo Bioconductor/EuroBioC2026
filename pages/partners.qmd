@@ -53,5 +53,13 @@ kbl(df, row.names=FALSE, align=c("r", rep("c", ncol(df)-1))) |>
     cat()
 ```
 
+::: {.callout-tip appearance="simple"}
+
+The listed sponsor levels are indicative. We’re always open to discussion and
+happy to tailor sponsorships to better suit your company’s needs and budget.
+If you’re interested in collaborating, just reach out. We’d be happy to discuss!
+
+:::
+
 Interested in partnering with EuroBioC2026? Please contact
 [eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org).
