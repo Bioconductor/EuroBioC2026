@@ -63,7 +63,7 @@ format:
   html:
     theme: lux
     css: styles.css
-    toc: true
+    toc: false
     grid:
       sidebar-width: 0px
       body-width: 1000px

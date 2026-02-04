@@ -1,6 +1,20 @@
 # Keynote speakers
 
 ```{css, echo = FALSE}
+/* ---------- Switch layouts by screen size ---------- */
+
+/* Desktop first */
+.keynotes-mobile { display: none; }
+.keynotes-desktop { display: block; }
+
+/* Phone / small screens */
+@media (max-width: 768px) {
+  .keynotes-desktop { display: none; }
+  .keynotes-mobile { display: block; }
+}
+
+/* ---------- Your existing styles (mobile accordion) ---------- */
+
 /* Keep your justified text, but avoid awkward spacing on narrow screens */
 .justify {
   text-align: justify !important;
@@ -20,7 +34,7 @@
 /* Make the summary a big, tappable header */
 .keynote-card summary {
   cursor: pointer;
-  list-style: none;              /* hide default marker in some browsers */
+  list-style: none;
   padding: 0.9rem 1rem;
   display: flex;
   align-items: center;
@@ -64,6 +78,7 @@
   flex: 0 0 auto;
   opacity: 0.7;
   font-size: 1.2rem;
+  transition: transform 0.15s ease;
 }
 details[open] .keynote-toggle {
   transform: rotate(180deg);
@@ -91,6 +106,38 @@ details[open] .keynote-toggle {
     font-size: 1.15rem;
   }
 }
+
+/* ---------- Desktop "old look" layout ---------- */
+.desktop-keynote {
+  display: grid;
+  grid-template-columns: 1fr 160px;   /* text + photo */
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.desktop-keynote:last-child {
+  border-bottom: none;
+}
+
+.desktop-keynote h3 {
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.02em;
+}
+
+.desktop-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  justify-self: end;
+}
+
+.desktop-links a {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
 ```
 
 ```{r results="asis", echo=FALSE}
@@ -100,48 +147,97 @@ if ("order" %in% colnames(speakers)) {
   speakers <- speakers[order(speakers$order), ]
 }
 
+img_tag <- function(img, name, cls, alt_prefix="Photo of") {
+  if (!is.na(img) && img != "") {
+    sprintf('<img src="../images/keynote_speakers/%s" class="%s" alt="%s %s">', img, cls, alt_prefix, name)
+  } else {
+    sprintf('<div class="%s" aria-hidden="true"></div>', cls)
+  }
+}
+
+# ---------------- Desktop (old look) ----------------
+cat('<div class="keynotes-desktop">\n')
+
 for (i in 1:nrow(speakers)) {
   x <- speakers[i, ]
 
   name <- x$name
   position <- if (!is.na(x$position) && x$position != "") x$position else NULL
-  #talk <- if (!is.na(x$title) && x$title != "") x$title else NULL
   bio <- if (!is.na(x$txt) && x$txt != "") x$txt else ""
   web <- if (!is.na(x$web) && x$web != "") x$web else NULL
-  img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else NULL
+  img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else ""
+
+  cat('<div class="desktop-keynote">\n')
+  cat('<div>\n')
+  cat(sprintf('<h3>%s</h3>\n', toupper(name)))
+  if (!is.null(position)) cat(sprintf('<p><strong>%s</strong></p>\n', position))
+  if (bio != "") {
+    cat('<div class="justify">\n')
+    cat(bio, "\n")
+    cat('</div>\n')
+  }
+  if (!is.null(web)) {
+    cat('<div class="desktop-links">\n')
+    cat(sprintf('<a href="%s">%s</a>\n', web, web))
+    cat('</div>\n')
+  }
+  cat('</div>\n') # text col
+
+  # photo col
+  if (img != "") {
+    cat(sprintf(
+      '<div>%s</div>\n',
+      img_tag(img, name, "desktop-photo")
+    ))
+  } else {
+    cat('<div></div>\n')
+  }
+
+  cat('</div>\n') # desktop-keynote
+}
+
+cat('</div>\n') # keynotes-desktop
+
+
+# ---------------- Mobile (accordion) ----------------
+cat('<div class="keynotes-mobile">\n')
+
+for (i in 1:nrow(speakers)) {
+  x <- speakers[i, ]
+
+  name <- x$name
+  position <- if (!is.na(x$position) && x$position != "") x$position else NULL
+  bio <- if (!is.na(x$txt) && x$txt != "") x$txt else ""
+  web <- if (!is.na(x$web) && x$web != "") x$web else NULL
+  img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else ""
 
   cat('::: {.keynote-card}\n')
   cat('<details>\n')
-
-  # Summary header (tap area)
   cat('<summary>\n')
 
-  # Photo (if present)
-  if (!is.null(img)) {
+  # Photo
+  if (img != "") {
     cat(sprintf(
       '<img src="../images/keynote_speakers/%s" class="keynote-photo" alt="Photo of %s">\n',
       img, name
     ))
   } else {
-    # Fallback spacer if no photo
     cat('<div class="keynote-photo" aria-hidden="true"></div>\n')
   }
 
   cat('<div class="keynote-head">\n')
   cat(sprintf('<div class="keynote-name"><strong>%s</strong></div>\n', name))
 
-  # Meta lines (position + talk title, compact)
   meta_lines <- c()
   if (!is.null(position)) meta_lines <- c(meta_lines, position)
   if (length(meta_lines) > 0) {
     cat(sprintf('<div class="keynote-meta">%s</div>\n', paste(meta_lines, "<br/>")))
-  } 
+  }
 
   cat('</div>\n') # keynote-head
   cat('<div class="keynote-toggle" aria-hidden="true">▾</div>\n')
   cat('</summary>\n')
 
-  # Body (hidden until expanded)
   cat('<div class="keynote-body">\n')
 
   if (bio != "") {
@@ -157,8 +253,9 @@ for (i in 1:nrow(speakers)) {
   }
 
   cat('</div>\n') # keynote-body
-
   cat('</details>\n')
   cat(':::\n\n')
 }
+
+cat('</div>\n') # keynotes-mobile
 ```
