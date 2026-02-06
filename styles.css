@@ -75,30 +75,3 @@ img.speaker {
   height: 200px;
   object-fit: cover;
 }
-
-.carousel-imgwrap{
-  position: relative;
-  display: inline-block;
-}
-
-.carousel-caption-br{
-  position: absolute;
-  bottom: 10px;
-  right: 12px;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  line-height: 1.2;
-  max-width: 85%;
-}
-
-/* Mobile */
-@media (max-width: 768px){
-  .carousel-caption-br{
-    font-size: 0.75rem;
-    padding: 5px 8px;
-  }
-}
-
