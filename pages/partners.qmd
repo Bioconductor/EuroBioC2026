@@ -1,5 +1,47 @@
 # Partnering with us
 
+**Diamond**
+
+:::: {.columns}
+::: {.column width="5%"}
+:::
+
+::: {.column width="90%"}
+
+:::: {.columns}
+::: {.column width="24%"}
+[![](../images/partners/logo-tsv-en){width=100%}](https://tsv.fi/en){target="_blank"}
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+::::
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::::
+
 **Bronze**
 
 :::: {.columns}
