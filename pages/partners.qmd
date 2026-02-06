@@ -1,5 +1,47 @@
 # Partnering with us
 
+**Bronze**
+
+:::: {.columns}
+::: {.column width="5%"}
+:::
+
+::: {.column width="90%"}
+
+:::: {.columns}
+::: {.column width="24%"}
+[![](../images/partners/liedon-saastopankkisaatio.png){width=100%}](https://liedonsaastopankkisaatio.fi/en/){target="_blank"}
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+::::
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::::
+
 ## About partnering with EuroBioC2026
 
 [Bioconductor](https://bioconductor.org){target="_blank"} is a non-profit
