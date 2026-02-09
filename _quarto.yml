@@ -18,13 +18,14 @@ website:
       - href: pages/submissions.qmd
       - href: pages/registration.qmd
       #- href: pages/carpentry-workshops.qmd
-      - href: pages/sticker-contest.qmd
+      #- href: pages/sticker-contest.qmd
       - href: pages/partners.qmd
       - text: About
         menu:
           - href: pages/travel-information.qmd
           - href: pages/about-turku.qmd
           - href: pages/organizers.qmd
+          - href: pages/sticker-contest.qmd
           - href: pages/past-events.qmd
           - href: pages/code-of-conduct.qmd
           #- href: pages/conference-dinner.qmd

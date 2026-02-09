@@ -1,5 +1,89 @@
 # Partnering with us
 
+**Diamond**
+
+:::: {.columns}
+::: {.column width="5%"}
+:::
+
+::: {.column width="90%"}
+
+:::: {.columns}
+::: {.column width="30%"}
+[![](../images/partners/logo-tsv-en){width=100%}](https://tsv.fi/en){target="_blank"}
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+::::
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::::
+
+**Bronze**
+
+:::: {.columns}
+::: {.column width="5%"}
+:::
+
+::: {.column width="90%"}
+
+:::: {.columns}
+::: {.column width="12%"}
+[![](../images/partners/LSPS_logo_text_green_cmyk.jpg){width=100%}](https://liedonsaastopankkisaatio.fi/en/){target="_blank"}
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="24%"}
+
+:::
+::::
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::::
+
 ## About partnering with EuroBioC2026
 
 [Bioconductor](https://bioconductor.org){target="_blank"} is a non-profit
@@ -52,6 +136,14 @@ kbl(df, row.names=FALSE, align=c("r", rep("c", ncol(df)-1))) |>
     row_spec(seq(1, nrow(df), 2), background="ghostwhite") |>
     cat()
 ```
+
+::: {.callout-tip appearance="simple"}
+
+The listed sponsor levels are indicative. We’re always open to discussion and
+happy to tailor sponsorships to better suit your company’s needs and budget.
+If you’re interested in collaborating, just reach out. We’d be happy to discuss!
+
+:::
 
 Interested in partnering with EuroBioC2026? Please contact
 [eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org).
