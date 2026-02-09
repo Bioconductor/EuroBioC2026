@@ -82,15 +82,15 @@ carousel(
 ::: {.column width="80%"}
 
 :::: {.columns}
-::: {.column width="24%"}
+::: {.column width="30%"}
 [![](../images/partners/logo-tsv-en){width=100%}](https://tsv.fi/en){target="_blank"}
 :::
 
 ::: {.column width="2%"}
 :::
 
-::: {.column width="16%"}
-[![](images/partners/liedon-saastopankkisaatio.png){width=100%}](https://liedonsaastopankkisaatio.fi/en/){target="_blank"}
+::: {.column width="12%"}
+[![](images/partners/LSPS_logo_text_green_cmyk.jpg){width=100%}](https://liedonsaastopankkisaatio.fi/en/){target="_blank"}
 :::
 
 ::: {.column width="1%"}
