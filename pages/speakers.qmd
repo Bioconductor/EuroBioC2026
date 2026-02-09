@@ -1,50 +1,261 @@
 # Keynote speakers
 
 ```{css, echo = FALSE}
+/* ---------- Switch layouts by screen size ---------- */
+
+/* Desktop first */
+.keynotes-mobile { display: none; }
+.keynotes-desktop { display: block; }
+
+/* Phone / small screens */
+@media (max-width: 768px) {
+  .keynotes-desktop { display: none; }
+  .keynotes-mobile { display: block; }
+}
+
+/* ---------- Your existing styles (mobile accordion) ---------- */
+
+/* Keep your justified text, but avoid awkward spacing on narrow screens */
 .justify {
-  text-align: justify !important
+  text-align: justify !important;
+  hyphens: auto;
+}
+
+/* Keynote card styling */
+.keynote-card {
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  padding: 0;
+  margin: 1rem 0;
+  overflow: hidden;
+  background: rgba(255,255,255,0.8);
+}
+
+/* Make the summary a big, tappable header */
+.keynote-card summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* Hide default marker (Chrome/Safari) */
+.keynote-card summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Speaker image */
+.keynote-photo {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex: 0 0 auto;
+}
+
+/* Header text block */
+.keynote-head {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.keynote-name {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.keynote-meta {
+  margin: 0.25rem 0 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+/* “chevron” indicator */
+.keynote-toggle {
+  flex: 0 0 auto;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  transition: transform 0.15s ease;
+}
+details[open] .keynote-toggle {
+  transform: rotate(180deg);
+}
+
+/* Content area */
+.keynote-body {
+  padding: 0 1rem 1rem 1rem;
+}
+
+/* Make links easier to tap */
+.keynote-links a {
+  display: inline-block;
+  margin-top: 0.6rem;
+}
+
+/* On small screens, keep it compact */
+@media (max-width: 576px) {
+  .keynote-photo {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+  }
+  .keynote-name {
+    font-size: 1.15rem;
+  }
+}
+
+/* ---------- Desktop "old look" layout ---------- */
+.desktop-keynote {
+  display: grid;
+  grid-template-columns: 1fr 160px;   /* text + photo */
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.desktop-keynote:last-child {
+  border-bottom: none;
+}
+
+.desktop-keynote h3 {
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.02em;
+}
+
+.desktop-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  justify-self: end;
+}
+
+.desktop-links a {
+  display: inline-block;
+  margin-top: 0.75rem;
 }
 ```
 
 ```{r results="asis", echo=FALSE}
-# Read the CSV data
 speakers <- read.csv(file.path("..", "data", "keynote_speakers.csv"))
 
-# Sort by order if specified
 if ("order" %in% colnames(speakers)) {
   speakers <- speakers[order(speakers$order), ]
 }
 
-# Loop through each speaker
+img_tag <- function(img, name, cls, alt_prefix="Photo of") {
+  if (!is.na(img) && img != "") {
+    sprintf('<img src="../images/keynote_speakers/%s" class="%s" alt="%s %s">', img, cls, alt_prefix, name)
+  } else {
+    sprintf('<div class="%s" aria-hidden="true"></div>', cls)
+  }
+}
+
+# ---------------- Desktop (old look) ----------------
+cat('<div class="keynotes-desktop">\n')
+
 for (i in 1:nrow(speakers)) {
   x <- speakers[i, ]
-  
-  cat(":::: {.columns}\n")
-  cat("##", x$name, "\n")
-  
-  # 1st column (text)
-  cat("::: {.column width=60%}\n")
-  if (!is.na(x$position) && x$position != "") {
-    cat("**", x$position, "**\n\n", sep="")
+
+  name <- x$name
+  position <- if (!is.na(x$position) && x$position != "") x$position else NULL
+  bio <- if (!is.na(x$txt) && x$txt != "") x$txt else ""
+  web <- if (!is.na(x$web) && x$web != "") x$web else NULL
+  img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else ""
+
+  cat('<div class="desktop-keynote">\n')
+  cat('<div>\n')
+  cat(sprintf('<h3>%s</h3>\n', toupper(name)))
+  if (!is.null(position)) cat(sprintf('<p><strong>%s</strong></p>\n', position))
+  if (bio != "") {
+    cat('<div class="justify">\n')
+    cat(bio, "\n")
+    cat('</div>\n')
   }
-  cat("::: {.justify}\n")
-  cat(x$txt, "\n:::\n")
-  if (!is.na(x$web) && x$web != "") {
-    cat(sprintf("<%s>", x$web), "\n")
+  if (!is.null(web)) {
+    cat('<div class="desktop-links">\n')
+    cat(sprintf('<a href="%s">%s</a>\n', web, web))
+    cat('</div>\n')
   }
-  cat(":::\n")
-  
-  # horizontal spacing
-  cat("::: {.column width=1%}\n:::\n")
-  
-  # 2nd column (image)
-  cat("::: {.column width=30%}\n")
-  if (!is.na(x$img_path) && x$img_path != "") {
-    cat(sprintf("![](../images/keynote_speakers/%s){.speaker}", x$img_path))
+  cat('</div>\n') # text col
+
+  # photo col
+  if (img != "") {
+    cat(sprintf(
+      '<div>%s</div>\n',
+      img_tag(img, name, "desktop-photo")
+    ))
   } else {
-    cat("<!-- Image will appear here when added -->\n")
+    cat('<div></div>\n')
   }
-  cat("\n")
-  cat("::::\n\n")
+
+  cat('</div>\n') # desktop-keynote
 }
+
+cat('</div>\n') # keynotes-desktop
+
+
+# ---------------- Mobile (accordion) ----------------
+cat('<div class="keynotes-mobile">\n')
+
+for (i in 1:nrow(speakers)) {
+  x <- speakers[i, ]
+
+  name <- x$name
+  position <- if (!is.na(x$position) && x$position != "") x$position else NULL
+  bio <- if (!is.na(x$txt) && x$txt != "") x$txt else ""
+  web <- if (!is.na(x$web) && x$web != "") x$web else NULL
+  img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else ""
+
+  cat('::: {.keynote-card}\n')
+  cat('<details>\n')
+  cat('<summary>\n')
+
+  # Photo
+  if (img != "") {
+    cat(sprintf(
+      '<img src="../images/keynote_speakers/%s" class="keynote-photo" alt="Photo of %s">\n',
+      img, name
+    ))
+  } else {
+    cat('<div class="keynote-photo" aria-hidden="true"></div>\n')
+  }
+
+  cat('<div class="keynote-head">\n')
+  cat(sprintf('<div class="keynote-name"><strong>%s</strong></div>\n', name))
+
+  meta_lines <- c()
+  if (!is.null(position)) meta_lines <- c(meta_lines, position)
+  if (length(meta_lines) > 0) {
+    cat(sprintf('<div class="keynote-meta">%s</div>\n', paste(meta_lines, "<br/>")))
+  }
+
+  cat('</div>\n') # keynote-head
+  cat('<div class="keynote-toggle" aria-hidden="true">▾</div>\n')
+  cat('</summary>\n')
+
+  cat('<div class="keynote-body">\n')
+
+  if (bio != "") {
+    cat('::: {.justify}\n')
+    cat(bio, "\n")
+    cat(':::\n')
+  }
+
+  if (!is.null(web)) {
+    cat('<div class="keynote-links">\n')
+    cat(sprintf('<a href="%s">Website</a>\n', web))
+    cat('</div>\n')
+  }
+
+  cat('</div>\n') # keynote-body
+  cat('</details>\n')
+  cat(':::\n\n')
+}
+
+cat('</div>\n') # keynotes-mobile
 ```

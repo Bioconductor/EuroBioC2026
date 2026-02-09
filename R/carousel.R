@@ -35,7 +35,9 @@ carouselItem <- function(caption, image, link, index, interval) {
         type = "button",
         `data-bs-target` = "#gallery-carousel",
         `data-bs-slide-to` = index,
-        `aria-label` = paste("Slide", index + 1)
+        `aria-label` = paste("Slide", index + 1),
+        class = if (index == 0) "active" else NULL,
+        `aria-current` = if (index == 0) "true" else NULL
     )
     if (index == 0) {
         button <- tagAppendAttributes(button,
@@ -43,10 +45,13 @@ carouselItem <- function(caption, image, link, index, interval) {
             `aria-current` = "true"
         )
     }
+    overlay <- if (!is.null(caption) && nzchar(caption)) {
+      span(class = "carousel-caption-br", caption)
+    } else NULL
     item <- div(
         class = paste0("carousel-item", ifelse(index == 0, " active", "")),
         `data-bs-interval` = interval,
-        a(href = link, img(src = image, width = "50%", class = "d-block mx-auto")),
+        a(href = link, img(src = image, width = "50%", class = "d-block mx-auto"), overlay),
         div(
             class = "carousel-caption d-none d-md-block",
             tags$p(class = "fw-bold", style = "color:white", caption)
