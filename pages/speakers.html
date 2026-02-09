@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -150,15 +150,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#keynote-speakers" id="toc-keynote-speakers" class="nav-link active" data-scroll-target="#keynote-speakers">Keynote speakers</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -169,76 +161,295 @@ ul.task-list li input[type="checkbox"] {
 <h1>Keynote speakers</h1>
 <div class="cell">
 <style type="text/css">
+/* ---------- Switch layouts by screen size ---------- */
+
+/* Desktop first */
+.keynotes-mobile { display: none; }
+.keynotes-desktop { display: block; }
+
+/* Phone / small screens */
+@media (max-width: 768px) {
+  .keynotes-desktop { display: none; }
+  .keynotes-mobile { display: block; }
+}
+
+/* ---------- Your existing styles (mobile accordion) ---------- */
+
+/* Keep your justified text, but avoid awkward spacing on narrow screens */
 .justify {
-  text-align: justify !important
+  text-align: justify !important;
+  hyphens: auto;
+}
+
+/* Keynote card styling */
+.keynote-card {
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  padding: 0;
+  margin: 1rem 0;
+  overflow: hidden;
+  background: rgba(255,255,255,0.8);
+}
+
+/* Make the summary a big, tappable header */
+.keynote-card summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* Hide default marker (Chrome/Safari) */
+.keynote-card summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Speaker image */
+.keynote-photo {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex: 0 0 auto;
+}
+
+/* Header text block */
+.keynote-head {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.keynote-name {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.keynote-meta {
+  margin: 0.25rem 0 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+/* “chevron” indicator */
+.keynote-toggle {
+  flex: 0 0 auto;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  transition: transform 0.15s ease;
+}
+details[open] .keynote-toggle {
+  transform: rotate(180deg);
+}
+
+/* Content area */
+.keynote-body {
+  padding: 0 1rem 1rem 1rem;
+}
+
+/* Make links easier to tap */
+.keynote-links a {
+  display: inline-block;
+  margin-top: 0.6rem;
+}
+
+/* On small screens, keep it compact */
+@media (max-width: 576px) {
+  .keynote-photo {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+  }
+  .keynote-name {
+    font-size: 1.15rem;
+  }
+}
+
+/* ---------- Desktop "old look" layout ---------- */
+.desktop-keynote {
+  display: grid;
+  grid-template-columns: 1fr 160px;   /* text + photo */
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.desktop-keynote:last-child {
+  border-bottom: none;
+}
+
+.desktop-keynote h3 {
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.02em;
+}
+
+.desktop-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  justify-self: end;
+}
+
+.desktop-links a {
+  display: inline-block;
+  margin-top: 0.75rem;
 }
 </style>
 </div>
-<div class="columns">
-<section id="helena-kilpinen" class="level2">
-<h2 class="anchored" data-anchor-id="helena-kilpinen">Helena Kilpinen</h2>
-<div class="column" style="width:60%;">
+<div class="keynotes-desktop">
+<div class="desktop-keynote">
+<div>
+<h3 class="anchored" data-anchor-id="keynote-speakers">
+HELENA KILPINEN
+</h3>
 <div class="justify">
 <p>Helena Kilpinen is a tenure-track associate professor in human genetics and genomic medicine at the University of Helsinki, in the Helsinki Institute of Life Science (HiLIFE) and the Faculty of Medicine, and group leader at the Institute for Molecular Medicine Finland (FIMM) and the HiLIFE Neuroscience Center. She is interested in cellular genetics and the cellular basis of developmental and other brain-related disorders. In her research group, they use human induced pluripotent stem cells (iPSC) as models, and combine computational and experimental methods to study how genetic variation causes variability in cell phenotypes and contributes to differential susceptibility to diseases, both common and rare.</p>
 </div>
-<p><a href="https://kilpinenlab.org/" class="uri">https://kilpinenlab.org/</a></p>
+<div class="desktop-links">
+<p><a href="https://kilpinenlab.org/">https://kilpinenlab.org/</a></p>
 </div>
-<div class="column" style="width:1%;">
-
 </div>
-<div class="column" style="width:30%;">
-<p><img src="../images/keynote_speakers/helena-kilpinen.webp" class="speaker img-fluid"></p>
+<div>
+<img src="../images/keynote_speakers/helena-kilpinen.webp" class="desktop-photo" alt="Photo of Helena Kilpinen">
 </div>
-</section><div class="columns">
-<section id="levi-waldron" class="level2">
-<h2 class="anchored" data-anchor-id="levi-waldron">Levi Waldron</h2>
-<div class="column" style="width:60%;">
+</div>
+<div class="desktop-keynote">
+<div>
+<h3 class="anchored">
+LEVI WALDRON
+</h3>
 <div class="justify">
 <p>Levi Waldron is Professor of Epidemiology and Biostatistics at the City University of New York, where he leads a research program in cancer genomics and in metagenomic profiling of the human microbiome, develops methods within the intersection of statistical analysis and computation, and works to develop an inclusive community of researchers and students around open-source bioinformatics software and methods. His research group aims to generate new insights into human health, disease, and treatment through improved tools and novel analysis of publicly available data. He is an active contributor to the Bioconductor project and member of its Technical Advisory Board.</p>
 </div>
-<p><a href="https://waldronlab.io/" class="uri">https://waldronlab.io/</a></p>
+<div class="desktop-links">
+<p><a href="https://waldronlab.io/">https://waldronlab.io/</a></p>
 </div>
-<div class="column" style="width:1%;">
-
 </div>
-<div class="column" style="width:30%;">
-<p><img src="../images/keynote_speakers/levi-waldron.jpg" class="speaker img-fluid"></p>
+<div>
+<img src="../images/keynote_speakers/levi-waldron.jpg" class="desktop-photo" alt="Photo of Levi Waldron">
 </div>
-</section><div class="columns">
-<section id="anders-krogh" class="level2">
-<h2 class="anchored" data-anchor-id="anders-krogh">Anders Krogh</h2>
-<div class="column" style="width:60%;">
+</div>
+<div class="desktop-keynote">
+<div>
+<h3 class="anchored">
+ANDERS KROGH
+</h3>
 <div class="justify">
 <p>Anders Krogh is professor in the Department of Computer Science and the head of the Center for Health Data Science (HeaDS) in the Faculty of Health and Medical Sciences at the University of Copenhagen. He has worked in many areas of bioinformatics and machine learning, both with theory and applications, particularly on hidden Markov models for biological sequences. In recent years, he has focused on deep generative models and applied them to gene expression data and other bio/medical data.</p>
 </div>
 </div>
-<div class="column" style="width:1%;">
-
+<div>
+<img src="../images/keynote_speakers/anders-krogh.png" class="desktop-photo" alt="Photo of Anders Krogh">
 </div>
-<div class="column" style="width:30%;">
-<p><img src="../images/keynote_speakers/anders-krogh.png" class="speaker img-fluid"></p>
 </div>
-</section><div class="columns">
-<section id="aura-raulo" class="level2">
-<h2 class="anchored" data-anchor-id="aura-raulo">Aura Raulo</h2>
-<div class="column" style="width:60%;">
+<div class="desktop-keynote">
+<div>
+<h3 class="anchored">
+AURA RAULO
+</h3>
 <div class="justify">
-<p>Probabilistic models for complex spreading processes in contact networks – examples from microbiome transmission Many things spread in social contact networks – microbes, information, memes – and many methods exist for tracking the spread of these agents across networks. However, spreading agents rarely spread alone – social contact can function as a way to spread whole communities of microbes, or whole sets of ideas. Much fewer tools exist to describe complex spreading processes of sets of things spreading in parallel in the same networks. A good example of this kind of spreading set is the gut microbiome, our internal ecosystem of hundreds of healthy microbial species that, just like disease, can spread from individual to another in social contact. Social transmission of healthy gut microbiomes offers a great system to develop new models of complex spread Here I will introduce a Probabilistic modeling framework for studying complex spreading processes, based on data on contact networks and distribution of shared elements in a population of interacting individuals. This model predicts frequency of shared elements with frequency of contact among pairs of individuals, using a multimembership random structure to account for dependance among pairwise values. I will show how such a model can be used to reveal the extent of transmission of gut microbiomes in animal social networks and what kind of follow-up research directions it offers, such as: What kind of microbes spread through which kind of contact or what kind of positions in a social network accumulate most diverse set of microbes.</p>
+<p>Aura Raulo is a microbial ecologist and a network scientist based at the University of Oxford, where their research focuses on patterns of spread in ecological and social systems. They are particularly interested in probabilistic and network-based approaches for studying microbial transmission processes in contact networks. In their work, Raulo develops and applies statistical and probabilistic models to investigate how sets of entities—such as microbial communities—spread through populations via social interactions and other forms of contact between hosts. A central focus of their research is the gut microbiome, viewed as a complex internal ecosystem that can be socially transmitted between individuals. By combining contact network data with models that account for dependency and shared structure among interacting individuals, their research reveals how patterns of contact influence the sharing, diversity, and accumulation of microbiomes across host individuals. Through this work, they aim to uncover which types of social interactions and network positions facilitate healthymicrobiome transmission while minimising the spread of disease-causing microbes, and ultimately to advances general modelling frameworks applicable to a wide range of complex spreading processes, from microbes to information.</p>
 </div>
 </div>
-<div class="column" style="width:1%;">
+<div>
+<img src="../images/keynote_speakers/aura-raulo.jpeg" class="desktop-photo" alt="Photo of Aura Raulo">
+</div>
+</div>
+</div>
+<div class="keynotes-mobile">
+<div class="keynote-card">
+<details>
+<summary>
+<img src="../images/keynote_speakers/helena-kilpinen.webp" class="keynote-photo" alt="Photo of Helena Kilpinen">
+<div class="keynote-head">
+<div class="keynote-name">
+<strong>Helena Kilpinen</strong>
+</div>
+</div>
+<div class="keynote-toggle" aria-hidden="true">
+▾
+</div>
+</summary>
+<div class="keynote-body">
+<div class="justify">
+<p>Helena Kilpinen is a tenure-track associate professor in human genetics and genomic medicine at the University of Helsinki, in the Helsinki Institute of Life Science (HiLIFE) and the Faculty of Medicine, and group leader at the Institute for Molecular Medicine Finland (FIMM) and the HiLIFE Neuroscience Center. She is interested in cellular genetics and the cellular basis of developmental and other brain-related disorders. In her research group, they use human induced pluripotent stem cells (iPSC) as models, and combine computational and experimental methods to study how genetic variation causes variability in cell phenotypes and contributes to differential susceptibility to diseases, both common and rare.</p>
+</div>
+<div class="keynote-links">
+<p><a href="https://kilpinenlab.org/">Website</a></p>
+</div>
+</div>
+</details>
+</div>
+<div class="keynote-card">
+<details>
+<summary>
+<img src="../images/keynote_speakers/levi-waldron.jpg" class="keynote-photo" alt="Photo of Levi Waldron">
+<div class="keynote-head">
+<div class="keynote-name">
+<strong>Levi Waldron</strong>
+</div>
+</div>
+<div class="keynote-toggle" aria-hidden="true">
+▾
+</div>
+</summary>
+<div class="keynote-body">
+<div class="justify">
+<p>Levi Waldron is Professor of Epidemiology and Biostatistics at the City University of New York, where he leads a research program in cancer genomics and in metagenomic profiling of the human microbiome, develops methods within the intersection of statistical analysis and computation, and works to develop an inclusive community of researchers and students around open-source bioinformatics software and methods. His research group aims to generate new insights into human health, disease, and treatment through improved tools and novel analysis of publicly available data. He is an active contributor to the Bioconductor project and member of its Technical Advisory Board.</p>
+</div>
+<div class="keynote-links">
+<p><a href="https://waldronlab.io/">Website</a></p>
+</div>
+</div>
+</details>
+</div>
+<div class="keynote-card">
+<details>
+<summary>
+<img src="../images/keynote_speakers/anders-krogh.png" class="keynote-photo" alt="Photo of Anders Krogh">
+<div class="keynote-head">
+<div class="keynote-name">
+<strong>Anders Krogh</strong>
+</div>
+</div>
+<div class="keynote-toggle" aria-hidden="true">
+▾
+</div>
+</summary>
+<div class="keynote-body">
+<div class="justify">
+<p>Anders Krogh is professor in the Department of Computer Science and the head of the Center for Health Data Science (HeaDS) in the Faculty of Health and Medical Sciences at the University of Copenhagen. He has worked in many areas of bioinformatics and machine learning, both with theory and applications, particularly on hidden Markov models for biological sequences. In recent years, he has focused on deep generative models and applied them to gene expression data and other bio/medical data.</p>
+</div>
+</div>
+</details>
+</div>
+<div class="keynote-card">
+<details>
+<summary>
+<img src="../images/keynote_speakers/aura-raulo.jpeg" class="keynote-photo" alt="Photo of Aura Raulo">
+<div class="keynote-head">
+<div class="keynote-name">
+<strong>Aura Raulo</strong>
+</div>
+</div>
+<div class="keynote-toggle" aria-hidden="true">
+▾
+</div>
+</summary>
+<div class="keynote-body">
+<div class="justify">
+<p>Aura Raulo is a microbial ecologist and a network scientist based at the University of Oxford, where their research focuses on patterns of spread in ecological and social systems. They are particularly interested in probabilistic and network-based approaches for studying microbial transmission processes in contact networks. In their work, Raulo develops and applies statistical and probabilistic models to investigate how sets of entities—such as microbial communities—spread through populations via social interactions and other forms of contact between hosts. A central focus of their research is the gut microbiome, viewed as a complex internal ecosystem that can be socially transmitted between individuals. By combining contact network data with models that account for dependency and shared structure among interacting individuals, their research reveals how patterns of contact influence the sharing, diversity, and accumulation of microbiomes across host individuals. Through this work, they aim to uncover which types of social interactions and network positions facilitate healthymicrobiome transmission while minimising the spread of disease-causing microbes, and ultimately to advances general modelling frameworks applicable to a wide range of complex spreading processes, from microbes to information.</p>
+</div>
+</div>
+</details>
+</div>
+</div>
 
-</div>
-<div class="column" style="width:30%;">
-<p><img src="../images/keynote_speakers/aura-raulo.jpeg" class="speaker img-fluid"></p>
-</div>
 
-
-</section>
-</div>
-</div>
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
