@@ -1,88 +1,16 @@
 # Partnering with us
 
-**Diamond**
+```{r results="asis", echo=FALSE}
+source("../R/sponsors.R")
 
-:::: {.columns}
-::: {.column width="5%"}
-:::
+render_sponsors_by_level(
+  "../data/sponsors.csv",
+  ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
+  heading = "h2",
+  img_prefix = ".."
+)
+```
 
-::: {.column width="90%"}
-
-:::: {.columns}
-::: {.column width="30%"}
-[![](../images/partners/logo-tsv-en){width=100%}](https://tsv.fi/en){target="_blank"}
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="24%"}
-
-:::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="24%"}
-
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="24%"}
-
-:::
-::::
-
-:::
-
-::: {.column width="5%"}
-:::
-
-::::
-
-**Bronze**
-
-:::: {.columns}
-::: {.column width="5%"}
-:::
-
-::: {.column width="90%"}
-
-:::: {.columns}
-::: {.column width="12%"}
-[![](../images/partners/LSPS_logo_text_green_cmyk.jpg){width=100%}](https://liedonsaastopankkisaatio.fi/en/){target="_blank"}
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="24%"}
-
-:::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="24%"}
-
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="24%"}
-
-:::
-::::
-
-:::
-
-::: {.column width="5%"}
-:::
-
-::::
 
 ## About partnering with EuroBioC2026
 
