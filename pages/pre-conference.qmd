@@ -34,7 +34,7 @@ using freely available resources.
 
 **Prerequisites:** Familiarity with R and Bioconductor
 
-**Instructors:** Leo Lahti and Tuomas Borman
+**Instructors:** Leo Lahti, Himel Mallick and Tuomas Borman
 
 ### 2. **Hackathon**
 The hackathon will cover a range of topics (to be announced soon).  
