@@ -75,3 +75,24 @@ img.speaker {
   height: 200px;
   object-fit: cover;
 }
+
+.sponsor-link { display: block; text-align: center; }
+
+.sponsor-logo{
+  display:block;
+  margin:0 auto;
+  max-height:200px;
+  width:auto;
+  height:auto;
+
+  max-width:100%;
+}
+
+
+.sponsor-name {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
