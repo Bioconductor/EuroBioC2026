@@ -1,0 +1,74 @@
+# Pre-conference events
+
+::: {.callout-warning icon=false}
+## **Registration has not yet opened**
+
+Information will be added here soon.
+
+:::
+
+Before the conference, on **Monday and Tuesday, 1–2 June**, the
+[Bioconductor Training Committee](https://training.bioconductor.org), in
+collaboration with the [University of Turku](https://www.utu.fi),
+[CompLifeSci](https://biocityturku.fi/research-programs/complifesci/), and
+[the Finnish Society for Bioinformatics](https://www.bioinf.fi/), will organize
+the following two-day pre-conference events:
+
+1. **Carpentries workshop: Orchestrating Microbiome Analysis with Bioconductor**  
+2. **Hackathon**  
+
+### 1. **Orchestrating Microbiome Analysis with Bioconductor**
+This is a **Bioconductor Carpentries workshop**, combining the Carpentries’
+hands-on, interactive teaching approach with Bioconductor-specific materials.  
+
+Over 2 days, participants will learn how to:  
+
+* Import, process, and analyze microbiome datasets  
+* Explore diversity patterns  
+* Perform differential abundance analyses  
+* Integrate multi-omics data  
+
+The course combines lectures with practical exercises to give participants the
+skills and confidence to run common microbiome analysis workflows independently
+using freely available resources.  
+
+**Prerequisites:** Familiarity with R and Bioconductor
+
+**Instructors:** Leo Lahti, Himel Mallick and Tuomas Borman
+
+### 2. **Hackathon**
+The hackathon will cover a range of topics (to be announced soon).  
+Bring your own laptop and collaborate with other participants to tackle
+challenges and develop solutions.  
+
+::: {.callout-note}
+Each event spans two days. Participants should register for **either** the
+workshop or the hackathon.
+:::
+
+## Venue and requirements
+
+Both pre-conference events will take place at the **EuroBioC2026 venue**.  
+Participants are expected to bring a laptop. The rooms will provide:  
+
+* Electrical outlets for laptops  
+* Wireless internet (Eduroam WiFi available)
+
+## Registration
+
+Details about registration and fees will be provided shortly.
+
+## What is a Bioconductor Carpentry Workshop
+
+[The Carpentries](https://carpentries.org) is a global community focused on
+teaching foundational coding and data science skills to researchers. The core
+of this community are
+[Carpentries Instructors](https://carpentries.org/community/instructors), who
+work together to grow their instructional and technical skills. Bioconductor is
+a member of The Carpentries, supporting community members to earn Carpentries
+instructor certification, develop Bioconductor-specific training materials, and
+teach Carpentry workshops on those materials.
+
+A Bioconductor Carpentry Workshop is a course on how to use Bioconductor
+packages and workflows, led by Carpentry-certified instructors on materials
+developed by the Bioconductor community.

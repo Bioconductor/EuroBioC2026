@@ -7,6 +7,11 @@ Information will be added here soon.
 
 :::
 
+::: {.callout-note}
+For information on workshop and hackathon organized before the main conference,
+see page on [pre-conference events](pre-conference.qmd).
+:::
+
 ## Fees
 
 | Type                                                                  |   Fee    |
