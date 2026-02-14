@@ -52,6 +52,7 @@ technologies impacting computational biology.
 - <span class="deadline"><strong>February 13:</strong> Call for abstracts closes (final extended deadline)</span>
 -->
 - ~~**February 13**: Call for abstracts closes (final extended deadline)~~
+- **February**: Registration opens
 - **June 1-2**: Workshop and hackathon
 - **June 3-5**: The EuroBioC2026 conference!
 
