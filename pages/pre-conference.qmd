@@ -7,6 +7,20 @@ Information will be added here soon.
 
 :::
 
+## Fees
+
+| Type                                                                                      |   Fee    |
+|:------------------------------------------------------------------------------------------|:--------:|
+|Orchestrating Microbiome Analysis with Bioconductor workshop (includes lunches and coffee) | **€100** |
+|Hackathon                                                                                  | **free** |
+
+::: {.callout-note}
+Each event spans two days. Participants should register for **either** the
+workshop or the hackathon.
+:::
+
+## Event descriptions
+
 Before the conference, on **Monday and Tuesday, 1–2 June**, the
 [Bioconductor Training Committee](https://training.bioconductor.org), in
 collaboration with the [University of Turku](https://www.utu.fi),
@@ -40,11 +54,6 @@ using freely available resources.
 The hackathon will cover a range of topics (to be announced soon).  
 Bring your own laptop and collaborate with other participants to tackle
 challenges and develop solutions.  
-
-::: {.callout-note}
-Each event spans two days. Participants should register for **either** the
-workshop or the hackathon.
-:::
 
 ## Venue and requirements
 
