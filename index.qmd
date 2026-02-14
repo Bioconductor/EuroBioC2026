@@ -45,7 +45,7 @@ technologies impacting computational biology.
 **Important dates**
 :::
 
-- **November 24**: Call for abstracts opens
+- ~~**November 24**: Call for abstracts opens~~
 - ~~**January 30**: Call for abstracts closes~~
 - ~~**January 31**: Sticker design contest closes~~
 <!--
