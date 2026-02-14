@@ -1,14 +1,18 @@
 # Partnering with us
 
-```{r results="asis", echo=FALSE}
+```{r results="asis", echo=FALSE, warning=FALSE, message=FALSE}
 source("../R/sponsors.R")
 
 render_sponsors_by_level(
   "../data/sponsors.csv",
   ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
   heading = "h2",
-  img_prefix = ".."
+  fs_prefix = "..",
+  web_prefix = "..",
+  harmonize = TRUE,
+  harmonized_dir = "../images/partners_harmonized"
 )
+
 ```
 
 

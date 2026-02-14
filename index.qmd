@@ -75,7 +75,12 @@ carousel(
 
 # \ \ \ Partnering with
 
-```{r results="asis", echo=FALSE}
+```{r results="asis", echo=FALSE, warning=FALSE, message=FALSE}
 source("R/sponsors.R")
-render_sponsors_home("data/sponsors.csv", ncol = 4)
+render_sponsors_home(
+  "data/sponsors.csv",
+  ncol = 4,
+  harmonize = TRUE,
+  harmonized_dir = "images/partners_harmonized"
+)
 ```
