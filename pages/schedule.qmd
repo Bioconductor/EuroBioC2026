@@ -7,7 +7,6 @@ The program below is tentative and may be updated.
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 library(dplyr)
 library(stringr)
-library(tidyr)
 library(kableExtra)
 
 csv <- "../data/program.csv"
