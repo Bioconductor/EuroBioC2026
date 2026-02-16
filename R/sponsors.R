@@ -175,7 +175,7 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4,
   render_sponsor_grid(
     df,
     ncol = ncol,
-    fs_prefix = "",
+    fs_prefix = ".",
     web_prefix = "",
     harmonize = harmonize,
     harmonized_dir = harmonized_dir
