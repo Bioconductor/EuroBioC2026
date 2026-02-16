@@ -2,8 +2,8 @@
 
 ## Call for abstracts
 
-::: {.callout-tip icon=false}
-## **Abstract call open**
+::: {.callout-important icon=false}
+## **Abstract call closed**
 
 **Important dates**
 
@@ -11,7 +11,9 @@
 - ~~**January 30**: Call for abstracts closes~~
 - **February 13**: Call for abstracts closes (final extended deadline)
 
+<!--
 [Submit your abstract here!](https://openreview.net/group?id=bioconductor.org/EuroBioC/2026/Conference){target="_blank"}
+-->
 
 :::
 
