@@ -5,10 +5,18 @@ read_sponsors <- function(csv_path) {
 
 url_join <- function(prefix, path) {
   if (is.null(prefix) || prefix == "") return(path)
+
+  # Keep "/" as site-root prefix
+  if (identical(prefix, "/")) {
+    path <- sub("^/+", "", path)
+    return(paste0("/", path))
+  }
+
   prefix <- sub("/+$", "", prefix)
   path   <- sub("^/+", "", path)
   paste0(prefix, "/", path)
 }
+
 
 # ---- (1) Harmonize one logo into a fixed canvas and save it
 harmonize_logo <- function(input_fs,
@@ -117,16 +125,27 @@ render_sponsor_grid <- function(df,
   width <- floor(100 / ncol)
 
   # Harmonize first (updates df$image to harmonized paths)
-  if (harmonize) {
-    df <- harmonize_sponsor_logos(
-      df,
-      fs_prefix = fs_prefix,
-      harmonized_dir = harmonized_dir,
-      canvas_w = canvas_w,
-      canvas_h = canvas_h,
-      padding = padding
-    )
+  # if (harmonize) {
+  #   df <- harmonize_sponsor_logos(
+  #     df,
+  #     fs_prefix = fs_prefix,
+  #     harmonized_dir = harmonized_dir,
+  #     canvas_w = canvas_w,
+  #     canvas_h = canvas_h,
+  #     padding = padding
+  #   )
+  # }
+  # Prefer harmonized image if it exists
+  for (i in seq_len(nrow(df))) {
+    base <- tools::file_path_sans_ext(basename(df$image[i]))
+    harm_rel <- file.path(harmonized_dir, paste0(base, ".png"))
+    harm_fs  <- file.path(fs_prefix, harm_rel)
+
+    if (file.exists(harm_fs)) {
+      df$image[i] <- harm_rel
+    }
   }
+
 
   out <- c()
   out <- c(out, ":::: {.columns}")
@@ -137,7 +156,7 @@ render_sponsor_grid <- function(df,
 
   for (i in seq_len(nrow(df))) {
     # df$image is now the harmonized relative path (or original if harmonize=FALSE)
-    img_src <- df$image[i]
+    img_src <- url_join(web_prefix, df$image[i])
 
     out <- c(out, sprintf("::: {.column width=\"%s%%\"}", width))
 
@@ -168,6 +187,8 @@ render_sponsor_grid <- function(df,
 }
 
 render_sponsors_home <- function(csv_path, title = "", ncol = 4,
+                                 fs_prefix = ".",
+                                 web_prefix = "/",
                                  harmonize = TRUE,
                                  harmonized_dir = "images/partners_harmonized") {
   df <- read_sponsors(csv_path)
@@ -175,8 +196,8 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4,
   render_sponsor_grid(
     df,
     ncol = ncol,
-    fs_prefix = ".",
-    web_prefix = "",
+    fs_prefix = "..",
+    web_prefix = "/",
     harmonize = harmonize,
     harmonized_dir = harmonized_dir
   )
