@@ -117,91 +117,90 @@ render_sponsor_grid <- function(df,
                                 harmonized_dir = "images/partners_harmonized",
                                 canvas_w = 800,
                                 canvas_h = 240,
-                                padding = 24) {
+                                padding = 24,
+                                left_margin = 10,
+                                inner_width = 80) {
   stopifnot(all(c("image", "website") %in% names(df)))
   if (nrow(df) == 0) return(invisible(NULL))
 
-  ncol <- min(ncol, nrow(df))
+  ncol  <- min(ncol, nrow(df))
   width <- floor(100 / ncol)
 
-  # Harmonize first (updates df$image to harmonized paths)
-  # if (harmonize) {
-  #   df <- harmonize_sponsor_logos(
-  #     df,
-  #     fs_prefix = fs_prefix,
-  #     harmonized_dir = harmonized_dir,
-  #     canvas_w = canvas_w,
-  #     canvas_h = canvas_h,
-  #     padding = padding
-  #   )
-  # }
-  # Prefer harmonized image if it exists
-  for (i in seq_len(nrow(df))) {
-    base <- tools::file_path_sans_ext(basename(df$image[i]))
-    harm_rel <- file.path(harmonized_dir, paste0(base, ".png"))
-    harm_fs  <- file.path(fs_prefix, harm_rel)
-
-    if (file.exists(harm_fs)) {
-      df$image[i] <- harm_rel
+  # If you want to harmonize on render time, do it here (optional)
+  if (isTRUE(harmonize)) {
+    df <- harmonize_sponsor_logos(
+      df,
+      fs_prefix = fs_prefix,
+      harmonized_dir = harmonized_dir,
+      canvas_w = canvas_w,
+      canvas_h = canvas_h,
+      padding = padding
+    )
+  } else {
+    # Even if we don't harmonize now, prefer an already-existing harmonized image
+    for (i in seq_len(nrow(df))) {
+      base    <- tools::file_path_sans_ext(basename(df$image[i]))
+      harm_rel <- file.path(harmonized_dir, paste0(base, ".png"))
+      harm_fs  <- file.path(fs_prefix, harm_rel)
+      if (file.exists(harm_fs)) df$image[i] <- harm_rel
     }
   }
 
+  out <- character()
 
-  out <- c()
   out <- c(out, ":::: {.columns}")
-  out <- c(out, "::: {.column width=\"10%\"}")
+  out <- c(out, sprintf("::: {.column width=\"%s%%\"}", left_margin))
   out <- c(out, ":::")
-  out <- c(out, "::: {.column width=\"90%\"}", "")
+  out <- c(out, sprintf("::: {.column width=\"%s%%\"}", inner_width), "")
   out <- c(out, ":::: {.columns}")
 
   for (i in seq_len(nrow(df))) {
-    # df$image is now the harmonized relative path (or original if harmonize=FALSE)
     img_src <- url_join(web_prefix, df$image[i])
+    alt_txt <- ""
 
     out <- c(out, sprintf("::: {.column width=\"%s%%\"}", width))
 
+    # Quarto supports target="_blank" on markdown links with an attribute block
+    # If your setup doesn’t, you can remove `{target="_blank"}`
     out <- c(out, sprintf(
-      "<a href='%s' target='_blank' class='sponsor-link'>%s</a>",
-      df$website[i],
-      sprintf(
-        "<img src='%s' alt='%s' class='sponsor-logo'>",
-        img_src,
-        if ("name" %in% names(df)) df$name[i] else "Sponsor logo"
-      )
+      "[![%s](%s)](%s){target=\"_blank\"}",
+      alt_txt, img_src, df$website[i]
     ))
 
-    if (show_name && ("name" %in% names(df)) && nzchar(df$name[i])) {
-      out <- c(out, sprintf("<div class='sponsor-name'>%s</div>", df$name[i]))
+    if (isTRUE(show_name) && ("name" %in% names(df)) && nzchar(df$name[i])) {
+      out <- c(out, "", df$name[i])
     }
 
     out <- c(out, ":::")
   }
 
   out <- c(out, "::::", "")
+  out <- c(out, ":::")  # close inner width column
+  out <- c(out, sprintf("::: {.column width=\"%s%%\"}", left_margin))
   out <- c(out, ":::")
-  out <- c(out, "::: {.column width=\"10%\"}")
-  out <- c(out, ":::")
-  out <- c(out, "::::")
+  out <- c(out, "::::") # close outer columns
 
   cat(paste(out, collapse = "\n"))
 }
 
+
 render_sponsors_home <- function(csv_path, title = "", ncol = 4,
-                                 fs_prefix = ".",
-                                 web_prefix = "/",
+                                 fs_prefix = "",
+                                 web_prefix = "",
                                  harmonize = TRUE,
                                  harmonized_dir = "images/partners_harmonized") {
   df <- read_sponsors(csv_path)
-  cat(sprintf("# %s\n\n", title))
+
   render_sponsor_grid(
     df,
     ncol = ncol,
-    fs_prefix = "..",
-    web_prefix = "/",
+    fs_prefix = fs_prefix,
+    web_prefix = web_prefix,
     harmonize = harmonize,
     harmonized_dir = harmonized_dir
   )
 }
+
 
 render_sponsors_by_level <- function(
     csv_path,

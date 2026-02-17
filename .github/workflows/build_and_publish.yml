@@ -59,11 +59,6 @@ jobs:
           Rscript -e "install.packages('devtools')"
           Rscript -e "devtools::install_deps(dependencies = TRUE)"
 
-      - name: System dependencies for magick
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick libmagick++-dev
-
       # Build the Quarto project into HTML
       - name: Render site
         run: quarto render

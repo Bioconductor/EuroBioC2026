@@ -1,85 +1,17 @@
 # Schedule
 
-::: {.callout-caution title="Program subject to change" appearance="minimal" icon=false}
+::: {.callout-note icon=false}
+## Note!
 The program below is tentative and may be updated.
 :::
 
-```{r results="asis", echo=FALSE, warning=FALSE, message=FALSE}
-library(dplyr)
-library(stringr)
-library(kableExtra)
 
-csv <- "../data/program.csv"
-df <- read.csv(csv, stringsAsFactors = FALSE, na.strings = c("", "NA")) |>
-  mutate(
-    day    = as.integer(day),
-    time   = str_trim(time),
-    type   = str_trim(type),
-    author = str_trim(coalesce(author, "")),
-    title  = str_trim(coalesce(title, "")),
-    info   = str_trim(coalesce(info, ""))
-  ) |>
-  arrange(day, time)
-
-# Optional: shorten repeated phrasing
-df$author <- gsub("Contributed\\s*from\\s*submitted\\s*abstracts", "Contributed abstracts", df$author)
-df$author <- gsub("Contributed\\s*until\\s*the\\s*beginning\\s*of\\s*the\\s*conference", "Contributed pre-conference", df$author)
-
-# Day headers (edit dates if needed)
-day_headers <- c(
-  "Day 1 — Wed. Sep 17, 2025",
-  "Day 2 — Thu. Sep 18, 2025",
-  "Day 3 — Fri. Sep 19, 2025"
-)
-
-df_out <- df |> select(time, type, author, title)
-
-# Row indices by day (safer than min(which(...)))
-idx_by_day <- split(seq_len(nrow(df_out)), df$day)
-
-tbl <- kbl(
-  df_out,
-  escape = TRUE,
-  row.names = FALSE,
-  col.names = c("Time", "Type", "Author", "Title")
-) |>
-  kable_material(full_width = TRUE) |>
-  column_spec(1, width = "12%") |>
-  column_spec(2, width = "18%") |>
-  column_spec(3, width = "28%") |>
-  column_spec(4, width = "42%")
-
-# --- Color coding (edit as you like) ---
-# Keep these simple “category palettes” like EuroBioC2025.
-type_colors <- list(
-  Keynote        = "lavender",
-  Break          = "lightyellow",
-  Lunch          = "lightyellow",
-  `Poster session` = "#E8F5E9",
-  `Poster pitches` = "#E8F5E9",
-  `Conference dinner` = "#FFF3E0",
-  `Walking tour` = "#E3F2FD",
-  Workshops      = "#F3E5F5",
-  `BoF sessions` = "#E0F7FA",
-  Opening        = "#F5F5F5",
-  Closing        = "#F5F5F5"
-)
-
-for (nm in names(type_colors)) {
-  ii <- which(df$type == nm)
-  if (length(ii) > 0) {
-    tbl <- tbl |> row_spec(ii, background = type_colors[[nm]])
-  }
-}
-
-# Group by day (only if day exists)
-for (d in 1:3) {
-  if (!is.null(idx_by_day[[as.character(d)]])) {
-    tbl <- tbl |> pack_rows(day_headers[d],
-                            min(idx_by_day[[as.character(d)]]),
-                            max(idx_by_day[[as.character(d)]]))
-  }
-}
-
-tbl |> cat()
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+program_csv <- "../data/program.csv"
+colors_csv  <- "../data/type_colors.csv"
+source("../R/schedule.R")
 ```
