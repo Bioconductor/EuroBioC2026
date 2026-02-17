@@ -71,7 +71,8 @@ different ways to contribute. Participants from all career stages and technical
 backgrounds are welcome, with the only requirements being a willingness to
 learn and work well in a collaborative environment.
 
-If you are interested in attending, please [fill out this google form](https://docs.google.com/forms/d/e/1FAIpQLSdQPwHgF7fJwfwkXxKPZeB5W_MjTMQpjLbRZj1ix-bA4vLYOg/viewform?usp=header).
+<!--- If you are interested in attending, please [fill out this google form](https://docs.google.com/forms/d/e/1FAIpQLSdQPwHgF7fJwfwkXxKPZeB5W_MjTMQpjLbRZj1ix-bA4vLYOg/viewform?usp=header). ---> 
+The details on registration will be added here soon.
 We will be in contact about a month before the conference to confirm
 participation, plan out teams for projects, and ensure any questions or concerns
 are addressed.
