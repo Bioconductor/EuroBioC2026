@@ -8,9 +8,9 @@ render_sponsors_by_level(
   ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
   heading = "h2",
   fs_prefix = "..",
-  web_prefix = "..",
+  web_prefix = "/",
   harmonize = TRUE,
-  harmonized_dir = "../images/partners_harmonized"
+  harmonized_dir = "images/partners_harmonized"
 )
 
 ```

@@ -1,0 +1,17 @@
+# Schedule
+
+::: {.callout-note icon=false}
+## Note!
+The program below is tentative and may be updated.
+:::
+
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+program_csv <- "../data/program.csv"
+colors_csv  <- "../data/type_colors.csv"
+source("../R/schedule.R")
+```

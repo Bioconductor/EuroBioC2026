@@ -84,6 +84,8 @@ source("R/sponsors.R")
 render_sponsors_home(
   "data/sponsors.csv",
   ncol = 4,
+  fs_prefix = ".",
+  web_prefix = "/",
   harmonize = TRUE,
   harmonized_dir = "images/partners_harmonized"
 )
