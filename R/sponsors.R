@@ -76,34 +76,18 @@ harmonize_sponsor_logos <- function(df,
     out_rel <- file.path(harmonized_dir, paste0(base, ".png"))   # WEB PATH (no fs_prefix)
     out_fs  <- file.path(fs_prefix, out_rel)                     # FILESYSTEM PATH
 
-    # Only harmonize if we can read the input
-    if (file.exists(in_fs)) {
+    harmonize_logo(
+      input_fs  = in_fs,
+      output_fs = out_fs,
+      canvas_w  = canvas_w,
+      canvas_h  = canvas_h,
+      padding   = padding
+    )
 
-      # render if missing or stale
-      need <- !file.exists(out_fs) ||
-        (file.info(out_fs)$mtime < file.info(in_fs)$mtime)
-
-      if (need) {
-        harmonize_logo(
-          input_fs  = in_fs,
-          output_fs = out_fs,
-          canvas_w  = canvas_w,
-          canvas_h  = canvas_h,
-          padding   = padding
-        )
-      }
-
-      # Only switch to harmonized image if the file actually exists
-      if (file.exists(out_fs)) {
-        df2$image[i] <- out_rel
-      }
-    } else {
-      # input not found -> keep original df2$image[i]
-      # (this is the critical difference vs your current code)
-    }
+    df2$image[i] <- out_rel
   }
 
-  df2
+ return(df2)
 }
 
 
@@ -126,25 +110,14 @@ render_sponsor_grid <- function(df,
   ncol  <- min(ncol, nrow(df))
   width <- floor(100 / ncol)
 
-  # If you want to harmonize on render time, do it here (optional)
-  if (isTRUE(harmonize)) {
-    df <- harmonize_sponsor_logos(
-      df,
-      fs_prefix = fs_prefix,
-      harmonized_dir = harmonized_dir,
-      canvas_w = canvas_w,
-      canvas_h = canvas_h,
-      padding = padding
-    )
-  } else {
-    # Even if we don't harmonize now, prefer an already-existing harmonized image
-    for (i in seq_len(nrow(df))) {
-      base    <- tools::file_path_sans_ext(basename(df$image[i]))
-      harm_rel <- file.path(harmonized_dir, paste0(base, ".png"))
-      harm_fs  <- file.path(fs_prefix, harm_rel)
-      if (file.exists(harm_fs)) df$image[i] <- harm_rel
-    }
-  }
+  df <- harmonize_sponsor_logos(
+    df,
+    fs_prefix = fs_prefix,
+    harmonized_dir = harmonized_dir,
+    canvas_w = canvas_w,
+    canvas_h = canvas_h,
+    padding = padding
+  )
 
   out <- character()
 
