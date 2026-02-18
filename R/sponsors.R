@@ -49,13 +49,13 @@ harmonize_logo <- function(input_fs,
 }
 
 # ---- (1) Harmonize all sponsors in a df and return new image paths ----------
-harmonize_sponsor_logos <- function(df,
+harmonize_sponsor_logos <- function(input_dir = "images/partners/raw",
                                     fs_prefix = "",
-                                    harmonized_dir = "images/partners_harmonized",
+                                    out_dir = "images/partners",
                                     canvas_w = 800,
                                     canvas_h = 240,
                                     padding = 24) {
-  stopifnot("image" %in% names(df))
+  imgs <- list.files(input_dir)
 
   # If magick missing, do nothing (keep original df$image)
   if (!requireNamespace("magick", quietly = TRUE)) {
@@ -65,16 +65,12 @@ harmonize_sponsor_logos <- function(df,
 
   df2 <- df
 
-  for (i in seq_len(nrow(df2))) {
+  for (img in imgs) {
     in_rel <- df2$image[i]
 
     # filesystem input (prefix applies)
-    in_fs <- file.path(fs_prefix, in_rel)
-
-    # stable output name
-    base <- tools::file_path_sans_ext(basename(in_rel))
-    out_rel <- file.path(harmonized_dir, paste0(base, ".png"))   # WEB PATH (no fs_prefix)
-    out_fs  <- file.path(fs_prefix, out_rel)                     # FILESYSTEM PATH
+    in_fs <- file.path(input_dir, img)
+    out_fs  <- file.path(out_dir, img)
 
     harmonize_logo(
       input_fs  = in_fs,
@@ -83,11 +79,9 @@ harmonize_sponsor_logos <- function(df,
       canvas_h  = canvas_h,
       padding   = padding
     )
-
-    df2$image[i] <- out_rel
   }
 
- return(df2)
+ return(NULL)
 }
 
 
@@ -97,8 +91,6 @@ render_sponsor_grid <- function(df,
                                 fs_prefix = "",
                                 web_prefix = "",
                                 show_name = FALSE,
-                                harmonize = TRUE,
-                                harmonized_dir = "images/partners_harmonized",
                                 canvas_w = 800,
                                 canvas_h = 240,
                                 padding = 24,
@@ -109,15 +101,6 @@ render_sponsor_grid <- function(df,
 
   ncol  <- min(ncol, nrow(df))
   width <- floor(100 / ncol)
-
-  df <- harmonize_sponsor_logos(
-    df,
-    fs_prefix = fs_prefix,
-    harmonized_dir = harmonized_dir,
-    canvas_w = canvas_w,
-    canvas_h = canvas_h,
-    padding = padding
-  )
 
   out <- character()
 
@@ -157,20 +140,12 @@ render_sponsor_grid <- function(df,
 }
 
 
-render_sponsors_home <- function(csv_path, title = "", ncol = 4,
-                                 fs_prefix = "",
-                                 web_prefix = "",
-                                 harmonize = TRUE,
-                                 harmonized_dir = "images/partners_harmonized") {
+render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
   df <- read_sponsors(csv_path)
 
   render_sponsor_grid(
     df,
-    ncol = ncol,
-    fs_prefix = fs_prefix,
-    web_prefix = web_prefix,
-    harmonize = harmonize,
-    harmonized_dir = harmonized_dir
+    ncol = ncol
   )
 }
 
@@ -179,11 +154,7 @@ render_sponsors_by_level <- function(
     csv_path,
     level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter"),
     ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
-    heading = c("bold", "h2"),
-    fs_prefix = "",
-    web_prefix = "",
-    harmonize = TRUE,
-    harmonized_dir = "images/partners_harmonized"
+    heading = c("bold", "h2")
 ) {
   heading <- match.arg(heading)
 
@@ -210,11 +181,7 @@ render_sponsors_by_level <- function(
 
     render_sponsor_grid(
       df_lvl,
-      ncol = ncol,
-      fs_prefix = fs_prefix,
-      web_prefix = web_prefix,
-      harmonize = harmonize,
-      harmonized_dir = harmonized_dir
+      ncol = ncol
     )
     cat("\n")
   }
