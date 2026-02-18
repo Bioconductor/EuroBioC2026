@@ -161,6 +161,16 @@ render_sponsors_by_level <- function(
   df <- read_sponsors(csv_path)
   if (!("level" %in% names(df))) stop("CSV must include a 'level' column.")
 
+  # Get directory where the CSV lives
+  csv_dir <- dirname(csv_path)
+  if( grepl("../", csv_dir) ){
+    df$image <- file.path(
+      "..",
+      df$image
+    )
+  }
+
+
   df$level <- factor(df$level, levels = level_order)
 
   levels_present <- unique(as.character(df$level))
