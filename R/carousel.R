@@ -46,8 +46,10 @@ carouselItem <- function(caption, image, link, index, interval) {
         )
     }
     overlay <- if (!is.null(caption) && nzchar(caption)) {
-      span(class = "carousel-caption-br", caption)
-    } else NULL
+        span(class = "carousel-caption-br", caption)
+    } else {
+        NULL
+    }
     item <- div(
         class = paste0("carousel-item", ifelse(index == 0, " active", "")),
         `data-bs-interval` = interval,

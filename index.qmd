@@ -79,10 +79,15 @@ carousel(
 
 # \ \ \ Partnering with
 
-```{r results="asis", echo=FALSE, warning=FALSE, message=FALSE}
+```{r}
+#| label: sponsors
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
 source("R/sponsors.R")
 render_sponsors_home(
-  "data/sponsors.csv",
-  ncol = 4
+    "data/sponsors.csv",
+    ncol = 4
 )
 ```

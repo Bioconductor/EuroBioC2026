@@ -144,118 +144,118 @@ details[open] .keynote-toggle {
 speakers <- read.csv(file.path("..", "data", "keynote_speakers.csv"))
 
 if ("order" %in% colnames(speakers)) {
-  speakers <- speakers[order(speakers$order), ]
+    speakers <- speakers[order(speakers$order), ]
 }
 
-img_tag <- function(img, name, cls, alt_prefix="Photo of") {
-  if (!is.na(img) && img != "") {
-    sprintf('<img src="../images/keynote_speakers/%s" class="%s" alt="%s %s">', img, cls, alt_prefix, name)
-  } else {
-    sprintf('<div class="%s" aria-hidden="true"></div>', cls)
-  }
+img_tag <- function(img, name, cls, alt_prefix = "Photo of") {
+    if (!is.na(img) && img != "") {
+        sprintf('<img src="../images/keynote_speakers/%s" class="%s" alt="%s %s">', img, cls, alt_prefix, name)
+    } else {
+        sprintf('<div class="%s" aria-hidden="true"></div>', cls)
+    }
 }
 
 # ---------------- Desktop (old look) ----------------
 cat('<div class="keynotes-desktop">\n')
 
 for (i in 1:nrow(speakers)) {
-  x <- speakers[i, ]
+    x <- speakers[i, ]
 
-  name <- x$name
-  position <- if (!is.na(x$position) && x$position != "") x$position else NULL
-  bio <- if (!is.na(x$txt) && x$txt != "") x$txt else ""
-  web <- if (!is.na(x$web) && x$web != "") x$web else NULL
-  img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else ""
+    name <- x$name
+    position <- if (!is.na(x$position) && x$position != "") x$position else NULL
+    bio <- if (!is.na(x$txt) && x$txt != "") x$txt else ""
+    web <- if (!is.na(x$web) && x$web != "") x$web else NULL
+    img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else ""
 
-  cat('<div class="desktop-keynote">\n')
-  cat('<div>\n')
-  cat(sprintf('<h3>%s</h3>\n', toupper(name)))
-  if (!is.null(position)) cat(sprintf('<p><strong>%s</strong></p>\n', position))
-  if (bio != "") {
-    cat('<div class="justify">\n')
-    cat(bio, "\n")
-    cat('</div>\n')
-  }
-  if (!is.null(web)) {
-    cat('<div class="desktop-links">\n')
-    cat(sprintf('<a href="%s">%s</a>\n', web, web))
-    cat('</div>\n')
-  }
-  cat('</div>\n') # text col
+    cat('<div class="desktop-keynote">\n')
+    cat("<div>\n")
+    cat(sprintf("<h3>%s</h3>\n", toupper(name)))
+    if (!is.null(position)) cat(sprintf("<p><strong>%s</strong></p>\n", position))
+    if (bio != "") {
+        cat('<div class="justify">\n')
+        cat(bio, "\n")
+        cat("</div>\n")
+    }
+    if (!is.null(web)) {
+        cat('<div class="desktop-links">\n')
+        cat(sprintf('<a href="%s">%s</a>\n', web, web))
+        cat("</div>\n")
+    }
+    cat("</div>\n") # text col
 
-  # photo col
-  if (img != "") {
-    cat(sprintf(
-      '<div>%s</div>\n',
-      img_tag(img, name, "desktop-photo")
-    ))
-  } else {
-    cat('<div></div>\n')
-  }
+    # photo col
+    if (img != "") {
+        cat(sprintf(
+            "<div>%s</div>\n",
+            img_tag(img, name, "desktop-photo")
+        ))
+    } else {
+        cat("<div></div>\n")
+    }
 
-  cat('</div>\n') # desktop-keynote
+    cat("</div>\n") # desktop-keynote
 }
 
-cat('</div>\n') # keynotes-desktop
+cat("</div>\n") # keynotes-desktop
 
 
 # ---------------- Mobile (accordion) ----------------
 cat('<div class="keynotes-mobile">\n')
 
 for (i in 1:nrow(speakers)) {
-  x <- speakers[i, ]
+    x <- speakers[i, ]
 
-  name <- x$name
-  position <- if (!is.na(x$position) && x$position != "") x$position else NULL
-  bio <- if (!is.na(x$txt) && x$txt != "") x$txt else ""
-  web <- if (!is.na(x$web) && x$web != "") x$web else NULL
-  img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else ""
+    name <- x$name
+    position <- if (!is.na(x$position) && x$position != "") x$position else NULL
+    bio <- if (!is.na(x$txt) && x$txt != "") x$txt else ""
+    web <- if (!is.na(x$web) && x$web != "") x$web else NULL
+    img <- if (!is.na(x$img_path) && x$img_path != "") x$img_path else ""
 
-  cat('::: {.keynote-card}\n')
-  cat('<details>\n')
-  cat('<summary>\n')
+    cat("::: {.keynote-card}\n")
+    cat("<details>\n")
+    cat("<summary>\n")
 
-  # Photo
-  if (img != "") {
-    cat(sprintf(
-      '<img src="../images/keynote_speakers/%s" class="keynote-photo" alt="Photo of %s">\n',
-      img, name
-    ))
-  } else {
-    cat('<div class="keynote-photo" aria-hidden="true"></div>\n')
-  }
+    # Photo
+    if (img != "") {
+        cat(sprintf(
+            '<img src="../images/keynote_speakers/%s" class="keynote-photo" alt="Photo of %s">\n',
+            img, name
+        ))
+    } else {
+        cat('<div class="keynote-photo" aria-hidden="true"></div>\n')
+    }
 
-  cat('<div class="keynote-head">\n')
-  cat(sprintf('<div class="keynote-name"><strong>%s</strong></div>\n', name))
+    cat('<div class="keynote-head">\n')
+    cat(sprintf('<div class="keynote-name"><strong>%s</strong></div>\n', name))
 
-  meta_lines <- c()
-  if (!is.null(position)) meta_lines <- c(meta_lines, position)
-  if (length(meta_lines) > 0) {
-    cat(sprintf('<div class="keynote-meta">%s</div>\n', paste(meta_lines, "<br/>")))
-  }
+    meta_lines <- c()
+    if (!is.null(position)) meta_lines <- c(meta_lines, position)
+    if (length(meta_lines) > 0) {
+        cat(sprintf('<div class="keynote-meta">%s</div>\n', paste(meta_lines, "<br/>")))
+    }
 
-  cat('</div>\n') # keynote-head
-  cat('<div class="keynote-toggle" aria-hidden="true">▾</div>\n')
-  cat('</summary>\n')
+    cat("</div>\n") # keynote-head
+    cat('<div class="keynote-toggle" aria-hidden="true">▾</div>\n')
+    cat("</summary>\n")
 
-  cat('<div class="keynote-body">\n')
+    cat('<div class="keynote-body">\n')
 
-  if (bio != "") {
-    cat('::: {.justify}\n')
-    cat(bio, "\n")
-    cat(':::\n')
-  }
+    if (bio != "") {
+        cat("::: {.justify}\n")
+        cat(bio, "\n")
+        cat(":::\n")
+    }
 
-  if (!is.null(web)) {
-    cat('<div class="keynote-links">\n')
-    cat(sprintf('<a href="%s">Website</a>\n', web))
-    cat('</div>\n')
-  }
+    if (!is.null(web)) {
+        cat('<div class="keynote-links">\n')
+        cat(sprintf('<a href="%s">Website</a>\n', web))
+        cat("</div>\n")
+    }
 
-  cat('</div>\n') # keynote-body
-  cat('</details>\n')
-  cat(':::\n\n')
+    cat("</div>\n") # keynote-body
+    cat("</details>\n")
+    cat(":::\n\n")
 }
 
-cat('</div>\n') # keynotes-mobile
+cat("</div>\n") # keynotes-mobile
 ```

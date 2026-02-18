@@ -1,14 +1,18 @@
 # Partnering with us
 
-```{r results="asis", echo=FALSE, warning=FALSE, message=FALSE}
+```{r}
+#| label: sponsors
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
 source("../R/sponsors.R")
 
 render_sponsors_by_level(
-  "../data/sponsors.csv",
-  ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
-  heading = "h2"
+    "../data/sponsors.csv",
+    ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
+    heading = "h2"
 )
-
 ```
 
 
@@ -51,17 +55,17 @@ organisation, research applications of their product(s), etc.
 
 ```{r echo=FALSE}
 url <- "../data/partners.csv"
-df <- read.csv(url, check.names=FALSE)
+df <- read.csv(url, check.names = FALSE)
 df[df == "X"] <- "$\\checkmark$"
 library(kableExtra)
 ```
 
 ```{r results="asis", echo=FALSE}
-kbl(df, row.names=FALSE, align=c("r", rep("c", ncol(df)-1))) |>
+kbl(df, row.names = FALSE, align = c("r", rep("c", ncol(df) - 1))) |>
     kable_material() |>
-    column_spec(1, width="65%") |>
-    column_spec(2:5, width="10%") |>
-    row_spec(seq(1, nrow(df), 2), background="ghostwhite") |>
+    column_spec(1, width = "65%") |>
+    column_spec(2:5, width = "10%") |>
+    row_spec(seq(1, nrow(df), 2), background = "ghostwhite") |>
     cat()
 ```
 
