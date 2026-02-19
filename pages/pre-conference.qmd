@@ -1,22 +1,31 @@
 # Pre-conference events
 
-::: {.callout-warning icon=false}
-## **Registration has not yet opened**
+::: {.callout-tip icon=false}
+## **Registration is open**
 
-Information will be added here soon.
+Each event spans two days. Participants should register for **either** the workshop or the hackathon.
 
+Register for  
+- [Workshop](https://portal.lyyti.fi/reg16/?p=choose&uid=1f10ccde-d871-60b2-9c74-47c5a587250c)  
+- [Hackathon](https://docs.google.com/forms/d/e/1FAIpQLSdQPwHgF7fJwfwkXxKPZeB5W_MjTMQpjLbRZj1ix-bA4vLYOg/viewform?usp=header)
+
+Registration closes on **Sunday, May 3**, or earlier if capacity is reached.
 :::
 
 ## Fees
 
-| Type                                                                                      |   Fee    |
-|:------------------------------------------------------------------------------------------|:--------:|
-|Orchestrating Microbiome Analysis with Bioconductor workshop (includes lunches and coffee) | **€100** |
-|Hackathon                                                                                  | **free** |
+| Type                                  |   Fee    |
+|:--------------------------------------|:--------:|
+|Workshop (includes lunches)            | **€100** |
+|Hackathon                              | **free** |
 
-::: {.callout-note}
-Each event spans two days. Participants should register for **either** the
-workshop or the hackathon.
+::: {.callout-note icon=false}
+## **Workshop fee**
+
+If you are unable to pay the fee, you may request to be added to a waiting list
+in case funding becomes available. Please note that places will be filled on a
+first‑come, first‑served basis by paying participants. If all places fill before
+funding becomes available, we may not be able to offer you a spot.
 :::
 
 ## Event descriptions
@@ -28,7 +37,7 @@ collaboration with the [University of Turku](https://www.utu.fi),
 [the Finnish Society for Bioinformatics](https://www.bioinf.fi/), will organize
 the following two-day pre-conference events:
 
-1. **Carpentries workshop: Orchestrating Microbiome Analysis with Bioconductor**  
+1. **Workshop: Orchestrating Microbiome Analysis with Bioconductor**  
 2. **Hackathon**  
 
 ### 1. **Orchestrating Microbiome Analysis with Bioconductor**
@@ -49,6 +58,21 @@ using freely available resources.
 **Prerequisites:** Familiarity with R and Bioconductor
 
 **Instructors:** Leo Lahti, Himel Mallick and Tuomas Borman
+
+#### What is a Bioconductor Carpentry Workshop
+
+[The Carpentries](https://carpentries.org) is a global community focused on
+teaching foundational coding and data science skills to researchers. The core
+of this community are
+[Carpentries Instructors](https://carpentries.org/community/instructors), who
+work together to grow their instructional and technical skills. Bioconductor is
+a member of The Carpentries, supporting community members to earn Carpentries
+instructor certification, develop Bioconductor-specific training materials, and
+teach Carpentry workshops on those materials.
+
+A Bioconductor Carpentry Workshop is a course on how to use Bioconductor
+packages and workflows, led by Carpentry-certified instructors on materials
+developed by the Bioconductor community.
 
 ### 2. **Hackathon**
 A bioconductor-centric hackathon will be held in the two days before
@@ -71,8 +95,6 @@ different ways to contribute. Participants from all career stages and technical
 backgrounds are welcome, with the only requirements being a willingness to
 learn and work well in a collaborative environment.
 
-<!--- If you are interested in attending, please [fill out this google form](https://docs.google.com/forms/d/e/1FAIpQLSdQPwHgF7fJwfwkXxKPZeB5W_MjTMQpjLbRZj1ix-bA4vLYOg/viewform?usp=header). ---> 
-The details on registration will be added here soon.
 We will be in contact about a month before the conference to confirm
 participation, plan out teams for projects, and ensure any questions or concerns
 are addressed.
@@ -82,8 +104,6 @@ working and tested R packages are the goal where applicable. Tangible
 contributions to repositories that can be clearly professionally communicated
 will be the goal otherwise.
 
-If you have any questions, please contact Nicholas(dot)Cooley(at)ul(dot)ie.
-
 ## Venue and requirements
 
 Both pre-conference events will take place at the **EuroBioC2026 venue**.  
@@ -92,21 +112,8 @@ Participants are expected to bring a laptop. The rooms will provide:
 * Electrical outlets for laptops  
 * Wireless internet (Eduroam WiFi available)
 
-## Registration
+## Questions?
 
-Details about registration and fees will be provided shortly.
-
-## What is a Bioconductor Carpentry Workshop
-
-[The Carpentries](https://carpentries.org) is a global community focused on
-teaching foundational coding and data science skills to researchers. The core
-of this community are
-[Carpentries Instructors](https://carpentries.org/community/instructors), who
-work together to grow their instructional and technical skills. Bioconductor is
-a member of The Carpentries, supporting community members to earn Carpentries
-instructor certification, develop Bioconductor-specific training materials, and
-teach Carpentry workshops on those materials.
-
-A Bioconductor Carpentry Workshop is a course on how to use Bioconductor
-packages and workflows, led by Carpentry-certified instructors on materials
-developed by the Bioconductor community.
+If you have any questions about the pre-conference workshop or hackathon,
+do not hesitate to contact the [organizers](organizers.html) at
+[eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org).
