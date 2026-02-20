@@ -6,12 +6,8 @@
 Each event spans two days. Participants should register for **either** the workshop or the hackathon.
 
 Register for  
-- Workshop registration form becomes available shortly  
+- [Workshop](https://www.lyyti.fi/reg/EuroBioC_workshop)  
 - [Hackathon](https://docs.google.com/forms/d/e/1FAIpQLSdQPwHgF7fJwfwkXxKPZeB5W_MjTMQpjLbRZj1ix-bA4vLYOg/viewform?usp=header)
-
-<!--
-- [Workshop](https://portal.lyyti.fi/reg16/?p=choose&uid=1f10ccde-d871-60b2-9c74-47c5a587250c)  
--->
 
 Registration closes on **Sunday, May 3**, or earlier if capacity is reached.
 :::
