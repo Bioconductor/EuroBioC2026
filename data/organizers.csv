@@ -1,29 +1,35 @@
 name,committee,role,order,img_path
-Leo Lahti,Community,Chair,1,Leo Lahti.jpg
-Tuomas Borman,Community,Coordinator,2,Tuomas Borman.jpeg
-Annekathrin Nedwed,Community,General member,NA,Annekathrin Nedwed.png
-Charlotte Soneson,Community,Scientific program,NA,Charlotte Soneson.jpg
-Dania Machlab,Community,Scientific Program,NA,Dania Machlab.jpg
-Dario Righelli,Community,General member,NA,Dario Righelli.jpg
-Eliana Ibrahimi,Community,Scientific program,NA,Eliana Ibrahimi.png
-Federico Marini,Community,General member,NA,Federico Marini.png
-James Dalgleish,Community,"Partnerships, scientific program",NA,James Dalgleish.png
-Kevin Rue-Albrecht,Community,General member,NA,Kevin Rue-Albrecht.jpg
-Laurent Gatto,Community,General member,NA,Laurent Gatto.jpg
-Lieven Clement,Community,General member,NA,Lieven Clement.jpeg
-Maria Doyle,Community,Communications,NA,Maria Doyle.jpeg
-Michael Stadler,Community,Scientific program,NA,Michael Stadler.jpg
-Najla Abassi,Community,Scientific program,NA,Najla Abassi.jpg
-Nyasita Laurah Ondari,Community,Communications,NA,laurah.png
-Robert Castelo,Community,Partnerships,NA,Robert Castelo.jpeg
-Robert Ivánek,Community,General member,NA,Robert Ivanek.jpg
-Nicholas Cooley,Community,Hackathon,NA,Nicholas_Cooley.jpeg
-Michael Love,Community,Scientific program,NA,Michael_Love.jpeg
-Mark Robinson,Community,Scientific program,NA,Mark_Robinson.jpg
-Leo Lahti,Local,Co-chair,2,Leo Lahti.jpg
+Leo Lahti,Organizing committee,Chair,1,Leo Lahti.jpg
+Annekathrin Nedwed,Organizing committee,,NA,Annekathrin Nedwed.png
+Charlotte Soneson,Organizing committee,Scientific program,NA,Charlotte Soneson.jpg
+Dania Machlab,Organizing committee,Scientific Program,NA,Dania Machlab.jpg
+Dario Righelli,Organizing committee,,NA,Dario Righelli.jpg
+Eliana Ibrahimi,Organizing committee,Scientific program,NA,Eliana Ibrahimi.png
+Federico Marini,Organizing committee,,NA,Federico Marini.png
+James Dalgleish,Organizing committee,"Partnerships, scientific program",NA,James Dalgleish.png
+Kevin Rue-Albrecht,Organizing committee,,NA,Kevin Rue-Albrecht.jpg
+Laurent Gatto,Organizing committee,,NA,Laurent Gatto.jpg
+Lieven Clement,Organizing committee,,NA,Lieven Clement.jpeg
+Maria Doyle,Organizing committee,Communications,NA,Maria Doyle.jpeg
+Michael Stadler,Organizing committee,Scientific program,NA,Michael Stadler.jpg
+Najla Abassi,Organizing committee,Scientific program,NA,Najla Abassi.jpg
+Nyasita Laurah Ondari,Organizing committee,Communications,NA,laurah.png
+Robert Castelo,Organizing committee,Partnerships,NA,Robert Castelo.jpeg
+Robert Ivánek,Organizing committee,,NA,Robert Ivanek.jpg
+Nicholas Cooley,Organizing committee,Hackathon,NA,Nicholas_Cooley.jpeg
+Michael Love,Organizing committee,Scientific program,NA,Michael_Love.jpeg
+Mark Robinson,Organizing committee,Scientific program,NA,Mark_Robinson.jpg
 Tuomas Borman,Local,Chair,1,Tuomas Borman.jpeg
 Julia Mathlin,Local,"Partnerships, communications",NA,julia_mathlin.jpeg
 Teemu Daniel Laajala,Local,Partnerships,NA,TDLaajala.jpg
 Anna Kaisanlahti,Local,Partnerships,NA,anna_kaisanlahti.jpg
 Miina Vulli,Local,Partnerships,NA,NA
 Akewak Jeba,Local,Website,NA,Akewak Jeba.jpeg
+Charlotte Soneson,Program committee,Scientific program,NA,Charlotte Soneson.jpg
+Dania Machlab,Program committee,Scientific Program,NA,Dania Machlab.jpg
+Eliana Ibrahimi,Program committee,Scientific program,NA,Eliana Ibrahimi.png
+James Dalgleish,Program committee,"Partnerships, scientific program",NA,James Dalgleish.png
+Michael Stadler,Program committee,Scientific program,NA,Michael Stadler.jpg
+Najla Abassi,Program committee,Scientific program,NA,Najla Abassi.jpg
+Michael Love,Program committee,Scientific program,NA,Michael_Love.jpeg
+Mark Robinson,Program committee,Scientific program,NA,Mark_Robinson.jpg
