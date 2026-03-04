@@ -20,9 +20,9 @@ df$author <- gsub("Contributed\\s*until\\s*the\\s*beginning\\s*of\\s*the\\s*conf
 
 # Day headers (edit dates if needed)
 day_headers <- c(
-    "Day 1 — Wed. Sep 17, 2025",
-    "Day 2 — Thu. Sep 18, 2025",
-    "Day 3 — Fri. Sep 19, 2025"
+    "Day 1 — Wed. Jun 3, 2026",
+    "Day 2 — Thu. Jun 4, 2026",
+    "Day 3 — Fri. Jun 5, 2026"
 )
 
 # ---- Read palette (optional) ----
