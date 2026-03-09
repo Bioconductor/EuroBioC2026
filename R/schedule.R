@@ -2,13 +2,12 @@ library(dplyr)
 library(stringr)
 library(kableExtra)
 
-render_program_schedule <- function(program_csv, full_width = TRUE) {
+render_program_schedule <- function(program_csv = "../data/program.csv", full_width = TRUE) {
 
   # ---- Read + clean program ----
   df <- read.csv(program_csv, stringsAsFactors = FALSE, na.strings = c("", "NA")) |>
     mutate(
-      day        = as.integer(day),
-      start_date = str_trim(coalesce(start_date, "")),
+      date       = as.Date(date),
       time       = str_trim(time),
       type       = str_trim(type),
       author     = str_trim(coalesce(author, "")),
@@ -16,21 +15,14 @@ render_program_schedule <- function(program_csv, full_width = TRUE) {
       info       = str_trim(coalesce(info, "")),
       color      = str_trim(coalesce(color, ""))
     ) |>
-    arrange(day, time)
+    arrange(date, time)
 
-  # Optional: shorten repeated phrasing
-  df$author <- gsub("Contributed\\s*from\\s*submitted\\s*abstracts", "Contributed abstracts", df$author)
-  df$author <- gsub("Contributed\\s*until\\s*the\\s*beginning\\s*of\\s*the\\s*conference", "Contributed pre-conference", df$author)
-
-  # ---- Day headers from CSV ----
-  start_date_str <- df$start_date[which(nzchar(df$start_date))[1]]
-  if (is.na(start_date_str) || !nzchar(start_date_str)) {
-    stop("program_csv must contain a start_date value (YYYY-MM-DD) in at least one row.")
-  }
-  conference_start <- as.Date(start_date_str)
+  # Add day info
+  conference_start <- df$date |> as.Date() |> min()
   if (is.na(conference_start)) {
-    stop("start_date must be in ISO format YYYY-MM-DD, e.g. 2026-06-03.")
+    stop("date must be in ISO format YYYY-MM-DD, e.g. 2026-06-03.")
   }
+  df$day <- (df$date - conference_start)+1
 
   day_headers_df <- df |>
     distinct(day) |>
@@ -82,5 +74,5 @@ render_program_schedule <- function(program_csv, full_width = TRUE) {
     }
   }
 
-  tbl
+  tbl |> cat()
 }

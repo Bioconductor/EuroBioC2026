@@ -9,7 +9,8 @@ create_organizer_table <- function(table.path = file.path("..", "data", "organiz
                                    align = "l") {
 
   organizers <- read.csv(table.path, stringsAsFactors = FALSE)
-  organizers$row_id <- seq_len(nrow(organizers))
+  organizers$name <- organizers$name |> trimws()
+  organizers$name_order <- organizers$name |> rank()
 
   # Ensure expected columns exist (safe defaults)
   if (!"role" %in% names(organizers)) organizers$role <- ""
@@ -18,31 +19,11 @@ create_organizer_table <- function(table.path = file.path("..", "data", "organiz
 
   # Normalize order: if missing/blank, treat as Inf
   organizers <- organizers |>
-    mutate(order = ifelse(is.na(order) | order == "", Inf, suppressWarnings(as.numeric(order))))
+    mutate(order = ifelse(is.na(order) | trimws(order) == "", Inf, suppressWarnings(as.numeric(order))))
 
   # Detect whether committee column has any real information
   has_committee_col  <- "committee" %in% names(organizers)
   has_committee_info <- has_committee_col && any(trimws(organizers$committee) != "" & !is.na(organizers$committee))
-
-  # Determine "local organizer" flag:
-  # Prefer explicit `local` column if present; otherwise infer from committee (when available)
-  if ("local" %in% names(organizers)) {
-    organizers <- organizers |> mutate(.is_local = as.logical(local))
-  } else if (has_committee_col) {
-    organizers <- organizers |> mutate(.is_local = trimws(committee) == "Local")
-  } else {
-    organizers <- organizers |> mutate(.is_local = FALSE)
-  }
-
-  # Apply rule: if local organizer has no role -> "Local organizer"
-  organizers <- organizers |>
-    mutate(
-      role = ifelse(
-        .is_local & (is.na(role) | trimws(role) == ""),
-        "Local organizer",
-        role
-      )
-    )
 
   # Add full image paths (handle missing paths)
   organizers <- organizers |>
@@ -55,7 +36,7 @@ create_organizer_table <- function(table.path = file.path("..", "data", "organiz
   render_one_table <- function(df_comm) {
 
     df_comm <- df_comm |>
-      arrange(order, row_id) |>
+      arrange(order, name_order) |>
       mutate(
         img = ifelse(
           full_img_path != "",
@@ -107,7 +88,7 @@ create_organizer_table <- function(table.path = file.path("..", "data", "organiz
     return(invisible(NULL))
   }
 
-  # Otherwise: committee-separated rendering (your current behavior)
+  # Otherwise: committee-separated rendering
   committees <- unique(organizers$committee)
   committees <- committees[!is.na(committees) & trimws(committees) != ""]
 

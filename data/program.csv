@@ -1,26 +1,26 @@
-start_date,day,time,type,author,title,info,color
-2026-06-03,1,09:00,Opening,Organizing committee,Welcome to EuroBioC,,#F5F5F5
-,1,09:30,Keynote,,,,lavender
-,1,10:00,Short talks,Contributed from submitted abstracts,,,
-,1,10:45,Break,,,,lightyellow
-,1,11:30,Workshops,Contributed from submitted abstracts,,,#F3E5F5
-,1,13:00,Lunch,,,,lightyellow
-,1,14:15,Keynote,,,,lavender
-,1,14:45,Short talks,Contributed from submitted abstracts,,,
-,1,15:45,Poster pitches,Contributed from submitted abstracts,,,#E8F5E9
-,1,16:00,Poster session,Contributed from submitted abstracts,,,#E8F5E9
-,1,19:00,Conference dinner,,,,#E3F2FD
-,2,09:00,Keynote,,,,lavender
-,2,09:30,Short talks,Contributed from submitted abstracts,,,
-,2,10:45,Break,,,,lightyellow
-,2,11:30,Workshops,Contributed from submitted abstracts,,,#F3E5F5
-,2,13:00,Lunch,,,,lightyellow
-,2,14:15,Keynote,,,,lavender
-,2,14:45,Short talks,Contributed from submitted abstracts,,,
-,2,15:45,Poster pitches,Contributed from submitted abstracts,,,#E8F5E9
-,2,16:00,Poster session,Contributed from submitted abstracts,,,#E8F5E9
-,2,19:00,Walking tour,,,,#E3F2FD
-,3,09:00,BoF sessions,Contributed until the beginning of the conference,,,#E0F7FA
-,3,10:30,Break,,,,lightyellow
-,3,11:15,Short talks,Contributed from submitted abstracts,,,
-,3,12:45,Closing,Organizing committee,,,#F5F5F5
+date,time,type,author,title,info,color
+2026-06-03,09:00,Opening,Organizing committee,Welcome to EuroBioC,,#F5F5F5
+2026-06-03,09:30,Keynote,,,,lavender
+2026-06-03,10:00,Short talks,From submitted abstracts,,,
+2026-06-03,10:45,Break,,,,lightyellow
+2026-06-03,11:30,Workshops,From submitted abstracts,,,#F3E5F5
+2026-06-03,13:00,Lunch,,,,lightyellow
+2026-06-03,14:15,Keynote,,,,lavender
+2026-06-03,14:45,Short talks,From submitted abstracts,,,
+2026-06-03,15:45,Poster pitches,From submitted abstracts,,,#E8F5E9
+2026-06-03,16:00,Poster session,From submitted abstracts,,,#E8F5E9
+2026-06-03,19:00,Conference dinner,,,,#E3F2FD
+2026-06-04,09:00,Keynote,,,,lavender
+2026-06-04,09:30,Short talks,From submitted abstracts,,,
+2026-06-04,10:45,Break,,,,lightyellow
+2026-06-04,11:30,Workshops,From submitted abstracts,,,#F3E5F5
+2026-06-04,13:00,Lunch,,,,lightyellow
+2026-06-04,14:15,Keynote,,,,lavender
+2026-06-04,14:45,Short talks,From submitted abstracts,,,
+2026-06-04,15:45,Poster pitches,From submitted abstracts,,,#E8F5E9
+2026-06-04,16:00,Poster session,From submitted abstracts,,,#E8F5E9
+2026-06-04,19:00,Walking tour,,,,#E3F2FD
+2026-06-05,09:00,BoF sessions,,,,#E0F7FA
+2026-06-05,10:30,Break,,,,lightyellow
+2026-06-05,11:15,Short talks,From submitted abstracts,,,
+2026-06-05,12:45,Closing,Organizing committee,,,#F5F5F5

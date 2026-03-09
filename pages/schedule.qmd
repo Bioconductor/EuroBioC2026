@@ -11,8 +11,6 @@ The program below is tentative and may be updated.
 #| echo: false
 #| warning: false
 #| message: false
-
 source("../R/schedule.R")
-
-render_program_schedule("../data/program.csv") |> cat()
+render_program_schedule()
 ```
