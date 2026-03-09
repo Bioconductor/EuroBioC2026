@@ -61,14 +61,10 @@ harmonize_sponsor_logos <- function(input_dir = "images/partners/raw",
     # If magick missing, do nothing (keep original df$image)
     if (!requireNamespace("magick", quietly = TRUE)) {
         warning("Package 'magick' not installed; skipping harmonization.")
-        return(df)
+        return(NULL)
     }
 
-    df2 <- df
-
     for (img in imgs) {
-        in_rel <- df2$image[i]
-
         # filesystem input (prefix applies)
         in_fs <- file.path(input_dir, img)
         out_fs <- file.path(out_dir, img)
@@ -85,8 +81,7 @@ harmonize_sponsor_logos <- function(input_dir = "images/partners/raw",
     return(NULL)
 }
 
-
-# ---- (2) Render grid; optionally harmonize and USE harmonized images --------
+# ---- (2) Render grid --------
 render_sponsor_grid <- function(df,
                                 ncol = 4,
                                 fs_prefix = "",
@@ -101,6 +96,11 @@ render_sponsor_grid <- function(df,
     if (nrow(df) == 0) {
         return(invisible(NULL))
     }
+
+    # Order based on levels
+    df$level <- df$level |>
+      factor(level = c(level_order, unique(df$level)) |> unique())
+    df <- df[order(df$level), , drop = FALSE]
 
     ncol <- min(ncol, nrow(df))
     width <- floor(100 / ncol)
@@ -142,7 +142,6 @@ render_sponsor_grid <- function(df,
     cat(paste(out, collapse = "\n"))
 }
 
-
 render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
     df <- read_sponsors(csv_path)
 
@@ -152,11 +151,11 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
     )
 }
 
+level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter")
 
 render_sponsors_by_level <- function(
   csv_path,
-  level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter"),
-  ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
+  ncol_by_level = c(Diamond = 5, Gold = 5, Silver = 5, Bronze = 5, Supporter = 5),
   heading = c("bold", "h2")
 ) {
     heading <- match.arg(heading)
