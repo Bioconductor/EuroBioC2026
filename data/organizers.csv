@@ -1,29 +1,27 @@
 name,committee,role,order,img_path
-Leo Lahti,Community,Chair,1,Leo Lahti.jpg
-Tuomas Borman,Community,Coordinator,2,Tuomas Borman.jpeg
-Annekathrin Nedwed,Community,General member,NA,Annekathrin Nedwed.png
-Charlotte Soneson,Community,Scientific program,NA,Charlotte Soneson.jpg
-Dania Machlab,Community,Scientific Program,NA,Dania Machlab.jpg
-Dario Righelli,Community,General member,NA,Dario Righelli.jpg
-Eliana Ibrahimi,Community,Scientific program,NA,Eliana Ibrahimi.png
-Federico Marini,Community,General member,NA,Federico Marini.png
-James Dalgleish,Community,"Partnerships, scientific program",NA,James Dalgleish.png
-Kevin Rue-Albrecht,Community,General member,NA,Kevin Rue-Albrecht.jpg
-Laurent Gatto,Community,General member,NA,Laurent Gatto.jpg
-Lieven Clement,Community,General member,NA,Lieven Clement.jpeg
-Maria Doyle,Community,Communications,NA,Maria Doyle.jpeg
-Michael Stadler,Community,Scientific program,NA,Michael Stadler.jpg
-Najla Abassi,Community,Scientific program,NA,Najla Abassi.jpg
-Nyasita Laurah Ondari,Community,Communications,NA,laurah.png
-Robert Castelo,Community,Partnerships,NA,Robert Castelo.jpeg
-Robert Ivánek,Community,General member,NA,Robert Ivanek.jpg
-Nicholas Cooley,Community,Hackathon,NA,Nicholas_Cooley.jpeg
-Michael Love,Community,Scientific program,NA,Michael_Love.jpeg
-Mark Robinson,Community,Scientific program,NA,Mark_Robinson.jpg
-Leo Lahti,Local,Co-chair,2,Leo Lahti.jpg
-Tuomas Borman,Local,Chair,1,Tuomas Borman.jpeg
-Julia Mathlin,Local,"Partnerships, communications",NA,julia_mathlin.jpeg
-Teemu Daniel Laajala,Local,Partnerships,NA,TDLaajala.jpg
-Anna Kaisanlahti,Local,Partnerships,NA,anna_kaisanlahti.jpg
-Miina Vulli,Local,Partnerships,NA,NA
-Akewak Jeba,Local,Website,NA,Akewak Jeba.jpeg
+Leo Lahti,,Chair,1,Leo Lahti.jpg
+Tuomas Borman,,Local chair,2,Tuomas Borman.jpeg
+Annekathrin Nedwed,,,NA,Annekathrin Nedwed.png
+Charlotte Soneson,,Scientific program,NA,Charlotte Soneson.jpg
+Dania Machlab,,,NA,Dania Machlab.jpg
+Dario Righelli,,,NA,Dario Righelli.jpg
+Eliana Ibrahimi,,,NA,Eliana Ibrahimi.png
+Federico Marini,,,NA,Federico Marini.png
+James Dalgleish,,,NA,James Dalgleish.png
+Kevin Rue-Albrecht,,,NA,Kevin Rue-Albrecht.jpg
+Laurent Gatto,,,NA,Laurent Gatto.jpg
+Lieven Clement,,,NA,Lieven Clement.jpeg
+Maria Doyle,,Communications,NA,Maria Doyle.jpeg
+Michael Stadler,,,NA,Michael Stadler.jpg
+Najla Abassi,,,NA,Najla Abassi.jpg
+Nyasita Laurah Ondari,,Communications,NA,laurah.png
+Robert Castelo,,,NA,Robert Castelo.jpeg
+Robert Ivánek,,,NA,Robert Ivanek.jpg
+Nicholas Cooley,,Hackathon,NA,Nicholas_Cooley.jpeg
+Michael Love,,,NA,Michael_Love.jpeg
+Mark Robinson,,,NA,Mark_Robinson.jpg
+Julia Mathlin,,Local organizer,NA,julia_mathlin.jpeg
+Teemu Daniel Laajala,,Local organizer,NA,TDLaajala.jpg
+Anna Kaisanlahti,,Local organizer,NA,anna_kaisanlahti.jpg
+Miina Vulli,,Local organizer,NA,NA
+Akewak Jeba,,Website,NA,Akewak Jeba.jpeg

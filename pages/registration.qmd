@@ -1,16 +1,21 @@
 # Registration
 
 ::: {.callout-tip icon=false}
-## **Registration is open**
 
-Secure your place by registering [here](https://www.lyyti.fi/reg/EuroBioC2026).
+## Registration is open
+
+Secure your place:
+
+<a class="btn btn-success rounded-pill" href="https://www.lyyti.fi/reg/EuroBioC2026">
+Register
+</a>
 
 Registration closes on **Sunday, May 3**, or earlier if all places are filled.
 :::
 
 ::: {.callout-note}
 For information on workshop and hackathon organized before the main conference,
-see page on [pre-conference events](pre-conference.qmd).
+see page on **[pre-conference events](pre-conference.qmd)**.
 :::
 
 ## Fees
