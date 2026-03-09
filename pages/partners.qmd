@@ -10,7 +10,6 @@ source("../R/sponsors.R")
 
 render_sponsors_by_level(
     "../data/sponsors.csv",
-    ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
     heading = "h2"
 )
 ```

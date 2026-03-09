@@ -99,7 +99,7 @@ render_sponsor_grid <- function(df,
 
     # Order based on levels
     df$level <- df$level |>
-      factor(level = c(c("Diamond", "Gold", "Silver", "Bronze"), unique(df$level)) |> unique())
+      factor(level = c(level_order, unique(df$level)) |> unique())
     df <- df[order(df$level), , drop = FALSE]
 
     ncol <- min(ncol, nrow(df))
@@ -151,10 +151,11 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
     )
 }
 
+level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter")
+
 render_sponsors_by_level <- function(
   csv_path,
-  level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter"),
-  ncol_by_level = c(Diamond = 2, Gold = 3, Silver = 5, Bronze = 6, Supporter = 6),
+  ncol_by_level = c(Diamond = 5, Gold = 5, Silver = 5, Bronze = 5, Supporter = 5),
   heading = c("bold", "h2")
 ) {
     heading <- match.arg(heading)
