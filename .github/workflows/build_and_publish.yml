@@ -58,8 +58,9 @@ jobs:
         run: |
           Rscript -e "install.packages('remotes')"
           Rscript -e "install.packages('devtools')"
-          Rscript -e "devtools::install_deps(dependencies = TRUE)"
-
+          Rscript -e "Sys.setenv(GITHUB_PAT = Sys.getenv('GITHUB_TOKEN')); devtools::install_deps(dependencies = TRUE)"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Build the Quarto project into HTML
       - name: Render site
         run: quarto render
