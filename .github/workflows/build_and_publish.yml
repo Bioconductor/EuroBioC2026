@@ -56,6 +56,7 @@ jobs:
       # Install all R dependencies defined in DESCRIPTION file
       - name: Install dependencies
         run: |
+          Rscript -e "install.packages('remotes')"
           Rscript -e "install.packages('devtools')"
           Rscript -e "devtools::install_deps(dependencies = TRUE)"
 
