@@ -8,5 +8,4 @@ Imports:
     knitr,
     leaflet,
     leaflet.extras,
-    readr,
-    remotes
+    readr
