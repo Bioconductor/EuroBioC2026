@@ -9,3 +9,5 @@ Imports:
     leaflet,
     leaflet.extras,
     readr
+Remotes:
+    github::trafficonese/leaflet.extras
