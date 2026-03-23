@@ -14,8 +14,8 @@ Registration closes on **Sunday, May 3**, or earlier if all places are filled.
 :::
 
 ::: {.callout-note}
-For information on workshop and hackathon organized before the main conference,
-see page on **[pre-conference events](pre-conference.qmd)**.
+For information on workshop and hackathon organized on June 1-2, just before the main conference,
+see page on **[pre-conference events](pre-conference.qmd)**. A separate registration is required.
 :::
 
 ## Fees

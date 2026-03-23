@@ -62,7 +62,7 @@ using freely available resources.
 
 **Prerequisites:** Familiarity with R and Bioconductor
 
-**Instructors:** Leo Lahti, Himel Mallick and Tuomas Borman
+**Instructors:** Leo Lahti, Himel Mallick and Tuomas Borman, Thomaz Bastiaanssen, Anna Kaisanlahti, Giulio Benedetti
 
 #### What is a Bioconductor Carpentry Workshop
 
