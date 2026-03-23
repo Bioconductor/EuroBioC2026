@@ -48,9 +48,6 @@ impacting computational biology.
 - ~~**November 24**: Call for abstracts opens~~
 - ~~**January 30**: Call for abstracts closes~~
 - ~~**January 31**: Sticker design contest closes~~
-<!--
-- <span class="deadline"><strong>February 13:</strong> Call for abstracts closes (final extended deadline)</span>
--->
 - ~~**February 13**: Call for abstracts closes (final extended deadline)~~
 - **February 20**: Registration opens
 - <span class="deadline"><strong>May 3:</strong> Registration closes</span>
