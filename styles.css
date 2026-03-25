@@ -76,18 +76,32 @@ img.speaker {
   object-fit: cover;
 }
 
-.sponsor-link { display: block; text-align: center; }
-
-.sponsor-logo{
-  display:block;
-  margin:0 auto;
-  max-height:200px;
-  width:auto;
-  height:auto;
-
-  max-width:100%;
+.sponsor-card {
+  margin-bottom: 1.2rem;
 }
 
+.sponsor-link {
+  display: block;
+  text-align: center;
+}
+
+.sponsor-logo-wrap {
+  width: 100%;
+  height: 180px;   /* fixed display area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.sponsor-logo {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
 
 .sponsor-name {
   margin-top: 0.6rem;

@@ -162,7 +162,7 @@ render_sponsors_by_level <- function(
 
     df <- read_sponsors(csv_path)
     if (!("level" %in% names(df))) stop("CSV must include a 'level' column.")
-
+    df <- df[!is.na(df$level) & trimws(df$level) != "", , drop = FALSE] # remove rows where level is NA or empty
     # Get directory where the CSV lives
     csv_dir <- dirname(csv_path)
     if (grepl("../", csv_dir)) {
