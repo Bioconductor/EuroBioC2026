@@ -24,7 +24,7 @@ toc: false
 
 ::: {.column width="43%"}
 ::: {.img-float}
-![](images/logos/bioconductor_sticker.gif){style="width: 25%; float: left; margin: 5px;"}
+![](images/logos/EuroBioC2026_sticker.png){style="width: 25%; float: left; margin: 5px;"}
 :::
 \
 The European Bioconductor Conference (EuroBioC2026) will take place on the

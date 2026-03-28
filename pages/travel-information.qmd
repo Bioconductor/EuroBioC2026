@@ -195,9 +195,12 @@ booking code by phone or email to the hotel using the contact details above.
 Please note that the reservations in Original Sokos Hotel Kupittaa must be made
 by 20 May 2026 or based on availability.
 
-::: callout-note
-See also the price of the day. It might be more affordable depending on how
-early you are reserving the room.
+::: {.callout-caution icon=false}
+## Availability notice (updated 26 March 2026)
+
+Availability is very limited for Tuesday night and rooms may no longer be
+available. From Wednesday to Friday, availability is better and rooms should
+still be obtainable.
 :::
 
 ### Other accommodation options
@@ -210,7 +213,7 @@ and other similar options are available.
 
 Below are listed some of them.
 
-- [Bore](https://cloud.hotellinx.com/NetReservationsBore/Home/Availability){target="_blank"}
+- [Bore](https://cloud.hotellinx.com/NetReservationsBore/Home/Availability){target="_blank"}  
   Hostel in a 1960s cruise ship. In a harbour, so little bit more far away
   (the venue can be reached in 35 minutes by bus). Unique and affordable option,
   own cabin and breakfast included.
@@ -236,9 +239,12 @@ Below are listed some of them.
 - [Scandic Plaza](https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=629){target="_blank"}  
   Hotel
 
+- [Sokos Hotel Seurahuone](https://www.sokoshotels.fi/en/hotels/turku/solo-sokos-hotel-turun-seurahuone){target="_blank"}  
+  Another partner hotel offering rooms at a reduced rate. Please see the registration email for the booking code, or contact us by email to request it.
+
 - [Sokos Hotel Wiklund](https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund){target="_blank"}  
   Hotel
-
+  
 ## Tips about Turku
 
 See tips about Turku on the [About Turku](about-turku.qmd) page.

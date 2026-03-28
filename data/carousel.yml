@@ -1,8 +1,8 @@
-- image: "images/carousel/posankka.jpg"
-  link: "https://en.wikipedia.org/wiki/Posankka"
-
 - image: "images/carousel/tuomiokirkko-kesa-2023-1.jpg"
   link: "https://en.wikipedia.org/wiki/Turku_Cathedral"
+
+- image: "images/carousel/posankka.jpg"
+  link: "https://en.wikipedia.org/wiki/Posankka"
 
 - image: "images/carousel/Föri_NETTIKOKO.jpg"
   link: "https://en.wikipedia.org/wiki/F%C3%B6ri"
