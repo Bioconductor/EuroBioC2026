@@ -13,12 +13,11 @@
 - **April 7**: Late-breaking poster abstract submission opens
 - **April 30**: Late-breaking poster abstract submission closes
 
-<!--
-[Submit your abstract here!](https://openreview.net/group?id=bioconductor.org/EuroBioC/2026/Conference){target="_blank"}
--->
+[Submit your abstract here!](https://forms.gle/rPQjjxF8KB2fPmBp7){target="_blank"}
 
 :::
 
+<!--
 ::: callout-important
 
 The submission system requires all submitters to create an account.
@@ -36,6 +35,7 @@ If you encounter any issues, please contact us at
 [eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org)
 
 :::
+-->
 
 ## Submission types
 
