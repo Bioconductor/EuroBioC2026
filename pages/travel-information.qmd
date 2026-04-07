@@ -203,20 +203,6 @@ available. From Wednesday to Friday, availability is better and rooms should
 still be obtainable.
 :::
 
-## Solo Sokos Hotel Turun Seurahuone
-
-**Humalistonkatu 2, 20100 Turku**  
-**+358 10 786 4000**  
-**[seurahuone.turku@sokoshotels.fi](mailto:seurahuone.turku@sokoshotels.fi)**  
-**[Hotel website](https://www.sokoshotels.fi/hotellit/turku/solo-sokos-hotel-turun-seurahuone)**
-
-**Solo Sokos Hotel Turun Seurahuone** is an elegant and lively boutique hotel located in the heart of Turku, just a few blocks from the Turku Market Square.
-
-### Rates
-
-- Solo, single room: **155 EUR / night**  
-- Solo, double room: **175 EUR / night**
-
 ### Reservations
 
 Reservations can be made using the booking code (**code will be sent by email for registered participants**) on the website, or by phone or email using the contact details above.
@@ -264,7 +250,12 @@ Below are listed some of them.
   Hotel
 
 - [Sokos Hotel Seurahuone](https://www.sokoshotels.fi/en/hotels/turku/solo-sokos-hotel-turun-seurahuone){target="_blank"}  
-  Another partner hotel offering rooms at a reduced rate. Please see the registration email for the booking code, or contact us by email to request it.
+  An elegant and lively boutique hotel located in the heart of Turku, just a few
+  blocks from the Turku Market Square. Special rates are available for
+  participants. Reservations can be made using the booking code (included in the
+  registration confirmation or available on request).
+
+  Rates: 155 EUR / night (single), 175 EUR / night (double)  
 
 - [Sokos Hotel Wiklund](https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund){target="_blank"}  
   Hotel
