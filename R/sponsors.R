@@ -1,4 +1,4 @@
-read_sponsors <- function(csv_path) {
+read_sponsors <- function(csv_path = "data/sponsors.csv") {
     read.csv(csv_path, stringsAsFactors = FALSE)
 }
 
@@ -41,6 +41,17 @@ harmonize_logo <- function(input_fs,
         stop("Package 'magick' is required for harmonization. Install with install.packages('magick').")
     }
 
+    if(scale_by_level) {
+        sponsor_df <- read_sponsors()
+        matched <- basename(sponsor_df$image) %in%  basename(input_fs)
+        if( any(matched) ){
+          level <- sponsor_df[matched, "level"][[1L]]
+          scaling_factor <- level_scale[[level]]
+          canvas_w <- scaling_factor * canvas_w
+          canvas_h <- scaling_factor * canvas_h
+        }
+    }
+
     img <- magick::image_read(input_fs)
 
     # Base target area inside canvas
@@ -75,36 +86,7 @@ harmonize_logo <- function(input_fs,
 }
 
 # ---- (1) Harmonize all sponsors in a df and return new image paths ----------
-# harmonize_sponsor_logos <- function(input_dir = "images/partners/raw",
-#                                     fs_prefix = "",
-#                                     out_dir = "images/partners",
-#                                     canvas_w = 800,
-#                                     canvas_h = 240,
-#                                     padding = 24) {
-#     imgs <- list.files(input_dir)
-#
-#     # If magick missing, do nothing (keep original df$image)
-#     if (!requireNamespace("magick", quietly = TRUE)) {
-#         warning("Package 'magick' not installed; skipping harmonization.")
-#         return(NULL)
-#     }
-#
-#     for (img in imgs) {
-#         # filesystem input (prefix applies)
-#         in_fs <- file.path(input_dir, img)
-#         out_fs <- file.path(out_dir, img)
-#
-#         harmonize_logo(
-#             input_fs  = in_fs,
-#             output_fs = out_fs,
-#             canvas_w  = canvas_w,
-#             canvas_h  = canvas_h,
-#             padding   = padding
-#         )
-#     }
-#
-#     return(NULL)
-# }
+
 
 harmonize_sponsor_logos <- function(csv_path,
                                     input_dir = "images/partners/raw",
@@ -221,6 +203,7 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
 }
 
 level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter")
+level_scale = c("Diamond" = 2, "Gold" = 1.5, "Silver" = 1, "Bronze" = 1, "Supporter" = 0.5)
 
 render_sponsors_by_level <- function(
   csv_path,
