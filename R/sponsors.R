@@ -1,4 +1,4 @@
-read_sponsors <- function(csv_path) {
+read_sponsors <- function(csv_path = "data/sponsors.csv") {
     read.csv(csv_path, stringsAsFactors = FALSE)
 }
 
@@ -24,9 +24,21 @@ harmonize_logo <- function(input_fs,
                            output_fs,
                            canvas_w = 800,
                            canvas_h = 240,
-                           padding = 24) {
+                           padding = 24,
+                           scale_by_level = TRUE) {
     if (!requireNamespace("magick", quietly = TRUE)) {
         stop("Package 'magick' is required for harmonization. Install with install.packages('magick').")
+    }
+
+    if(scale_by_level) {
+        sponsor_df <- read_sponsors()
+        matched <- basename(sponsor_df$image) %in%  basename(input_fs)
+        if( any(matched) ){
+          level <- sponsor_df[matched, "level"][[1L]]
+          scaling_factor <- level_scale[[level]]
+          canvas_w <- scaling_factor * canvas_w
+          canvas_h <- scaling_factor * canvas_h
+        }
     }
 
     img <- magick::image_read(input_fs)
@@ -152,6 +164,7 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
 }
 
 level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter")
+level_scale = c("Diamond" = 2, "Gold" = 1.5, "Silver" = 1, "Bronze" = 1, "Supporter" = 0.5)
 
 render_sponsors_by_level <- function(
   csv_path,
