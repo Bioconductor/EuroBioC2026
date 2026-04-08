@@ -203,6 +203,16 @@ available. From Wednesday to Friday, availability is better and rooms should
 still be obtainable.
 :::
 
+### Reservations
+
+Reservations can be made using the booking code (**code will be sent by email for registered participants**) on the website, or by phone or email using the contact details above.
+
+::: {.callout-caution icon=false}
+## Notice (updated April 7, 2026)
+
+Please note that reservations must be made by **2 May 2026**.
+:::
+
 ### Other accommodation options
 
 In city centre, there are many other accommodation options. City centre is about
@@ -240,7 +250,12 @@ Below are listed some of them.
   Hotel
 
 - [Sokos Hotel Seurahuone](https://www.sokoshotels.fi/en/hotels/turku/solo-sokos-hotel-turun-seurahuone){target="_blank"}  
-  Another partner hotel offering rooms at a reduced rate. Please see the registration email for the booking code, or contact us by email to request it.
+  An elegant and lively boutique hotel located in the heart of Turku, just a few
+  blocks from the Turku Market Square. Special rates are available for
+  participants. Reservations can be made using the booking code (included in the
+  registration confirmation or available on request).
+
+  Rates: 155 EUR / night (single), 175 EUR / night (double)  
 
 - [Sokos Hotel Wiklund](https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund){target="_blank"}  
   Hotel

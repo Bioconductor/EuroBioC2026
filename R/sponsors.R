@@ -1,4 +1,4 @@
-read_sponsors <- function(csv_path) {
+read_sponsors <- function(csv_path = "data/sponsors.csv") {
     read.csv(csv_path, stringsAsFactors = FALSE)
 }
 
@@ -18,24 +18,37 @@ url_join <- function(prefix, path) {
     paste0(prefix, "/", path)
 }
 
-
 # ---- (1) Harmonize one logo into a fixed canvas and save it
 harmonize_logo <- function(input_fs,
                            output_fs,
                            canvas_w = 800,
                            canvas_h = 240,
-                           padding = 24) {
+                           padding = 24,
+                           scale_factor = 1) {
     if (!requireNamespace("magick", quietly = TRUE)) {
         stop("Package 'magick' is required for harmonization. Install with install.packages('magick').")
     }
 
     img <- magick::image_read(input_fs)
 
+    # Base target area inside canvas
+    base_target_w <- max(1, canvas_w - 2 * padding)
+    base_target_h <- max(1, canvas_h - 2 * padding)
+
     # Scale logo to fit inside (canvas - padding) while preserving aspect ratio
-    target_w <- max(1, canvas_w - 2 * padding)
-    target_h <- max(1, canvas_h - 2 * padding)
+    target_w <- max(1, round(base_target_w * scale_factor))
+    target_h <- max(1, round(base_target_h * scale_factor))
 
     img2 <- magick::image_resize(img, geometry = paste0(target_w, "x", target_h, ">"))
+
+    # Do not allow image to overflow canvas completely
+    img_info <- magick::image_info(img2)
+    if (img_info$width > canvas_w || img_info$height > canvas_h) {
+      img2 <- magick::image_resize(
+        img2,
+        geometry = paste0(canvas_w, "x", canvas_h, ">")
+      )
+    }
 
     # Create transparent canvas and center the resized logo
     canvas <- magick::image_blank(width = canvas_w, height = canvas_h, color = "none")
@@ -50,35 +63,50 @@ harmonize_logo <- function(input_fs,
 }
 
 # ---- (1) Harmonize all sponsors in a df and return new image paths ----------
-harmonize_sponsor_logos <- function(input_dir = "images/partners/raw",
-                                    fs_prefix = "",
+
+
+harmonize_sponsor_logos <- function(csv_path = "data/sponsors.csv",
+                                    input_dir = "images/partners/raw",
                                     out_dir = "images/partners",
                                     canvas_w = 800,
                                     canvas_h = 240,
                                     padding = 24) {
-    imgs <- list.files(input_dir)
-
-    # If magick missing, do nothing (keep original df$image)
-    if (!requireNamespace("magick", quietly = TRUE)) {
-        warning("Package 'magick' not installed; skipping harmonization.")
-        return(NULL)
-    }
-
-    for (img in imgs) {
-        # filesystem input (prefix applies)
-        in_fs <- file.path(input_dir, img)
-        out_fs <- file.path(out_dir, img)
-
-        harmonize_logo(
-            input_fs  = in_fs,
-            output_fs = out_fs,
-            canvas_w  = canvas_w,
-            canvas_h  = canvas_h,
-            padding   = padding
-        )
-    }
-
+  if (!requireNamespace("magick", quietly = TRUE)) {
+    warning("Package 'magick' not installed; skipping harmonization.")
     return(NULL)
+  }
+
+  df <- read_sponsors(csv_path)
+
+  required_cols <- c("image", "level")
+  missing_cols <- setdiff(required_cols, names(df))
+  if (length(missing_cols) > 0) {
+    stop("CSV must include columns: ", paste(missing_cols, collapse = ", "))
+  }
+
+  for (i in seq_len(nrow(df))) {
+    img_name <- df$image[i]
+    lvl <- df$level[i]
+
+    in_fs <- file.path(input_dir, basename(img_name))
+    out_fs <- file.path(out_dir, basename(img_name))
+
+    if (!file.exists(in_fs)) {
+      warning("Missing input logo: ", in_fs)
+      next
+    }
+
+    harmonize_logo(
+      input_fs = in_fs,
+      output_fs = out_fs,
+      canvas_w = canvas_w,
+      canvas_h = canvas_h,
+      padding = padding,
+      scale_factor = level_scale[lvl]
+    )
+  }
+
+  invisible(NULL)
 }
 
 # ---- (2) Render grid --------
@@ -152,6 +180,7 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
 }
 
 level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter")
+level_scale = c("Diamond" = 2, "Gold" = 1.5, "Silver" = 1, "Bronze" = 1, "Supporter" = 0.5)
 
 render_sponsors_by_level <- function(
   csv_path,
@@ -162,7 +191,7 @@ render_sponsors_by_level <- function(
 
     df <- read_sponsors(csv_path)
     if (!("level" %in% names(df))) stop("CSV must include a 'level' column.")
-
+    df <- df[!is.na(df$level) & trimws(df$level) != "", , drop = FALSE] # remove rows where level is NA or empty
     # Get directory where the CSV lives
     csv_dir <- dirname(csv_path)
     if (grepl("../", csv_dir)) {
