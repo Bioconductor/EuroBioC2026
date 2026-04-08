@@ -2,14 +2,14 @@
 
 ## Call for abstracts
 
-::: {.callout-important icon=false}
-## **Abstract call closed**
+::: {.callout-tip icon=false}
+## **Abstract call open**
 
 **Important dates**
 
-- **November 24**: Call for abstracts opens
+- ~~**November 24**: Call for abstracts opens~~
 - ~~**January 30**: Call for abstracts closes~~
-- **February 13**: Call for abstracts closes (final extended deadline)
+- ~~**February 13**: Call for abstracts closes (final extended deadline)~~
 - **April 8**: Late-breaking poster abstract submission opens
 - **April 30**: Late-breaking poster abstract submission closes
 

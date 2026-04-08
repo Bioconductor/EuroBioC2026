@@ -18,18 +18,6 @@ url_join <- function(prefix, path) {
     paste0(prefix, "/", path)
 }
 
-# helper for level-based scale
-get_level_scale <- function(level) {
-  level <- trimws(as.character(level))
-  if (identical(level, "Diamond")) {
-    2.0
-  } else if (identical(level, "Gold")) {
-    1.5
-  } else {
-    1.0
-  }
-}
-
 # ---- (1) Harmonize one logo into a fixed canvas and save it
 harmonize_logo <- function(input_fs,
                            output_fs,
@@ -39,17 +27,6 @@ harmonize_logo <- function(input_fs,
                            scale_factor = 1) {
     if (!requireNamespace("magick", quietly = TRUE)) {
         stop("Package 'magick' is required for harmonization. Install with install.packages('magick').")
-    }
-
-    if(scale_by_level) {
-        sponsor_df <- read_sponsors()
-        matched <- basename(sponsor_df$image) %in%  basename(input_fs)
-        if( any(matched) ){
-          level <- sponsor_df[matched, "level"][[1L]]
-          scaling_factor <- level_scale[[level]]
-          canvas_w <- scaling_factor * canvas_w
-          canvas_h <- scaling_factor * canvas_h
-        }
     }
 
     img <- magick::image_read(input_fs)
@@ -88,7 +65,7 @@ harmonize_logo <- function(input_fs,
 # ---- (1) Harmonize all sponsors in a df and return new image paths ----------
 
 
-harmonize_sponsor_logos <- function(csv_path,
+harmonize_sponsor_logos <- function(csv_path = "data/sponsors.csv",
                                     input_dir = "images/partners/raw",
                                     out_dir = "images/partners",
                                     canvas_w = 800,
@@ -125,7 +102,7 @@ harmonize_sponsor_logos <- function(csv_path,
       canvas_w = canvas_w,
       canvas_h = canvas_h,
       padding = padding,
-      scale_factor = get_level_scale(lvl)
+      scale_factor = level_scale[lvl]
     )
   }
 
