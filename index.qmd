@@ -50,7 +50,7 @@ impacting computational biology.
 - ~~**January 31**: Sticker design contest closes~~
 - ~~**February 13**: Call for abstracts closes (final extended deadline)~~
 - **February 20**: Registration opens
-- <span class="deadline"><strong>April 7:</strong> Call for late-breaking poster abstract opens</span>
+- <span class="deadline"><strong>April 8:</strong> Call for late-breaking poster abstract opens</span>
 - <span class="deadline"><strong>April 30:</strong> Call for late-breaking poster abstract closes</span>
 - <span class="deadline"><strong>May 3:</strong> Registration closes</span>
 - **June 1-2**: Workshop and hackathon
