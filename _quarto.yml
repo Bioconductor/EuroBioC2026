@@ -23,12 +23,12 @@ website:
       - text: About
         menu:
           - href: pages/travel-information.qmd
+          - href: pages/conference-dinner.qmd
           - href: pages/about-turku.qmd
           - href: pages/organizers.qmd
           - href: pages/sticker-contest.qmd
           - href: pages/past-events.qmd
           - href: pages/code-of-conduct.qmd
-          #- href: pages/conference-dinner.qmd
   page-footer:
     left: |
       [![](/images/logos/utu.png){width=25%}](https://www.utu.fi/en){target="_blank"}
