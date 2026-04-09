@@ -1,0 +1,97 @@
+# Conference dinner
+
+## Experience Finnish midsummer
+
+The conference dinner takes place on a beautiful island of
+[Ruissalo](https://en.wikipedia.org/wiki/Ruissalo) on Wednesday
+3rd of June. Ruissalo is a popular recreational area in Turku, and the first
+island Turku Achipelago&mdash;the largest archipelago in the world!
+The venue&mdash;Villa Marjaniemi&mdash;is a 150-year-old villa that has hosted
+many celebrations over the years.
+
+The evening is inspired by Juhannus, an important Finnish summer tradition when
+people gather to celebrate nature and the summer. The program includes dinner,
+optional sauna, and informal outdoor activities.
+
+**Wednesday, June 3**
+
+- **18:00** – Buses depart from the conference venue  
+- **19:00** – Dinner  
+- **20:30** – Sauna, networking, and outdoor games  
+- **23:00** – Buses return  
+
+## What to expect
+
+- Dinner with Finnish cuisine
+- Opportunity to join a sauna
+- Informal networking
+- Light outdoor activities
+
+Participation in sauna and activities is optional.
+
+## Dress code
+
+No dress code. If you want to go to sauna,
+**please take your swimwear with you.**
+
+## Location
+
+The dinner will be held in Villa Marjaniemi in Ruissalo island. See the exact
+location below.
+
+:::: {.columns .v-center-container}
+::: {.column width="4%"}
+:::
+
+::: {.column width="40%"}
+
+**Villa Marjaniemi**  
+Marjaniementie 50
+20100 Turku  
+(see [directions](https://osm.org/go/0bv1lOhjA-?way=94003085){target="_blank"})  
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="40%"}
+[![](../images/conference_dinner/marjaniemi.jpg){width="90%"}](https://www.villamarjaniemi.fi/en-gb/home){target="_blank"}
+:::
+
+::: {.column width="4%"}
+:::
+
+::::
+
+```{r}
+#| label: map
+#| echo: false
+#| message: false
+#| warning: false
+
+source(file.path("..", "R", "create_a_map.R"))
+create_a_map(show_attractions = FALSE, show_transport = FALSE, show_accommodation = FALSE)
+```
+
+## How to get there
+
+### Organized transport
+
+Buses are arranged for all registered participants. They depart from the
+conference venue at 18:00, and the journey takes about 20 minutes. Return buses
+leave the dinner venue at 23:00.
+
+### Other options
+
+The distance between the conference venue and the dinner venue is approximately
+7 km. The venue is easily reachable by public transport, with frequent bus
+connections from the city center to Ruissalo. You can also consider taking a
+taxi or perhaps using a rental bike.
+
+See the [travel information](travel-information.qmd#local-transportation) page for more details on local transportation.
+
+## Questions?
+
+Do not hesitate to contact the [organizers](organizers.html) at
+[eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org) if you have
+any questions or concerns.
