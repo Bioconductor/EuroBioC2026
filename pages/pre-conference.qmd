@@ -111,8 +111,9 @@ will be the goal otherwise.
 
 ## Venue and requirements
 
-Both pre-conference events will take place at the **EuroBioC2026 venue**.  
-Participants are expected to bring a laptop. The rooms will provide:  
+Both pre-conference events will take place at the **EuroBioC2026 venue**
+(see the [travel information](travel-information.qmd#conference-venue) page).  
+Participants are expected to bring a laptop. The rooms will provide:
 
 * Electrical outlets for laptops  
 * Wireless internet (Eduroam WiFi available)
