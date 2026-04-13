@@ -5,7 +5,7 @@ project:
 
 website:
   title: "EuroBioC2026"
-  favicon: images/logos/bioconductor_note.png
+  favicon: images/logos/EuroBioC2026_sticker.png
   navbar:
     toggle-position: right
     logo: images/logos/bioconductor.svg
