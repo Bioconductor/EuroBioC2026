@@ -4,8 +4,8 @@
 
 The European Bioconductor Conference 2026 will be held in **Turku, Finland**.
 
-The venue is **[BioCity Turku](https://biocityturku.fi/){target="_blank"}**
-(Tykistökatu 6, Turku).
+The venue is the **[BioCity Turku building](https://biocityturku.fi/){target="_blank"}**
+(address: Tykistökatu 6, Turku).
 
 ```{r}
 #| label: map
