@@ -5,7 +5,7 @@ project:
 
 website:
   title: "EuroBioC2026"
-  favicon: images/logos/bioconductor_note.png
+  favicon: images/logos/EuroBioC2026_sticker.png
   navbar:
     toggle-position: right
     logo: images/logos/bioconductor.svg
@@ -18,12 +18,12 @@ website:
       - href: pages/submissions.qmd
       - href: pages/registration.qmd
       - href: pages/pre-conference.qmd
+      - href: pages/conference-dinner.qmd
       #- href: pages/sticker-contest.qmd
       - href: pages/partners.qmd
       - text: About
         menu:
           - href: pages/travel-information.qmd
-          - href: pages/conference-dinner.qmd
           - href: pages/about-turku.qmd
           - href: pages/organizers.qmd
           - href: pages/sticker-contest.qmd

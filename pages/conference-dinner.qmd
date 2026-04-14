@@ -1,5 +1,9 @@
 # Conference dinner
 
+::: {.callout-note}
+Registration for the conference dinner is done through the conference registration form. The dinner costs €10. See **[registration](registration.qmd)** for details.
+:::
+
 ## Experience Finnish midsummer
 
 The conference dinner takes place on a beautiful island of
