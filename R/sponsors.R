@@ -180,7 +180,7 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
 }
 
 level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter")
-level_scale = c("Diamond" = 2, "Gold" = 1.5, "Silver" = 1, "Bronze" = 1, "Supporter" = 0.5)
+level_scale = c("Diamond" = 2, "Gold" = 1.5, "Silver" = 1, "Bronze" = 1, "Supporter" = 1)
 
 render_sponsors_by_level <- function(
   csv_path,
