@@ -131,7 +131,7 @@ render_sponsor_grid <- function(df,
     df <- df[order(df$level), , drop = FALSE]
 
     ncol <- min(ncol, nrow(df))
-    width <- floor(100/2)
+    width <- floor(100/3)
 
     out <- character()
 
