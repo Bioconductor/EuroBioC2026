@@ -89,7 +89,7 @@ leave the dinner venue at 23:00.
 
 The distance between the conference venue and the dinner venue is approximately
 7 km. The venue is easily reachable by public transport, with frequent bus
-connections from the city center to Ruissalo. You can also consider taking a
+connections (and a water bus) from the city center to Ruissalo. You can also consider taking a
 taxi or perhaps using a rental bike.
 
 See the [travel information](travel-information.qmd#local-transportation) page for more details on local transportation.
