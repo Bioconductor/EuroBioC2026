@@ -5,12 +5,14 @@
 The program below is tentative and may be updated.
 :::
 
-
 ```{r}
 #| results: asis
 #| echo: false
 #| warning: false
 #| message: false
 source("../R/schedule.R")
-render_program_schedule()
+render_program_schedule(
+  program_csv = "../data/program.csv",
+  sessions_csv = "../data/sessions.csv"
+)
 ```
