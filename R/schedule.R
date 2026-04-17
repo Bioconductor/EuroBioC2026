@@ -3,16 +3,77 @@ library(stringr)
 library(kableExtra)
 library(htmltools)
 
+# =========================================================
+# Helpers
+# =========================================================
+
+fill_presenter <- function(df) {
+  df |>
+    mutate(
+      presenter = if_else(
+        str_trim(coalesce(presenter, "")) == "",
+        str_trim(vapply(
+          strsplit(coalesce(authors, ""), ","),
+          function(x) if (length(x) > 0) x[1] else "",
+          character(1)
+        )),
+        str_trim(coalesce(presenter, ""))
+      )
+    )
+}
+
+normalize_type <- function(x) {
+  case_when(
+    tolower(x) %in% c("keynote", "keynotes") ~ "Keynote",
+    tolower(x) %in% c("short talk", "short talks") ~ "Short talks",
+    tolower(x) %in% c("flash talk", "flash talks") ~ "Flash talks",
+    tolower(x) %in% c("workshop", "workshops") ~ "Workshops",
+    tolower(x) %in% c("bof", "bof session", "bof sessions") ~ "BoF sessions",
+    tolower(x) %in% c("poster pitch", "poster pitches") ~ "Poster pitches",
+    tolower(x) %in% c("poster", "posters", "poster session") ~ "Poster session",
+    TRUE ~ tools::toTitleCase(x)
+  )
+}
+
+make_collapsible_title <- function(title, authors = "", abstract = "") {
+  title_esc <- htmlEscape(coalesce(title, ""))
+  authors_esc <- htmlEscape(coalesce(authors, ""))
+  abstract_esc <- htmlEscape(coalesce(abstract, ""))
+
+  if (isTRUE(abstract == "") || is.na(abstract)) {
+    return(title_esc)
+  }
+
+  paste0(
+    "<details class='schedule-details'>",
+    "<summary>",
+    title_esc,
+    "</summary>",
+    "<div class='schedule-details-body'>",
+    if (!isTRUE(authors == "") && !is.na(authors)) {
+      paste0("<div class='schedule-details-authors'>Author(s): ", authors_esc, "</div>")
+    } else "",
+    "<div>", abstract_esc, "</div>",
+    "</div>",
+    "</details>"
+  )
+}
+
+parse_hm <- function(x) {
+  x <- str_trim(coalesce(x, ""))
+  out <- suppressWarnings(as.POSIXct(x, format = "%H:%M", tz = "UTC"))
+  as.numeric(format(out, "%H")) * 60 + as.numeric(format(out, "%M"))
+}
+
+# =========================================================
+# 1) Old/simple schedule from program.csv only
+# =========================================================
 render_program_schedule <- function(
     program_csv = "../data/program.csv",
-    sessions_csv = "../data/sessions.csv",
     full_width = TRUE
 ) {
 
-  # -----------------------------
-  # Read program.csv
-  # -----------------------------
-  program <- read.csv(
+  df <- read.csv(
     program_csv,
     stringsAsFactors = FALSE,
     na.strings = c("", "NA")
@@ -28,27 +89,175 @@ render_program_schedule <- function(
     ) |>
     arrange(date, time)
 
-  conference_start <- min(program$date, na.rm = TRUE)
+  conference_start <- min(df$date, na.rm = TRUE)
 
   if (is.na(conference_start)) {
     stop("date must be in ISO format YYYY-MM-DD, e.g. 2026-06-03.")
   }
 
-  program <- program |>
-    mutate(day_num = as.integer(date - conference_start) + 1)
+  df <- df |>
+    mutate(day = as.integer(date - conference_start) + 1)
 
-  day_headers_df <- program |>
-    distinct(day_num, date) |>
-    arrange(day_num) |>
+  day_headers_df <- df |>
+    distinct(day, date) |>
+    arrange(day, date) |>
     mutate(
       header = format(date, "%a. - %b. %d, '%y")
     )
 
   day_headers <- day_headers_df$header
-  names(day_headers) <- as.character(day_headers_df$day_num)
+  names(day_headers) <- as.character(day_headers_df$day)
+
+  df_out <- df |>
+    select(time, type, author, title)
+
+  idx_by_day <- split(seq_len(nrow(df_out)), df$day)
+
+  tbl <- kbl(
+    df_out,
+    escape = TRUE,
+    row.names = FALSE,
+    col.names = c("TIME", "TYPE", "AUTHOR", "TITLE")
+  ) |>
+    kable_material(full_width = full_width) |>
+    column_spec(1, width = "12%") |>
+    column_spec(2, width = "18%") |>
+    column_spec(3, width = "28%") |>
+    column_spec(4, width = "42%")
+
+  for (i in seq_len(nrow(df))) {
+    bg <- df$color[i]
+    if (!is.na(bg) && nzchar(bg)) {
+      tbl <- tbl |> row_spec(i, background = bg)
+    }
+  }
+
+  for (key in names(day_headers)) {
+    rows_this_day <- idx_by_day[[key]]
+    if (!is.null(rows_this_day) && length(rows_this_day) > 0) {
+      tbl <- tbl |>
+        pack_rows(day_headers[[key]], min(rows_this_day), max(rows_this_day))
+    }
+  }
+
+  tbl |> cat()
+}
+
+# =========================================================
+# Posters section appended after the combined schedule
+# Day order comes from program.csv
+# Author names are alphabetical within each day
+# =========================================================
+render_posters_section <- function(
+    sessions,
+    day_header_map,
+    full_width = TRUE
+) {
+  posters <- sessions |>
+    filter(type_norm %in% c("Poster", "Poster session"))
+
+  if (nrow(posters) == 0) {
+    return(invisible(NULL))
+  }
+
+  # Keep day order from program.csv, not alphabetical day order
+  day_levels <- names(day_header_map)
+
+  posters <- posters |>
+    mutate(day = factor(day, levels = day_levels)) |>
+    arrange(day, presenter, title)
+
+  cat("<h2 style='margin-top: 2.5em; margin-bottom: 0.4em;'>POSTERS</h2>\n")
+  cat("<hr style='margin-top: 0; margin-bottom: 1.2em;'>\n")
+  cat("<p>(In alphabetical order.)</p>\n")
+
+  for (d in day_levels) {
+    day_df <- posters |>
+      filter(as.character(day) == d) |>
+      arrange(presenter, title)
+
+    if (nrow(day_df) == 0) next
+
+    day_df <- day_df |>
+      mutate(idx = seq_len(n()))
+
+    heading <- day_header_map[[d]]
+    if (is.null(heading) || is.na(heading) || heading == "") {
+      heading <- d
+    }
+
+    cat(
+      paste0(
+        "<h3 style='margin-top: 1.2em; margin-bottom: 0.5em;'>",
+        htmlEscape(heading),
+        "</h3>\n"
+      )
+    )
+
+    out <- day_df |>
+      mutate(
+        Author = paste0(idx, " ", htmlEscape(presenter)),
+        Title = mapply(
+          make_collapsible_title,
+          title,
+          authors,
+          abstract,
+          USE.NAMES = FALSE
+        )
+      ) |>
+      select(Author, Title)
+
+    tbl_posters <- kbl(
+      out,
+      escape = FALSE,
+      row.names = FALSE,
+      col.names = c("# AUTHOR", "TITLE")
+    ) |>
+      kable_material(full_width = full_width) |>
+      column_spec(1, width = "28%") |>
+      column_spec(2, width = "72%")
+
+    tbl_posters |> cat()
+  }
+}
+
+# =========================================================
+# 2) Detailed/combined schedule from program.csv + sessions.csv
+# =========================================================
+render_detailed_program <- function(
+    program_csv = "../data/program.csv",
+    sessions_csv = "../data/sessions.csv",
+    full_width = TRUE
+) {
 
   # -----------------------------
-  # Read sessions.csv
+  # Read overview program
+  # -----------------------------
+  program <- read.csv(
+    program_csv,
+    stringsAsFactors = FALSE,
+    na.strings = c("", "NA")
+  ) |>
+    mutate(
+      date      = as.Date(date),
+      time      = str_trim(coalesce(time, "")),
+      type      = str_trim(coalesce(type, "")),
+      author    = str_trim(coalesce(author, "")),
+      title     = str_trim(coalesce(title, "")),
+      info      = str_trim(coalesce(info, "")),
+      color     = str_trim(coalesce(color, "")),
+      time_min  = parse_hm(time),
+      type_norm = normalize_type(type)
+    ) |>
+    arrange(date, time_min)
+
+  conference_start <- min(program$date, na.rm = TRUE)
+  if (is.na(conference_start)) {
+    stop("program.csv needs valid ISO dates.")
+  }
+
+  # -----------------------------
+  # Read sessions
   # -----------------------------
   sessions <- read.csv(
     sessions_csv,
@@ -57,77 +266,73 @@ render_program_schedule <- function(
   ) |>
     mutate(
       day       = str_trim(coalesce(day, "")),
+      time      = str_trim(coalesce(time, "")),
       type      = str_trim(coalesce(type, "")),
       title     = str_trim(coalesce(title, "")),
       authors   = str_trim(coalesce(authors, "")),
       presenter = str_trim(coalesce(presenter, "")),
-      abstract  = str_trim(coalesce(abstract, ""))
-    )
+      abstract  = str_trim(coalesce(abstract, "")),
+      time_min  = parse_hm(time),
+      type_norm = normalize_type(type)
+    ) |>
+    fill_presenter()
 
-  # Fill missing presenter from first author
-  sessions <- sessions |>
-    mutate(
-      presenter = if_else(
-        presenter == "",
-        str_trim(vapply(
-          strsplit(authors, ","),
-          function(x) if (length(x) > 0) x[1] else "",
-          character(1)
-        )),
-        presenter
-      )
-    )
+  # -----------------------------
+  # Map session day names to real dates from program.csv
+  # The order follows sessions day appearance, but poster headings
+  # will later follow program.csv day order through day_header_map.
+  # -----------------------------
+  session_day_levels <- sessions |>
+    filter(day != "") |>
+    distinct(day) |>
+    pull(day) |>
+    unique()
 
-  # Map short day names to actual dates
-  day_map <- c(
-    "Wed" = as.character(conference_start),
-    "Thu" = as.character(conference_start + 1),
-    "Fri" = as.character(conference_start + 2)
+  day_date_map <- tibble(
+    day = session_day_levels,
+    date = conference_start + seq_along(session_day_levels) - 1
   )
 
   sessions <- sessions |>
+    left_join(day_date_map, by = "day")
+
+  # -----------------------------
+  # Build formatted day headers from program.csv
+  # -----------------------------
+  program <- program |>
+    mutate(day_num = as.integer(date - conference_start) + 1)
+
+  day_headers_df <- program |>
+    distinct(day_num, date) |>
+    arrange(day_num, date) |>
     mutate(
-      date = as.Date(unname(day_map[day])),
-      type_norm = case_when(
-        tolower(type) %in% c("short talk", "short talks") ~ "Short talks",
-        tolower(type) %in% c("workshop", "workshops") ~ "Workshops",
-        tolower(type) %in% c("flash talk", "flash talks") ~ "Flash talks",
-        tolower(type) %in% c("poster", "poster pitch", "poster pitches", "poster session") ~ "Poster session",
-        tolower(type) %in% c("bof", "bof session", "bof sessions") ~ "BoF sessions",
-        tolower(type) == "keynote" ~ "Keynote",
-        TRUE ~ tools::toTitleCase(type)
-      )
+      header = format(date, "%a. - %b. %d, '%y")
     )
 
-  # -----------------------------
-  # Collapsible title HTML
-  # -----------------------------
-  make_collapsible_title <- function(title, authors, abstract) {
-    title_esc <- htmlEscape(title)
-    authors_esc <- htmlEscape(authors)
-    abstract_esc <- htmlEscape(abstract)
+  day_headers <- day_headers_df$header
+  names(day_headers) <- as.character(day_headers_df$day_num)
 
-    if (abstract == "") {
-      return(title_esc)
-    }
-
-    paste0(
-      "<details class='schedule-details'>",
-      "<summary>",
-      title_esc,
-      "</summary>",
-      "<div class='schedule-details-body'>",
-      if (authors != "") {
-        paste0("<div class='schedule-details-authors'>Author(s): ", authors_esc, "</div>")
-      } else "",
-      "<div>", abstract_esc, "</div>",
-      "</div>",
-      "</details>"
-    )
-  }
+  # day_header_map uses program order for headings,
+  # mapped onto session day labels in their appearance order
+  day_header_map <- setNames(
+    day_headers_df$header[seq_len(min(length(session_day_levels), nrow(day_headers_df)))],
+    session_day_levels[seq_len(min(length(session_day_levels), nrow(day_headers_df)))]
+  )
 
   # -----------------------------
-  # Build one combined table
+  # Compute the end time of each program block
+  # -----------------------------
+  program <- program |>
+    group_by(date) |>
+    arrange(time_min, .by_group = TRUE) |>
+    mutate(
+      next_time_min = lead(time_min),
+      block_end_min = if_else(is.na(next_time_min), 24 * 60, next_time_min)
+    ) |>
+    ungroup()
+
+  # -----------------------------
+  # Build combined schedule rows
   # -----------------------------
   out_rows <- list()
   out_bg <- character()
@@ -143,10 +348,12 @@ render_program_schedule <- function(
     out_bg[length(out_bg) + 1] <<- bg
   }
 
+  row_counts_per_program <- integer(nrow(program))
+
   for (i in seq_len(nrow(program))) {
     pr <- program[i, ]
 
-    # Main schedule row
+    # parent program row
     add_row(
       time = pr$time,
       type = pr$type,
@@ -155,50 +362,58 @@ render_program_schedule <- function(
       bg = pr$color
     )
 
-    # Matching detailed rows from sessions.csv
-    matching_sessions <- sessions |>
-      filter(date == pr$date, type_norm == pr$type)
+    expandable_types <- c(
+      "Short talks",
+      "Flash talks",
+      "Workshops",
+      "BoF sessions",
+      "Poster pitches",
+      "Poster session"
+    )
 
-    if (nrow(matching_sessions) > 0) {
-      matching_sessions <- matching_sessions |>
-        arrange(presenter, title)
+    attached_n <- 0L
 
-      for (j in seq_len(nrow(matching_sessions))) {
-        ss <- matching_sessions[j, ]
+    if (pr$type_norm %in% expandable_types) {
+      ss <- sessions |>
+        filter(
+          date == pr$date,
+          type_norm == pr$type_norm,
+          time_min >= pr$time_min,
+          time_min < pr$block_end_min
+        ) |>
+        arrange(time_min, presenter, title)
 
-        add_row(
-          time = "",
-          type = "",
-          author = htmlEscape(ss$presenter),
-          title = make_collapsible_title(ss$title, ss$authors, ss$abstract),
-          bg = pr$color
-        )
+      if (nrow(ss) > 0) {
+        for (j in seq_len(nrow(ss))) {
+          s <- ss[j, ]
+
+          add_row(
+            time = "",
+            type = "",
+            author = htmlEscape(s$presenter),
+            title = make_collapsible_title(s$title, s$authors, s$abstract),
+            bg = pr$color
+          )
+        }
+        attached_n <- nrow(ss)
       }
     }
+
+    row_counts_per_program[i] <- 1 + attached_n
   }
 
   df_out <- bind_rows(out_rows)
 
   # -----------------------------
-  # Group row indices by day
+  # Group rows by day
   # -----------------------------
-  row_counts_per_program_row <- integer(nrow(program))
-
-  for (i in seq_len(nrow(program))) {
-    pr <- program[i, ]
-    n_details <- sessions |>
-      filter(date == pr$date, type_norm == pr$type) |>
-      nrow()
-    row_counts_per_program_row[i] <- 1 + n_details
-  }
-
   idx_by_day <- split(
     seq_len(nrow(df_out)),
-    rep(program$day_num, times = row_counts_per_program_row)
+    rep(program$day_num, times = row_counts_per_program)
   )
 
   # -----------------------------
-  # Render table
+  # Render the combined table
   # -----------------------------
   tbl <- kbl(
     df_out,
@@ -212,25 +427,29 @@ render_program_schedule <- function(
     column_spec(3, width = "26%") |>
     column_spec(4, width = "44%")
 
-  # Apply row backgrounds only to main program rows
   for (i in seq_len(nrow(df_out))) {
-    if (!is.na(out_bg[i]) && nzchar(out_bg[i])) {
-      tbl <- tbl |> row_spec(i, background = out_bg[i])
+    bg <- out_bg[i]
+    if (!is.na(bg) && nzchar(bg)) {
+      tbl <- tbl |> row_spec(i, background = bg)
     }
   }
 
-  # Group rows by day
   for (key in names(day_headers)) {
     rows_this_day <- idx_by_day[[key]]
     if (!is.null(rows_this_day) && length(rows_this_day) > 0) {
       tbl <- tbl |>
-        pack_rows(
-          day_headers[[key]],
-          min(rows_this_day),
-          max(rows_this_day)
-        )
+        pack_rows(day_headers[[key]], min(rows_this_day), max(rows_this_day))
     }
   }
 
   tbl |> cat()
+
+  # -----------------------------
+  # Render posters after the main schedule
+  # -----------------------------
+  render_posters_section(
+    sessions = sessions,
+    day_header_map = day_header_map,
+    full_width = full_width
+  )
 }
