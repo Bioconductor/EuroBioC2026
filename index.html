@@ -184,7 +184,79 @@ The European Bioconductor Conference (EuroBioC2026) will take place on the <stro
 </div><div class="column" style="width:43%;">
 <div style="text-align:center;">
 <p><br>
-<strong>Important dates</strong></p>
+</p>
+<div id="countdown-1776414493" class="countdown-box">
+<div class="countdown-label">
+Conference starts in
+</div>
+<div class="countdown-time">
+Loading…
+</div>
+</div>
+<style>
+  .countdown-box {
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+    padding: 18px 12px;
+    margin: 18px 0;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+
+  .countdown-label {
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .countdown-time {
+    font-size: 1.9em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #2c3e50;
+  }
+
+  .countdown-done {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const targetDate = new Date("2026-06-01T09:00:00").getTime();
+  const el = document.querySelector("#countdown-1776414493 .countdown-time");
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (!el) return;
+
+    if (diff <= 0) {
+      el.className = "countdown-done";
+      el.innerHTML = "The conference has started 🎉";
+      clearInterval(timer);
+      return;
+    }
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((diff / (1000 * 60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
+
+    el.innerHTML = d + "d " + h + "h " + m + "m " + s + "s";
+  }
+
+  updateCountdown();
+  const timer = setInterval(updateCountdown, 1000);
+
+});
+</script>
+<p><strong>Important dates</strong></p>
 </div>
 <ul>
 <li><del><strong>November 24</strong>: Call for abstracts opens</del></li>
