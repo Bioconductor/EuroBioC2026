@@ -145,8 +145,8 @@ render_program_schedule <- function(
 
 # =========================================================
 # Posters section appended after the combined schedule
-# Day order comes from program.csv
-# Author names are alphabetical within each day
+# If poster day is missing, render one single table without day title
+# If poster day exists, use program order and alphabetical author order
 # =========================================================
 render_posters_section <- function(
     sessions,
@@ -160,41 +160,25 @@ render_posters_section <- function(
     return(invisible(NULL))
   }
 
-  # Keep day order from program.csv, not alphabetical day order
-  day_levels <- names(day_header_map)
-
-  posters <- posters |>
-    mutate(day = factor(day, levels = day_levels)) |>
-    arrange(day, presenter, title)
-
   cat("<h2 style='margin-top: 2.5em; margin-bottom: 0.4em;'>POSTERS</h2>\n")
   cat("<hr style='margin-top: 0; margin-bottom: 1.2em;'>\n")
   cat("<p>(In alphabetical order.)</p>\n")
 
-  for (d in day_levels) {
-    day_df <- posters |>
-      filter(as.character(day) == d) |>
-      arrange(presenter, title)
+  posters_with_day <- posters |>
+    filter(!is.na(day) & str_trim(day) != "")
 
-    if (nrow(day_df) == 0) next
+  posters_without_day <- posters |>
+    filter(is.na(day) | str_trim(day) == "")
 
-    day_df <- day_df |>
+  # -------------------------
+  # Undated posters: one single table, no day title
+  # -------------------------
+  if (nrow(posters_without_day) > 0) {
+    undated_df <- posters_without_day |>
+      arrange(presenter, title) |>
       mutate(idx = seq_len(n()))
 
-    heading <- day_header_map[[d]]
-    if (is.null(heading) || is.na(heading) || heading == "") {
-      heading <- d
-    }
-
-    cat(
-      paste0(
-        "<h3 style='margin-top: 1.2em; margin-bottom: 0.5em;'>",
-        htmlEscape(heading),
-        "</h3>\n"
-      )
-    )
-
-    out <- day_df |>
+    out <- undated_df |>
       mutate(
         Author = paste0(idx, " ", htmlEscape(presenter)),
         Title = mapply(
@@ -218,6 +202,66 @@ render_posters_section <- function(
       column_spec(2, width = "72%")
 
     tbl_posters |> cat()
+  }
+
+  # -------------------------
+  # Dated posters: grouped by day in program order
+  # -------------------------
+  if (nrow(posters_with_day) > 0) {
+    day_levels <- names(day_header_map)
+
+    posters_with_day <- posters_with_day |>
+      mutate(day = factor(day, levels = day_levels)) |>
+      arrange(day, presenter, title)
+
+    for (d in day_levels) {
+      day_df <- posters_with_day |>
+        filter(as.character(day) == d) |>
+        arrange(presenter, title)
+
+      if (nrow(day_df) == 0) next
+
+      day_df <- day_df |>
+        mutate(idx = seq_len(n()))
+
+      heading <- day_header_map[[d]]
+      if (is.null(heading) || is.na(heading) || heading == "") {
+        heading <- d
+      }
+
+      cat(
+        paste0(
+          "<h3 style='margin-top: 1.2em; margin-bottom: 0.5em;'>",
+          htmlEscape(heading),
+          "</h3>\n"
+        )
+      )
+
+      out <- day_df |>
+        mutate(
+          Author = paste0(idx, " ", htmlEscape(presenter)),
+          Title = mapply(
+            make_collapsible_title,
+            title,
+            authors,
+            abstract,
+            USE.NAMES = FALSE
+          )
+        ) |>
+        select(Author, Title)
+
+      tbl_posters <- kbl(
+        out,
+        escape = FALSE,
+        row.names = FALSE,
+        col.names = c("# AUTHOR", "TITLE")
+      ) |>
+        kable_material(full_width = full_width) |>
+        column_spec(1, width = "28%") |>
+        column_spec(2, width = "72%")
+
+      tbl_posters |> cat()
+    }
   }
 }
 
@@ -279,8 +323,7 @@ render_detailed_program <- function(
 
   # -----------------------------
   # Map session day names to real dates from program.csv
-  # The order follows sessions day appearance, but poster headings
-  # will later follow program.csv day order through day_header_map.
+  # Posters without day stay NA and will be handled separately
   # -----------------------------
   session_day_levels <- sessions |>
     filter(day != "") |>
@@ -312,8 +355,6 @@ render_detailed_program <- function(
   day_headers <- day_headers_df$header
   names(day_headers) <- as.character(day_headers_df$day_num)
 
-  # day_header_map uses program order for headings,
-  # mapped onto session day labels in their appearance order
   day_header_map <- setNames(
     day_headers_df$header[seq_len(min(length(session_day_levels), nrow(day_headers_df)))],
     session_day_levels[seq_len(min(length(session_day_levels), nrow(day_headers_df)))]
@@ -353,7 +394,6 @@ render_detailed_program <- function(
   for (i in seq_len(nrow(program))) {
     pr <- program[i, ]
 
-    # parent program row
     add_row(
       time = pr$time,
       type = pr$type,
@@ -376,6 +416,7 @@ render_detailed_program <- function(
     if (pr$type_norm %in% expandable_types) {
       ss <- sessions |>
         filter(
+          !is.na(date),
           date == pr$date,
           type_norm == pr$type_norm,
           time_min >= pr$time_min,
