@@ -42,6 +42,17 @@ impacting computational biology.
 ::: {.column width="43%"}
 ::: {style="text-align:center;"}
 \
+
+```{r}
+#| label: timer
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+source("R/timer.R")
+countdown_timer("2026-06-01 09:00:00")
+```
+
 **Important dates**
 :::
 
