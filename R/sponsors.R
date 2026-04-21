@@ -131,7 +131,7 @@ render_sponsor_grid <- function(df,
     df <- df[order(df$level), , drop = FALSE]
 
     ncol <- min(ncol, nrow(df))
-    width <- floor(100 / ncol)
+    width <- floor(100/3)
 
     out <- character()
 
@@ -180,7 +180,7 @@ render_sponsors_home <- function(csv_path, title = "", ncol = 4) {
 }
 
 level_order = c("Diamond", "Gold", "Silver", "Bronze", "Supporter")
-level_scale = c("Diamond" = 2, "Gold" = 1.5, "Silver" = 1, "Bronze" = 1, "Supporter" = 0.5)
+level_scale = c("Diamond" = 2, "Gold" = 1.5, "Silver" = 1, "Bronze" = 1, "Supporter" = 1)
 
 render_sponsors_by_level <- function(
   csv_path,
