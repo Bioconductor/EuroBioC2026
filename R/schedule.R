@@ -59,10 +59,31 @@ make_collapsible_title <- function(title, authors = "", abstract = "") {
   )
 }
 
+# Robust time parser: handles 9:40 and 09:40
 parse_hm <- function(x) {
   x <- str_trim(coalesce(x, ""))
-  out <- suppressWarnings(as.POSIXct(x, format = "%H:%M", tz = "UTC"))
-  as.numeric(format(out, "%H")) * 60 + as.numeric(format(out, "%M"))
+  x[x == ""] <- NA_character_
+
+  parts <- strsplit(x, ":", fixed = TRUE)
+
+  out <- vapply(parts, function(p) {
+    if (length(p) < 2) return(NA_real_)
+    h <- suppressWarnings(as.numeric(p[1]))
+    m <- suppressWarnings(as.numeric(p[2]))
+    if (is.na(h) || is.na(m)) return(NA_real_)
+    h * 60 + m
+  }, numeric(1))
+
+  out
+}
+
+# Normalize session day labels like Wed / Wednesday / Wed.
+normalize_day_label <- function(x) {
+  x |>
+    str_trim() |>
+    str_to_lower() |>
+    str_replace_all("\\.", "") |>
+    substr(1, 3)
 }
 
 # =========================================================
@@ -87,7 +108,7 @@ render_program_schedule <- function(
       info   = str_trim(coalesce(info, "")),
       color  = str_trim(coalesce(color, ""))
     ) |>
-    arrange(date, time)
+    arrange(date, parse_hm(time))
 
   conference_start <- min(df$date, na.rm = TRUE)
 
@@ -145,8 +166,9 @@ render_program_schedule <- function(
 
 # =========================================================
 # Posters section appended after the combined schedule
-# If poster day is missing, render one single table without day title
-# If poster day exists, use program order and alphabetical author order
+# If poster day is missing, render one single table, no day title
+# If poster day exists, use program day order
+# Author names alphabetical within each day
 # =========================================================
 render_posters_section <- function(
     sessions,
@@ -170,9 +192,7 @@ render_posters_section <- function(
   posters_without_day <- posters |>
     filter(is.na(day) | str_trim(day) == "")
 
-  # -------------------------
-  # Undated posters: one single table, no day title
-  # -------------------------
+  # Undated posters: one single table
   if (nrow(posters_without_day) > 0) {
     undated_df <- posters_without_day |>
       arrange(presenter, title) |>
@@ -204,9 +224,7 @@ render_posters_section <- function(
     tbl_posters |> cat()
   }
 
-  # -------------------------
   # Dated posters: grouped by day in program order
-  # -------------------------
   if (nrow(posters_with_day) > 0) {
     day_levels <- names(day_header_map)
 
@@ -322,22 +340,23 @@ render_detailed_program <- function(
     fill_presenter()
 
   # -----------------------------
-  # Map session day names to real dates from program.csv
-  # Posters without day stay NA and will be handled separately
+  # Map sessions day names to actual program dates by weekday
+  # This avoids wrong placement when sessions.csv is mixed
   # -----------------------------
-  session_day_levels <- sessions |>
-    filter(day != "") |>
-    distinct(day) |>
-    pull(day) |>
-    unique()
-
-  day_date_map <- tibble(
-    day = session_day_levels,
-    date = conference_start + seq_along(session_day_levels) - 1
-  )
+  program_day_lookup <- program |>
+    distinct(date) |>
+    arrange(date) |>
+    mutate(
+      day_key = normalize_day_label(format(date, "%a"))
+    )
 
   sessions <- sessions |>
-    left_join(day_date_map, by = "day")
+    mutate(day_key = if_else(day == "", NA_character_, normalize_day_label(day))) |>
+    left_join(
+      program_day_lookup |>
+        select(day_key, date),
+      by = "day_key"
+    )
 
   # -----------------------------
   # Build formatted day headers from program.csv
@@ -349,16 +368,25 @@ render_detailed_program <- function(
     distinct(day_num, date) |>
     arrange(day_num, date) |>
     mutate(
-      header = format(date, "%a. - %b. %d, '%y")
+      header = format(date, "%a. - %b. %d, '%y"),
+      day_key = normalize_day_label(format(date, "%a"))
     )
 
   day_headers <- day_headers_df$header
   names(day_headers) <- as.character(day_headers_df$day_num)
 
-  day_header_map <- setNames(
-    day_headers_df$header[seq_len(min(length(session_day_levels), nrow(day_headers_df)))],
-    session_day_levels[seq_len(min(length(session_day_levels), nrow(day_headers_df)))]
-  )
+  # Map raw session day labels to formatted day headers from program.csv
+  sessions_day_header_map <- sessions |>
+    filter(!is.na(day), str_trim(day) != "", !is.na(date)) |>
+    distinct(day, day_key) |>
+    left_join(
+      day_headers_df |>
+        select(day_key, header),
+      by = "day_key"
+    ) |>
+    filter(!is.na(header))
+
+  day_header_map <- setNames(sessions_day_header_map$header, sessions_day_header_map$day)
 
   # -----------------------------
   # Compute the end time of each program block
