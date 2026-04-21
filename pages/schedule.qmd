@@ -1,10 +1,5 @@
 # Schedule
 
-::: {.callout-note icon=false}
-## Note!
-The program below is tentative and may be updated.
-:::
-
 
 ```{r}
 #| results: asis
@@ -12,5 +7,8 @@ The program below is tentative and may be updated.
 #| warning: false
 #| message: false
 source("../R/schedule.R")
-render_program_schedule()
+render_detailed_program(
+  program_csv = "../data/program.csv",
+  sessions_csv = "../data/sessions.csv"
+)
 ```

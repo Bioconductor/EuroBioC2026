@@ -1,32 +1,32 @@
 date,time,type,author,title,info,color
-2026-06-03,09:00,Opening,Organizing committee,Welcome to EuroBioC,,#ECEFF1
-2026-06-03,09:30,Keynote,,,,#D1C4E9
-2026-06-03,10:00,Short talks,From submitted abstracts,,,#FFF9C4
-2026-06-03,10:35,Break,,,,
-2026-06-03,11:00,Short talks,From submitted abstracts,,,#FFF9C4
-2026-06-03,12:15,Lunch,,,,
-2026-06-03,13:30,Workshops,From submitted abstracts,,,#F3E5F5
-2026-06-03,15:00,Break,,,,
-2026-06-03,15:15,Poster pitches,From submitted abstracts,,,#E8F5E9
-2026-06-03,16:00,Poster session,From submitted abstracts,,,#E8F5E9
-2026-06-03,18:00,Conference dinner,,,,#E3F2FD
-2026-06-04,09:00,Keynote,,,,#D1C4E9
-2026-06-04,09:30,Short talks,From submitted abstracts,,,#FFF9C4
-2026-06-04,10:35,Break,,,,
-2026-06-04,11:00,Keynote,,,,#D1C4E9
-2026-06-03,11:30,Short talks,From submitted abstracts,,,#FFF9C4
-2026-06-04,12:15,Lunch,,,,
-2026-06-04,13:30,Workshops,From submitted abstracts,,,#F3E5F5
-2026-06-04,15:00,Break,,,,
-2026-06-04,15:15,Short talks,From submitted abstracts,,,#FFF9C4
-2026-06-04,15:45,Poster pitches,From submitted abstracts,,,#E8F5E9
-2026-06-04,16:30,Poster session,From submitted abstracts,,,#E8F5E9
-2026-06-04,19:00,Walking tour,,,,#E3F2FD
-2026-06-05,09:00,Keynote,,,,#D1C4E9
-2026-06-05,09:30,Short talks,From submitted abstracts,,,#FFF9C4
-2026-06-05,09:55,Flash talks,,,,#FFE082
-2026-06-05,10:35,Break,,,,
-2026-06-05,11:00,BoF sessions,,,,#E0F7FA
-2026-06-05,12:30,Break,,,,
-2026-06-05,12:45,Closing,Organizing committee,,,#ECEFF1
-2026-06-05,13:00,Lunch,,,,
+2026-06-03,09:00,Opening,Organizing committee,Welcome to EuroBioC,,
+2026-06-03,09:30,Keynote,Helena Kilpinen,,,#E3F2FD
+2026-06-03,10:00,Short talks,,,,
+2026-06-03,10:35,Break,,,,#FFF9C4
+2026-06-03,11:00,Short talks,,,,
+2026-06-03,12:15,Lunch,,,,#FFF9C4
+2026-06-03,13:30,Workshops,,,,
+2026-06-03,15:00,Break,,,,#FFF9C4
+2026-06-03,15:15,Poster pitches,,,,
+2026-06-03,16:00,Poster session,,,,
+2026-06-03,18:00,Conference dinner,,,,
+2026-06-04,09:00,Keynote,Anders Krogh,,,#E3F2FD
+2026-06-04,09:30,Short talks,,,,
+2026-06-04,10:35,Break,,,,#FFF9C4
+2026-06-04,11:00,Keynote,Aura Raulo,,,#E3F2FD
+2026-06-04,11:30,Short talks,,,,
+2026-06-04,12:15,Lunch,,,,#FFF9C4
+2026-06-04,13:30,Workshops,,,,
+2026-06-04,15:00,Break,,,,#FFF9C4
+2026-06-04,15:15,Short talks,,,,
+2026-06-04,15:45,Poster pitches,,,,
+2026-06-04,16:30,Poster session,,,,
+2026-06-04,19:00,Walking tour,,,,
+2026-06-05,09:00,Keynote,Levi Waldron,,,#E3F2FD
+2026-06-05,09:30,Short talks,,,,
+2026-06-05,09:55,Flash talks,,,,
+2026-06-05,10:35,Break,,,,#FFF9C4
+2026-06-05,11:00,BoF sessions,,,,
+2026-06-05,12:30,Break,,,,#FFF9C4
+2026-06-05,12:45,Closing,Organizing committee,,,
+2026-06-05,13:00,Lunch,,,,#FFF9C4
