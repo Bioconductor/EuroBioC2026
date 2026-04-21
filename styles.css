@@ -96,3 +96,42 @@ img.speaker {
   line-height: 1.25;
 }
 
+details.schedule-details {
+  margin: 0;
+}
+
+details.schedule-details summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.45;
+
+  display: block;              /* IMPORTANT */
+  position: relative;          /* for absolute arrow */
+  padding-right: 1.8rem;       /* space for arrow */
+}
+
+details.schedule-details summary::-webkit-details-marker {
+  display: none;
+}
+
+details.schedule-details summary::marker {
+  content: "";
+}
+
+/* RIGHT-ALIGNED CHEVRON */
+details.schedule-details summary::after {
+  content: "›";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3em;
+  color: #8a8a8a;
+}
+
+/* OPEN STATE */
+details.schedule-details[open] summary::after {
+  content: "⌄";
+}
