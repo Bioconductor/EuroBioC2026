@@ -75,6 +75,22 @@ countdown_timer("2026-06-01 09:00:00")
 
 ::::
 
+::: {.workshop-hero}
+
+::: {.workshop-hero-text}
+### 🧬 Microbiome Workshop (June 1–2)
+
+**Orchestrating Microbiome Analysis with Bioconductor**
+
+Hands-on Bioconductor Carpentries training covering microbiome workflows,
+diversity analysis, differential abundance, and multi-omics integration.
+
+[Learn more →](/pages/pre-conference.html#orchestrating-microbiome-analysis-with-bioconductor){.btn .btn-success .rounded-pill}
+:::
+
+
+:::
+
 ```{r}
 #| label: carousel
 #| classes: '.g-col-lg-6 .g-col-12 .g-col-md-12'

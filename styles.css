@@ -135,3 +135,69 @@ details.schedule-details summary::after {
 details.schedule-details[open] summary::after {
   content: "⌄";
 }
+
+.instructor-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;   /* crops instead of stretching */
+  border-radius: 50%;  /* optional: makes them circular */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.workshop-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 3rem auto 2.5rem auto;
+  padding: 2rem 2.4rem;
+  border-radius: 24px;
+  border: 1px solid rgba(76, 175, 80, 0.25);
+  background:
+    radial-gradient(circle at 92% 20%, rgba(76, 175, 80, 0.18), transparent 26%),
+    linear-gradient(135deg, #ffffff 0%, #f4fbf6 55%, #eaf7ef 100%);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+}
+
+.workshop-hero::before {
+  content: "Featured pre-conference event";
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(76, 175, 80, 0.12);
+  color: #1b5e20;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workshop-hero h3 {
+  margin: 0 0 0.4rem 0;
+  color: #1b5e20;
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.workshop-hero strong {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+.workshop-hero p {
+  max-width: 980px;
+  color: #4f565c;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.workshop-hero .btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 8px 18px rgba(76, 175, 80, 0.28);
+}
