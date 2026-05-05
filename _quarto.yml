@@ -5,7 +5,11 @@ project:
 
 website:
   title: "EuroBioC2026"
+  open-graph: true
   favicon: images/logos/EuroBioC2026_sticker.png
+  image: images/logos/EuroBioC2026_sticker.png
+  site-url: https://eurobioc2026.bioconductor.org/
+  description: "EuroBioC2026 conference website"
   navbar:
     toggle-position: right
     logo: images/logos/bioconductor.svg
