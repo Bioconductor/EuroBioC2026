@@ -62,8 +62,10 @@ countdown_timer("2026-06-01 09:00:00")
 - ~~**February 13**: Call for abstracts closes (final extended deadline)~~
 - **February 20**: Registration opens
 - **April 8**: Call for late-breaking poster abstract opens
-- <span class="deadline"><strong>May 3:</strong> Call for late-breaking poster abstract closes</span>
-- <span class="deadline"><strong>May 3:</strong> Registration closes</span>
+- ~~**May 3**: Call for late-breaking poster abstract closes~~
+- ~~**May 3**: Registration closes~~
+- <span class="deadline"><strong>May 18:</strong> Call for late-breaking poster abstract closes (final extended deadline)</span>
+- <span class="deadline"><strong>May 18:</strong> Registration closes (final extended deadline)</span>
 - **June 1-2**: Workshop and hackathon
 - **June 3-5**: The EuroBioC2026 conference!
 
