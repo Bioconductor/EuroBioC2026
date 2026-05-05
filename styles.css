@@ -153,6 +153,16 @@ details.schedule-details[open] summary::after {
   margin: 0 auto;
 }
 
+.instructor-card h3 {
+  font-size: 1rem;
+  margin: 0.25rem 0 0.3rem 0;
+
+  /* key fixes */
+  line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 .instructor-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
