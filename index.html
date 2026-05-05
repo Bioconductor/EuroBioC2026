@@ -75,6 +75,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="European Bioconductor Conference 2026">
+<meta property="og:description" content="The European Bioconductor Conference (EuroBioC2026) will take place on the first week of June in Turku, Finland. EuroBioC2026 will bring together the Bioconductor community to showcase the latest cutting-edge developments on Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.">
+<meta property="og:image" content="https://eurobioc2026.bioconductor.org/images/logos/bioconductor.svg">
+<meta property="og:site_name" content="EuroBioC2026">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -195,7 +199,7 @@ The European Bioconductor Conference (EuroBioC2026) will take place on the <stro
 <div style="text-align:center;">
 <p><br>
 </p>
-<div id="countdown-1777985048" class="countdown-box">
+<div id="countdown-1778006283" class="countdown-box">
 <div class="countdown-label">
 Conference starts in
 </div>
@@ -238,7 +242,7 @@ Loading…
 document.addEventListener("DOMContentLoaded", function() {
 
   const targetDate = new Date("2026-06-01T09:00:00").getTime();
-  const el = document.querySelector("#countdown-1777985048 .countdown-time");
+  const el = document.querySelector("#countdown-1778006283 .countdown-time");
 
   function updateCountdown() {
     const now = new Date().getTime();
@@ -529,7 +533,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/eurobioc2026\.bioconductor\.org");
+        var filterRegex = new RegExp("https:\/\/eurobioc2026\.bioconductor\.org\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
