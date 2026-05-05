@@ -33,6 +33,22 @@ the  Bioconductor community to showcase the latest cutting-edge developments on
 Bioconductor software packages, as well as on broader emerging technologies
 impacting computational biology.
 
+<div style="clear: both;"></div>
+
+::: {.promo-banner}
+
+### Microbiome Workshop
+
+📅 June 1–2, EuroBioC2026 venue  
+
+Hands-on Bioconductor Carpentries training covering microbiome workflows, diversity analysis, differential abundance, and multi-omics integration.
+
+**Registration is open now.**
+
+**[Secure your spot](/pages/pre-conference.html#orchestrating-microbiome-analysis-with-bioconductor){.btn .btn-success .rounded-pill}**
+
+:::
+
 :::
 
 ::: {.column width="4%"}
@@ -62,8 +78,10 @@ countdown_timer("2026-06-01 09:00:00")
 - ~~**February 13**: Call for abstracts closes (final extended deadline)~~
 - **February 20**: Registration opens
 - **April 8**: Call for late-breaking poster abstract opens
-- <span class="deadline"><strong>May 3:</strong> Call for late-breaking poster abstract closes</span>
-- <span class="deadline"><strong>May 3:</strong> Registration closes</span>
+- ~~**May 3**: Call for late-breaking poster abstract closes~~
+- ~~**May 3**: Registration closes~~
+- <span class="deadline"><strong>May 18:</strong> Call for late-breaking poster abstract closes (final extended deadline)</span>
+- <span class="deadline"><strong>May 18:</strong> Registration closes (final extended deadline)</span>
 - **June 1-2**: Workshop and hackathon
 - **June 3-5**: The EuroBioC2026 conference!
 
@@ -74,6 +92,8 @@ countdown_timer("2026-06-01 09:00:00")
 :::
 
 ::::
+
+:::
 
 ```{r}
 #| label: carousel
