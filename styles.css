@@ -135,3 +135,83 @@ details.schedule-details summary::after {
 details.schedule-details[open] summary::after {
   content: "⌄";
 }
+
+/* Card styling */
+.instructor-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.instructor-card {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.instructor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+/* Image consistency trick */
+.instructor-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* square looks better for compact grids */
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.instructor-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instructor-card {
+  background: white;
+  border-radius: 12px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.instructor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.instructor-bio {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.promo-banner {
+  background: linear-gradient(135deg, #0087af, #18a603);
+  color: white;
+  padding: 1.2rem 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.promo-banner h2,
+.promo-banner h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.promo-banner a {
+  color: white;
+  font-weight: 600;
+  text-decoration: underline;
+}
