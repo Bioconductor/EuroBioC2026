@@ -93,8 +93,6 @@ countdown_timer("2026-06-01 09:00:00")
 
 ::::
 
-:::
-
 ```{r}
 #| label: carousel
 #| classes: '.g-col-lg-6 .g-col-12 .g-col-md-12'
