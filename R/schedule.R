@@ -191,8 +191,28 @@ render_posters_section <- function(
   weekday_order <- wday(1:7, label = TRUE, abbr = TRUE, week_start = 1)
   posters$day <- factor(posters$day, level = levels(weekday_order))
   posters <- posters |>
-    arrange(is.na(day), day, presenter, title) |>
-    mutate(idx = seq_len(n()))
+    arrange(is.na(day), day, presenter, title)
+
+  # Add poster number. One can specify them in with poster_nro column, or then
+  # we assign them automatically.
+  if ("poster_nro" %in% names(posters)) {
+    used <- posters$poster_nro[!is.na(posters$poster_nro)]
+    available <- setdiff(seq_len(nrow(posters)), used)
+    posters <- posters |>
+      mutate(
+        idx = if_else(
+          !is.na(poster_nro),
+          poster_nro,
+          available[cumsum(is.na(poster_nro))]
+        )
+      )
+  } else {
+    posters <- posters |>
+      mutate(idx = seq_len(n()))
+  }
+
+  posters <- posters |>
+    arrange(idx)
 
   posters_with_day <- posters |>
     filter(!is.na(day) & str_trim(day) != "")
