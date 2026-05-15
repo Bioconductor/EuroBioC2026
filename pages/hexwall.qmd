@@ -8,7 +8,7 @@ There are two possible designs: one based on the musical note from the Bioconduc
 :::: {.columns}
 
 ::: {.column width="49%"}
-![](../images/biochexwall-270-stickers-273-hex.png){fig-alt="Layout of the hexwall using the musical note design" fig-align="center" width=100% }
+![](../images/hexwall/biochexwall-270-stickers-273-hex.png){fig-alt="Layout of the hexwall using the musical note design" fig-align="center" width=100% }
 
 :::
 
@@ -16,7 +16,7 @@ There are two possible designs: one based on the musical note from the Bioconduc
 :::
 
 ::: {.column width="49%"}
-![](../images/hexwall-270-stickers-341-hex.png){fig-alt="Layout of the hexwall using a hexagonal design" fig-align="center" width=100% }
+![](../images/hexwall/hexwall-270-stickers-341-hex.png){fig-alt="Layout of the hexwall using a hexagonal design" fig-align="center" width=100% }
 
 :::
 
@@ -28,7 +28,7 @@ You can view the full-resolution versions from EuroBioC2025 and explore the incl
 ## How to Get Your Sticker Included
 If your package’s sticker is not yet in the [BiocStickers GitHub repository]( https://github.com/Bioconductor/BiocStickers), we encourage you to submit it.
 
-- **Submission deadline**: Thursday, May 21, 2026
+- **Submission deadline**: <span class="deadline">Thursday, May 21, 2026</span>
 - **Submit via**: [BiocStickers GitHub repo](https://github.com/Bioconductor/BiocStickers)
 - **Need help?** Reach out to us on [Bioconductor Zulip](https://chat.bioconductor.org) channel #eurobioc2026-turku-conference
 - **See an example**: [Example pull request](https://github.com/Bioconductor/BiocStickers/pull/210).
