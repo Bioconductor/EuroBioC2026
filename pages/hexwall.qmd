@@ -2,7 +2,7 @@
 
 We’re planning a sticker hexwall for **EuroBioc2026**, building on previous community sticker collections at Bioconductor events. The hexwall will be a visual display of Bioconductor package stickers featured in the event space, highlighting the diversity of the Bioconductor ecosystem. 
 
-There are two possible designs: one based on the musical note from the Bioconductor logo, and another using an hexagonal shape. These were created by [Kevin Rue-Albrecht](https://kevinrue.github.io/) with input from the [EuroBioC2025 organising committee](https://eurobioc2025.bioconductor.org/pages/organizers.html).
+There are two possible designs: one based on the musical note from the Bioconductor logo, and another using an hexagonal shape. These were created by [Kevin Rue-Albrecht](https://kevinrue.github.io/) with input from the [EuroBioC2026 organising committee](organizers.html).
 
 ## Preview Hexwall
 :::: {.columns}
