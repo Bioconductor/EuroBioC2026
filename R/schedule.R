@@ -1,7 +1,8 @@
 library(dplyr)
-library(stringr)
-library(kableExtra)
 library(htmltools)
+library(kableExtra)
+library(lubridate)
+library(stringr)
 
 # =========================================================
 # Helpers
@@ -186,61 +187,31 @@ render_posters_section <- function(
   cat("<hr style='margin-top: 0; margin-bottom: 1.2em;'>\n")
   cat("<p>(In alphabetical order.)</p>\n")
 
+  # Sort the posters based on date and name of presenter
+  weekday_order <- wday(1:7, label = TRUE, abbr = TRUE, week_start = 1)
+  posters$day <- factor(posters$day, level = levels(weekday_order))
+  posters <- posters |>
+    arrange(is.na(day), day, presenter, title) |>
+    mutate(idx = seq_len(n()))
+
   posters_with_day <- posters |>
     filter(!is.na(day) & str_trim(day) != "")
 
   posters_without_day <- posters |>
     filter(is.na(day) | str_trim(day) == "")
 
-  # Undated posters: one single table
-  if (nrow(posters_without_day) > 0) {
-    undated_df <- posters_without_day |>
-      arrange(presenter, title) |>
-      mutate(idx = seq_len(n()))
-
-    out <- undated_df |>
-      mutate(
-        Author = paste0(idx, " ", htmlEscape(presenter)),
-        Title = mapply(
-          make_collapsible_title,
-          title,
-          authors,
-          abstract,
-          USE.NAMES = FALSE
-        )
-      ) |>
-      select(Author, Title)
-
-    tbl_posters <- kbl(
-      out,
-      escape = FALSE,
-      row.names = FALSE,
-      col.names = c("# AUTHOR", "TITLE")
-    ) |>
-      kable_material(full_width = full_width) |>
-      column_spec(1, width = "28%") |>
-      column_spec(2, width = "72%")
-
-    tbl_posters |> cat()
-  }
-
   # Dated posters: grouped by day in program order
   if (nrow(posters_with_day) > 0) {
     day_levels <- names(day_header_map)
 
     posters_with_day <- posters_with_day |>
-      mutate(day = factor(day, levels = day_levels)) |>
-      arrange(day, presenter, title)
+      mutate(day = factor(day, levels = day_levels))
 
     for (d in day_levels) {
       day_df <- posters_with_day |>
-        filter(as.character(day) == d) |>
-        arrange(presenter, title)
+        filter(as.character(day) == d)
 
       if (nrow(day_df) == 0) next
-
-      day_df <- day_df |>
-        mutate(idx = seq_len(n()))
 
       heading <- day_header_map[[d]]
       if (is.null(heading) || is.na(heading) || heading == "") {
@@ -281,6 +252,38 @@ render_posters_section <- function(
       tbl_posters |> cat()
     }
   }
+
+  # Undated posters: one single table
+  if (nrow(posters_without_day) > 0) {
+
+    out <- posters_without_day |>
+      mutate(
+        Author = paste0(idx, " ", htmlEscape(presenter)),
+        Title = mapply(
+          make_collapsible_title,
+          title,
+          authors,
+          abstract,
+          USE.NAMES = FALSE
+        )
+      ) |>
+      select(Author, Title)
+
+    cat( paste0( "<h3 style='margin-top: 1.2em; margin-bottom: 0.5em;'>", "Not yet assigned to a day", "</h3>\n" ) )
+
+    tbl_posters <- kbl(
+      out,
+      escape = FALSE,
+      row.names = FALSE,
+      col.names = c("# AUTHOR", "TITLE")
+    ) |>
+      kable_material(full_width = full_width) |>
+      column_spec(1, width = "28%") |>
+      column_spec(2, width = "72%")
+
+    tbl_posters |> cat()
+  }
+
 }
 
 # =========================================================

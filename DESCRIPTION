@@ -8,6 +8,7 @@ Imports:
     knitr,
     leaflet,
     leaflet.extras,
+    lubridate,
     readr
 Remotes:
     github::trafficonese/leaflet.extras
