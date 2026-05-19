@@ -1,8 +1,9 @@
 # Pre-conference events
 
-::: {.callout-tip title="Registration is open"}
+::: {.callout-important title="Registration is closed"}
 Each event spans two days. Participants should register for **either** the workshop or the hackathon.
 
+<!--
 **Register for:**
 
 <a class="btn btn-success rounded-pill me-2" href="https://www.lyyti.fi/reg/EuroBioC_workshop">
@@ -12,7 +13,7 @@ Workshop
 <a class="btn btn-success rounded-pill" href="https://docs.google.com/forms/d/e/1FAIpQLSdQPwHgF7fJwfwkXxKPZeB5W_MjTMQpjLbRZj1ix-bA4vLYOg/viewform?usp=header">
 Hackathon
 </a>
-
+-->
 
 Registration closes on **Monday, May 18** (extended deadline), or earlier if capacity is reached.
 :::

@@ -2,19 +2,20 @@
 
 ## Call for abstracts
 
-::: {.callout-tip icon=false}
-## **Abstract call open**
+::: {.callout-important icon=false}
+## **Abstract call is closed**
 
 **Important dates**
 
 - ~~**November 24**: Call for abstracts opens~~
 - ~~**January 30**: Call for abstracts closes~~
 - ~~**February 13**: Call for abstracts closes (final extended deadline)~~
-- **April 8**: Late-breaking poster abstract submission opens
-- **May 3**: Late-breaking poster abstract submission closes
+- ~~**April 8**: Late-breaking poster abstract submission opens~~
+- ~~**May 3**: Late-breaking poster abstract submission closes~~
 
+<!--
 [Submit your abstract here!](https://forms.gle/rPQjjxF8KB2fPmBp7){target="_blank"}
-
+-->
 :::
 
 <!--

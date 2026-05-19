@@ -183,6 +183,10 @@ render_posters_section <- function(
     return(invisible(NULL))
   }
 
+  if( !"poster_nro" %in% colnames(posters) ){
+    stop("Add poster numbers with add_poster_number()")
+  }
+
   cat("<h2 style='margin-top: 2.5em; margin-bottom: 0.4em;'>POSTERS</h2>\n")
   cat("<hr style='margin-top: 0; margin-bottom: 1.2em;'>\n")
   cat("<p>(In alphabetical order.)</p>\n")
@@ -193,26 +197,8 @@ render_posters_section <- function(
   posters <- posters |>
     arrange(is.na(day), day, presenter, title)
 
-  # Add poster number. One can specify them in with poster_nro column, or then
-  # we assign them automatically.
-  if ("poster_nro" %in% names(posters)) {
-    used <- posters$poster_nro[!is.na(posters$poster_nro)]
-    available <- setdiff(seq_len(nrow(posters)), used)
-    posters <- posters |>
-      mutate(
-        idx = if_else(
-          !is.na(poster_nro),
-          poster_nro,
-          available[cumsum(is.na(poster_nro))]
-        )
-      )
-  } else {
-    posters <- posters |>
-      mutate(idx = seq_len(n()))
-  }
-
   posters <- posters |>
-    arrange(idx)
+    arrange(poster_nro)
 
   posters_with_day <- posters |>
     filter(!is.na(day) & str_trim(day) != "")
@@ -248,7 +234,7 @@ render_posters_section <- function(
 
       out <- day_df |>
         mutate(
-          Author = paste0(idx, " ", htmlEscape(presenter)),
+          Author = paste0(poster_nro, " ", htmlEscape(presenter)),
           Title = mapply(
             make_collapsible_title,
             title,
@@ -278,7 +264,7 @@ render_posters_section <- function(
 
     out <- posters_without_day |>
       mutate(
-        Author = paste0(idx, " ", htmlEscape(presenter)),
+        Author = paste0(poster_nro, " ", htmlEscape(presenter)),
         Title = mapply(
           make_collapsible_title,
           title,
@@ -544,4 +530,53 @@ render_detailed_program <- function(
     day_header_map = day_header_map,
     full_width = full_width
   )
+}
+
+add_poster_number <- function(sessions_csv = "../data/sessions.csv"){
+  df <- read.csv(
+    sessions_csv,
+    stringsAsFactors = FALSE,
+    na.strings = c("", "NA")
+  ) |>
+    mutate(
+      day       = str_trim(coalesce(day, "")),
+      time      = str_trim(coalesce(time, "")),
+      type      = str_trim(coalesce(type, "")),
+      title     = str_trim(coalesce(title, "")),
+      authors   = str_trim(coalesce(authors, "")),
+      presenter = str_trim(coalesce(presenter, "")),
+      abstract  = str_trim(coalesce(abstract, "")),
+      time_min  = parse_hm(time),
+      type_norm = normalize_type(type)
+    ) |>
+    fill_presenter()
+
+  posters <- df[df$type == "poster", , drop = FALSE]
+  df <- df[df$type != "poster", , drop = FALSE]
+
+  # Sort in alphabetical order
+  weekday_order <- wday(1:7, label = TRUE, abbr = TRUE, week_start = 1)
+  posters$day <- factor(posters$day, level = levels(weekday_order))
+  posters <- posters |>
+    arrange(is.na(day), day, presenter, title)
+
+  # Add poster number
+  if( "poster_nro" %in% colnames(posters) ){
+    posters <- posters |>
+      arrange(is.na(poster_nro), poster_nro, is.na(day), day, presenter, title)
+    posters <- posters |>
+      mutate(
+        poster_nro = coalesce(poster_nro, seq_len(n()))
+      )
+  } else{
+    posters <- posters |>
+      mutate(poster_nro = seq_len(n()))
+  }
+
+  # Add poster_nro column to original table if it does not exist yet
+  df[["poster_nro"]] <- NA
+  # Add posters back
+  df <- rbind(df, posters)
+  write.csv(df, sessions_csv, row.names = FALSE)
+  return(NULL)
 }

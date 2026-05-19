@@ -37,15 +37,11 @@ impacting computational biology.
 
 ::: {.promo-banner}
 
-### Microbiome Workshop
+### Live streaming available
 
-📅 June 1–2, EuroBioC2026 venue  
+Can't attend in-person? Join us online **for free!**
 
-Hands-on Bioconductor Carpentries training covering microbiome workflows, diversity analysis, differential abundance, and multi-omics integration.
-
-**Registration is open now.**
-
-**[Secure your spot](/pages/pre-conference.html#orchestrating-microbiome-analysis-with-bioconductor){.btn .btn-success .rounded-pill}**
+More information will be available soon.
 
 :::
 
@@ -76,15 +72,14 @@ countdown_timer("2026-06-03 09:00:00")
 - ~~**January 30**: Call for abstracts closes~~
 - ~~**January 31**: Sticker design contest closes~~
 - ~~**February 13**: Call for abstracts closes (final extended deadline)~~
-- **February 20**: Registration opens
-- **April 8**: Call for late-breaking poster abstract opens
+- ~~**February 20**: Registration opens~~
+- ~~**April 8**: Call for late-breaking poster abstract opens~~
 - ~~**May 3**: Call for late-breaking poster abstract closes~~
 - ~~**May 3**: Registration closes~~
-- <span class="deadline"><strong>May 18:</strong> Call for late-breaking poster abstract closes (final extended deadline)</span>
-- <span class="deadline"><strong>May 18:</strong> Registration closes (final extended deadline)</span>
-- **June 1-2**: Workshop and hackathon
-- **June 3-5**: The EuroBioC2026 conference!
-
+- ~~**May 18**: Call for late-breaking poster abstract closes (final extended deadline)~~
+- ~~**May 18**: Registration closes (final extended deadline)~~
+- <span class="deadline"><strong>June 1-2:</strong> Workshop and hackathon</span>
+- <span class="deadline"><strong>June 3-5:</strong> The EuroBioC2026 conference!</span>
 :::
 
 ::: {.column width="5%"}

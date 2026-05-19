@@ -19,8 +19,8 @@ website:
     right:
       - href: pages/schedule.qmd
       - href: pages/speakers.qmd
-      - href: pages/submissions.qmd
-      - href: pages/registration.qmd
+      #- href: pages/submissions.qmd
+      #- href: pages/registration.qmd
       - href: pages/pre-conference.qmd
       - href: pages/conference-dinner.qmd
       - href: pages/hexwall.qmd
@@ -31,6 +31,8 @@ website:
           - href: pages/travel-information.qmd
           - href: pages/about-turku.qmd
           - href: pages/organizers.qmd
+          - href: pages/submissions.qmd
+          - href: pages/registration.qmd
           - href: pages/sticker-contest.qmd
           - href: pages/past-events.qmd
           - href: pages/code-of-conduct.qmd

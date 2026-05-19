@@ -1,14 +1,16 @@
 # Registration
 
-::: {.callout-tip icon=false}
+::: {.callout-important icon=false}
 
-## Registration is open
+## Registration is closed
 
+<!--
 Secure your place:
 
 <a class="btn btn-success rounded-pill" href="https://www.lyyti.fi/reg/EuroBioC2026">
 Register
 </a>
+-->
 
 Registration closes on **Monday, May 18** (extended deadline), or earlier if all places are filled.
 :::
