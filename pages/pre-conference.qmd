@@ -46,6 +46,8 @@ the following two-day pre-conference events:
 1. **Workshop: Orchestrating Microbiome Analysis with Bioconductor**  
 2. **Hackathon**  
 
+Both events run daily from **09:00 to 17:00**.
+
 ### 1. **Orchestrating Microbiome Analysis with Bioconductor**
 This is a **Bioconductor Carpentries workshop**, combining the Carpentries’
 hands-on, interactive teaching approach with Bioconductor-specific materials.  
