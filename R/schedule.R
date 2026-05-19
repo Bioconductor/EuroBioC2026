@@ -189,7 +189,7 @@ render_posters_section <- function(
 
   cat("<h2 style='margin-top: 2.5em; margin-bottom: 0.4em;'>POSTERS</h2>\n")
   cat("<hr style='margin-top: 0; margin-bottom: 1.2em;'>\n")
-  cat("<p>(In alphabetical order.)</p>\n")
+  # cat("<p>(In alphabetical order.)</p>\n")
 
   # Sort the posters based on date and name of presenter
   weekday_order <- wday(1:7, label = TRUE, abbr = TRUE, week_start = 1)
