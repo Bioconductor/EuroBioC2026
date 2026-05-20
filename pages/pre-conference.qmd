@@ -48,6 +48,16 @@ the following two-day pre-conference events:
 
 Both events run daily from **09:00 to 17:00**.
 
+| Time        |                                   |
+| ----------- | --------------------------------- |
+| 09:00–10:30 | Microbiome workshop and hackathon |
+| 10:30–11:00 | Break                             |
+| 11:00–12:30 | Microbiome workshop and hackathon |
+| 12:30–13:30 | Lunch                             |
+| 13:30–15:00 | Microbiome workshop and hackathon |
+| 15:00–15:30 | Break                             |
+| 15:30–17:00 | Microbiome workshop and hackathon |
+
 ### 1. **Orchestrating Microbiome Analysis with Bioconductor**
 This is a **Bioconductor Carpentries workshop**, combining the Carpentries’
 hands-on, interactive teaching approach with Bioconductor-specific materials.  
