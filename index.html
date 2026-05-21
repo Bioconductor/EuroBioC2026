@@ -201,7 +201,7 @@ The European Bioconductor Conference (EuroBioC2026) will take place on the <stro
 <div style="text-align:center;">
 <p><br>
 </p>
-<div id="countdown-1779260568" class="countdown-box">
+<div id="countdown-1779362763" class="countdown-box">
 <div class="countdown-label">
 Conference starts in
 </div>
@@ -243,28 +243,53 @@ Loading…
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-  const targetDate = new Date("2026-06-03T09:00:00").getTime();
-  const el = document.querySelector("#countdown-1779260568 .countdown-time");
+  const startDate = new Date("2026-06-03T09:00:00").getTime();
+  const endDate = new Date("2026-06-05T14:00:00").getTime();
+
+  const el = document.querySelector("#countdown-1779362763 .countdown-time");
+  const labelEl = document.querySelector("#countdown-1779362763 .countdown-label");
 
   function updateCountdown() {
+
     const now = new Date().getTime();
-    const diff = targetDate - now;
 
     if (!el) return;
 
-    if (diff <= 0) {
-      el.className = "countdown-done";
-      el.innerHTML = "The conference has started 🎉";
-      clearInterval(timer);
-      return;
+    // BEFORE conference
+    if (now < startDate) {
+
+      labelEl.style.display = "block";
+
+      const diff = startDate - now;
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      el.className = "countdown-time";
+      el.innerHTML = d + "d " + h + "h " + m + "m " + s + "s";
     }
 
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const m = Math.floor((diff / (1000 * 60)) % 60);
-    const s = Math.floor((diff / 1000) % 60);
+    // DURING conference
+    else if (now >= startDate && now <= endDate) {
 
-    el.innerHTML = d + "d " + h + "h " + m + "m " + s + "s";
+      labelEl.style.display = "none";
+
+      el.className = "countdown-done";
+      el.innerHTML = "The conference has started 🎉";
+    }
+
+    // AFTER conference
+    else {
+
+      labelEl.style.display = "none";
+
+      el.className = "countdown-done";
+      el.innerHTML = "The conference has ended. Thank you for joining us!";
+
+      clearInterval(timer);
+    }
   }
 
   updateCountdown();
