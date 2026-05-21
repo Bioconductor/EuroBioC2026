@@ -62,7 +62,7 @@ More information will be available soon.
 #| warning: false
 #| message: false
 source("R/timer.R")
-countdown_timer("2026-06-03 09:00:00")
+countdown_timer("2026-06-03 09:00:00", "2026-06-05 14:00:00")
 ```
 
 **Important dates**

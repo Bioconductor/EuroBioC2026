@@ -1,11 +1,17 @@
-countdown_timer <- function(target_datetime,
-                            label = "Conference starts in",
-                            end_message = "The conference has started 🎉") {
-    target <- format(as.POSIXct(target_datetime), "%Y-%m-%dT%H:%M:%S")
-    id <- paste0("countdown-", as.integer(Sys.time()))
 
-    html <- sprintf(
-        '
+countdown_timer <- function(start_datetime,
+                            end_datetime,
+                            label = "Conference starts in",
+                            start_message = "The conference has started 🎉",
+                            end_message = "The conference has ended. Thank you for joining us!") {
+
+  start_target <- format(as.POSIXct(start_datetime), "%Y-%m-%dT%H:%M:%S")
+  end_target <- format(as.POSIXct(end_datetime), "%Y-%m-%dT%H:%M:%S")
+
+  id <- paste0("countdown-", as.integer(Sys.time()))
+
+  html <- sprintf(
+    '
 <div id="%s" class="countdown-box">
   <div class="countdown-label">%s</div>
   <div class="countdown-time">Loading...</div>
@@ -46,28 +52,53 @@ countdown_timer <- function(target_datetime,
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-  const targetDate = new Date("%s").getTime();
+  const startDate = new Date("%s").getTime();
+  const endDate = new Date("%s").getTime();
+
   const el = document.querySelector("#%s .countdown-time");
+  const labelEl = document.querySelector("#%s .countdown-label");
 
   function updateCountdown() {
+
     const now = new Date().getTime();
-    const diff = targetDate - now;
 
     if (!el) return;
 
-    if (diff <= 0) {
-      el.className = "countdown-done";
-      el.innerHTML = "%s";
-      clearInterval(timer);
-      return;
+    // BEFORE conference
+    if (now < startDate) {
+
+      labelEl.style.display = "block";
+
+      const diff = startDate - now;
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) %% 24);
+      const m = Math.floor((diff / (1000 * 60)) %% 60);
+      const s = Math.floor((diff / 1000) %% 60);
+
+      el.className = "countdown-time";
+      el.innerHTML = d + "d " + h + "h " + m + "m " + s + "s";
     }
 
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff / (1000 * 60 * 60)) %% 24);
-    const m = Math.floor((diff / (1000 * 60)) %% 60);
-    const s = Math.floor((diff / 1000) %% 60);
+    // DURING conference
+    else if (now >= startDate && now <= endDate) {
 
-    el.innerHTML = d + "d " + h + "h " + m + "m " + s + "s";
+      labelEl.style.display = "none";
+
+      el.className = "countdown-done";
+      el.innerHTML = "%s";
+    }
+
+    // AFTER conference
+    else {
+
+      labelEl.style.display = "none";
+
+      el.className = "countdown-done";
+      el.innerHTML = "%s";
+
+      clearInterval(timer);
+    }
   }
 
   updateCountdown();
@@ -76,9 +107,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 ',
-        id, label,
-        target, id, end_message
-    )
+    id,
+    label,
+    start_target,
+    end_target,
+    id,
+    id,
+    start_message,
+    end_message
+  )
 
-    cat(html)
+  cat(html)
 }
