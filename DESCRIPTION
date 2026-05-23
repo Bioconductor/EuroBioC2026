@@ -9,6 +9,8 @@ Imports:
     leaflet,
     leaflet.extras,
     lubridate,
-    readr
+    osrm,
+    readr,
+    sf
 Remotes:
     github::trafficonese/leaflet.extras

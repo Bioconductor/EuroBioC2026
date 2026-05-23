@@ -133,13 +133,12 @@ source(file.path("..", "R", "create_a_map.R"))
 create_a_map(show_attractions = FALSE, show_transport = FALSE, show_accommodation = FALSE)
 ```
 
-## How to get there
+## How to get there?
 
 ### Organized transport
 
 Buses are arranged for all registered participants. They depart from the
-conference venue at 18:00, and the journey takes about 20 minutes. Return buses
-leave the dinner venue at 23:00.
+conference venue at 18:00, and the journey takes about 20 minutes.
 
 ### Other options
 
@@ -150,6 +149,28 @@ center to Ruissalo. You can also consider taking a
 taxi or perhaps using a rental bike.
 
 See the [travel information](travel-information.qmd#local-transportation) page for more details on local transportation.
+
+## How to get back?
+
+Return transportation has been arranged for all participants. The buses will
+depart from the dinner venue at **23:00**, taking you directly back to the
+conference area.
+
+If you prefer to leave earlier or travel independently, there are also several
+convenient options available. Local buses run frequently from nearby stops, and
+taxis are readily available in the area.
+
+See the [travel information](travel-information.qmd#local-transportation) page for more details on local transportation.
+
+```{r}
+#| label: map_route
+#| echo: false
+#| message: false
+#| warning: false
+
+source(file.path("..", "R", "create_a_map.R"))
+create_route_map(file.path("..", "data", "dinner_route.csv"))
+```
 
 ## Questions?
 

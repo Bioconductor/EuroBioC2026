@@ -1,0 +1,20 @@
+name,link,lat,lng,type
+Villa Marjaniemi,https://www.villamarjaniemi.fi/en-gb/home,60.442691,22.198651,venue
+BioCity Turku,https://biocityturku.fi/,60.449245,22.293052,venue
+Bore,https://cloud.hotellinx.com/NetReservationsBore/Home/Availability,60.4353819801594,22.2340500537468,accommodation
+Centro hotel,https://centrohotel.com/en/,60.4532987456388,22.271397999774,accommodation
+Forenom Aparthotel,https://www.forenom.com/aparthotels/turku/forenom-aparthotel-turku/411/?checkin=%222026-06-02%22&checkout=%222026-06-05%22&occupants=1,60.4506040333536,22.2627397064884,accommodation
+"Omena Hotel, Humalistonkatu",https://www.omenahotels.com/en/hotels/turku-humalistonkatu-en/,60.4517860588989,22.2590489823607,accommodation
+"Omena Hotel, Kauppiaskatu",https://www.omenahotels.com/en/services/omena-hotel-turku-kauppiaskatu/,60.4512781201325,22.270035309938,accommodation
+Scandic Hamburger Börs,https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&city=Turku&hotel=640,60.4509524125138,22.2686560151046,accommodation
+Scandic Julia,https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=619,60.4524782291103,22.272381742103,accommodation
+Scandic Plaza,https://www.scandichotels.com/en/hotelreservation/select-rate?room%5B0%5D.adults=1&fromdate=2026-06-02&todate=2026-06-05&hotel=629,60.4509617593163,22.2616170537362,accommodation
+Sokos Hotel Kupittaa,https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-kupittaa,60.4506456869537,22.2964396844318,accommodation
+Sokos Hotel Seurahuone,https://www.sokoshotels.fi/en/hotels/turku/solo-sokos-hotel-turun-seurahuone,60.4490372896326,22.2610074977219,accommodation
+Sokos Hotel Wiklund,https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund,60.4520621015847,22.2691931945021,accommodation
+1,,60.4423613285261,22.1988207049437,route
+8,,60.4507696422287,22.2952108423842,route
+2,,60.4508725441387,22.2464926587985,route
+3,,60.4461503644884,22.2533173649603,route
+4,,60.4530890630715,22.2736589654686,route
+5,,60.4533766543766,22.2867876302825,route

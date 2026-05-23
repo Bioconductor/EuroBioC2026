@@ -23,7 +23,7 @@ website:
       #- href: pages/registration.qmd
       - href: pages/pre-conference.qmd
       - href: pages/conference-dinner.qmd
-      - href: pages/hexwall.qmd
+      - href: pages/walking-tour.qmd
       #- href: pages/sticker-contest.qmd
       - href: pages/partners.qmd
       - text: About
@@ -34,6 +34,7 @@ website:
           - href: pages/submissions.qmd
           - href: pages/registration.qmd
           - href: pages/sticker-contest.qmd
+          - href: pages/hexwall.qmd
           - href: pages/past-events.qmd
           - href: pages/code-of-conduct.qmd
   page-footer:
