@@ -107,7 +107,7 @@ good food and a selection of beers and ciders.
 
 #### Cathedral Terrace
 
-<div style="float: right; width: 35%; margin: 0 1rem 1rem 0;">
+<div style="float: left; width: 35%; margin: 0 1rem 1rem 0;">
 
 <img src="../images/walking_tour/cathedral_terrace.jpg" style="width: 100%; border-radius: 10px;" />
 
@@ -126,7 +126,7 @@ often live music in a relaxed outdoor setting.
 
 #### River boats 
 
-<div style="float: left; width: 45%; margin: 0 1rem 1rem 0;">
+<div style="float: right; width: 45%; margin: 0 1rem 1rem 0;">
 
 <img src="../images/walking_tour/jokilaivat.jpg" style="width: 100%; border-radius: 10px;" />
 
