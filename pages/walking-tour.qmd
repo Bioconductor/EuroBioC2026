@@ -16,7 +16,7 @@ source(file.path("..", "R", "create_a_map.R"))
 create_route_map(file.path("..", "data", "walking_tour.csv"), "foot")
 ```
 
-## After the Walking Tour
+## After the Walking tour
 
 After the tour, there is no scheduled program. You are free to continue the
 evening at nearby restaurants or bars. Below are some recommended options within
