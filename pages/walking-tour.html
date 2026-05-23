@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>submissions – EuroBioC2026</title>
+<title>walking-tour – EuroBioC2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,11 +71,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="../site_libs/leaflet-providers-3.0.0/leaflet-providers.js"></script>
+<script src="../site_libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="EuroBioC2026">
-<meta property="og:image" content="https://eurobioc2026.bioconductor.org/pages/images/logos/EuroBioC2026_sticker.png">
+<meta property="og:description" content="EuroBioC2026 conference website">
+<meta property="og:image" content="https://eurobioc2026.bioconductor.org/images/walking_tour/oobu.jpg">
 <meta property="og:site_name" content="EuroBioC2026">
 </head>
 
@@ -114,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Conference dinner</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/walking-tour.html"> 
+    <a class="nav-link active" href="../pages/walking-tour.html" aria-current="page"> 
 <span class="menu-text">Walking tour</span></a>
   </li>  
   <li class="nav-item">
@@ -180,19 +193,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#submissions" id="toc-submissions" class="nav-link active" data-scroll-target="#submissions">Submissions</a>
+  <li><a href="#walking-tour" id="toc-walking-tour" class="nav-link active" data-scroll-target="#walking-tour">Walking tour</a>
   <ul class="collapse">
-  <li><a href="#call-for-abstracts" id="toc-call-for-abstracts" class="nav-link" data-scroll-target="#call-for-abstracts">Call for abstracts</a></li>
-  <li><a href="#submission-types" id="toc-submission-types" class="nav-link" data-scroll-target="#submission-types">Submission types</a>
+  <li><a href="#after-the-walking-tour" id="toc-after-the-walking-tour" class="nav-link" data-scroll-target="#after-the-walking-tour">After the Walking Tour</a>
   <ul class="collapse">
-  <li><a href="#short-talk" id="toc-short-talk" class="nav-link" data-scroll-target="#short-talk">Short talk</a></li>
-  <li><a href="#poster" id="toc-poster" class="nav-link" data-scroll-target="#poster">Poster</a></li>
-  <li><a href="#workshop" id="toc-workshop" class="nav-link" data-scroll-target="#workshop">Workshop</a></li>
-  <li><a href="#flash-talk" id="toc-flash-talk" class="nav-link" data-scroll-target="#flash-talk">Flash talk</a></li>
-  <li><a href="#birds-of-a-feather" id="toc-birds-of-a-feather" class="nav-link" data-scroll-target="#birds-of-a-feather">Birds-of-a-feather</a></li>
+  <li><a href="#recommended-places-nearby" id="toc-recommended-places-nearby" class="nav-link" data-scroll-target="#recommended-places-nearby">Recommended places nearby</a></li>
   </ul></li>
-  <li><a href="#pre-conference-workshops" id="toc-pre-conference-workshops" class="nav-link" data-scroll-target="#pre-conference-workshops">Pre-conference workshops</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -203,109 +209,112 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="submissions" class="level1">
-<h1>Submissions</h1>
-<section id="call-for-abstracts" class="level2">
-<h2 class="anchored" data-anchor-id="call-for-abstracts">Call for abstracts</h2>
-<div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span><strong>Abstract call is closed</strong>
+<section id="walking-tour" class="level1">
+<h1>Walking tour</h1>
+<p>On Thursday evening, we will host an optional walking tour free of charge. The tour starts at 19:00 next to the Turku Cathedral, in the heart of old Turku.</p>
+<p>We will walk through nearby historical attractions while learning about the city’s history and culture. The tour lasts approximately one hour.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-11b47d069a4240710e1d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-11b47d069a4240710e1d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[60.4477180630102,60.4497194956919,60.4517470738827,60.4506951644711,60.4479769040043,60.452482958067,60.4545165736554,60.4512708499933,60.4487923655831],[22.2766275233901,22.2660948175219,22.2669435254847,22.2757732473731,22.270034469119,22.2783144628437,22.2844489145254,22.2730379821332,22.2685487439962],6,null,"Attraction",{"interactive":true,"className":"","stroke":false,"color":"#1f5eff","weight":5,"opacity":0.5,"fill":true,"fillColor":"#1f5eff","fillOpacity":0.85},null,null,["<b>Luostarinmäki<\/b><br><a href='https://en.wikipedia.org/wiki/Luostarinm%C3%A4kii' target='_blank'>More information<\/a>","<b>Market Hall<\/b><br><a href='https://en.wikipedia.org/wiki/Turku_Market_Hall' target='_blank'>More information<\/a>","<b>Market Square<\/b><br><a href='https://en.wikipedia.org/wiki/Market_Square,_Turku' target='_blank'>More information<\/a>","<b>Old Great Square<\/b><br><a href='https://en.wikipedia.org/wiki/Old_Great_Square_(Turku)' target='_blank'>More information<\/a>","<b>Paavo Nurmi statue<\/b><br><a href='https://en.wikipedia.org/wiki/Paavo_Nurmi_statue' target='_blank'>More information<\/a>","<b>Turku Cathedral<\/b><br><a href='https://en.wikipedia.org/wiki/Turku_Cathedral' target='_blank'>More information<\/a>","<b>University Hill<\/b><br><a href='https://en.wikipedia.org/wiki/University_of_Turku' target='_blank'>More information<\/a>","Vähätori","Turku City Hall"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[60.4477180630102,60.4497194956919,60.4517470738827,60.4506951644711,60.4479769040043,60.452482958067,60.4545165736554,60.4512708499933,60.4487923655831],[22.2766275233901,22.2660948175219,22.2669435254847,22.2757732473731,22.270034469119,22.2783144628437,22.2844489145254,22.2730379821332,22.2685487439962],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,"Attraction",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Luostarinmäki","Market Hall","Market Square","Old Great Square","Paavo Nurmi statue","Turku Cathedral","University Hill","Vähätori","Turku City Hall"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"style":{"font-size":"11px","font-weight":"500","background-color":"rgba(255,255,255,0.85)","padding":"2px 4px","border-radius":"4px"},"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[60.4477973198549,60.4490178364111,60.4480692626157,60.4522149343997,60.4519842593175,60.4497792794432],[22.2705475768947,22.2695212596224,22.268015417087,22.2763647311574,22.2684834662788,22.26439864726],6,null,"Restaurant",{"interactive":true,"className":"","stroke":false,"color":"#1f5eff","weight":5,"opacity":0.5,"fill":true,"fillColor":"#1f5eff","fillOpacity":0.85},null,null,["<b>Mantun Grilli<\/b><br><a href='https://www.mantungrilli.fi/' target='_blank'>More information<\/a>","<b>Oobu<\/b><br><a href='https://www.oobu.fi/eng/home.html' target='_blank'>More information<\/a>","River Boats","<b>Turku Cathedral Terrace<\/b><br><a href='https://kirkkopuistonterassi.com/' target='_blank'>More information<\/a>","<b>Hesburger<\/b><br><a href='https://www.hesburger.com/' target='_blank'>More information<\/a>","<b>\n\nBrewery Restaurant Koulu<\/b><br><a href='https://www.panimoravintolakoulu.fi/?lang=en' target='_blank'>More information<\/a>"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[60.4477973198549,60.4490178364111,60.4480692626157,60.4522149343997,60.4519842593175,60.4497792794432],[22.2705475768947,22.2695212596224,22.268015417087,22.2763647311574,22.2684834662788,22.26439864726],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,"Restaurant",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Mantun Grilli","Oobu","River Boats","Turku Cathedral Terrace","Hesburger","\n\nBrewery Restaurant Koulu"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"style":{"font-size":"11px","font-weight":"500","background-color":"rgba(255,255,255,0.85)","padding":"2px 4px","border-radius":"4px"},"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2788391113281,22.2784900665283,22.2783603668213,22.2781200408936,22.2779998779297,22.2779903411865,22.2779598236084,22.2778987884521,22.2778091430664,22.2777996063232,22.2777690887451,22.277738571167,22.2774696350098,22.2774486541748],"lat":[60.4520301818848,60.4519691467285,60.4519691467285,60.4519577026367,60.4519691467285,60.4519577026367,60.4518966674805,60.4519081115723,60.4518394470215,60.4518394470215,60.4518203735352,60.4518089294434,60.4517478942871,60.4517402648926]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2774486541748,22.2774295806885,22.2772388458252,22.2770595550537,22.276008605957,22.2759799957275,22.2759494781494,22.2758598327637],"lat":[60.4517402648926,60.4517288208008,60.4517097473145,60.4517288208008,60.4519271850586,60.4519271850586,60.4519386291504,60.4519500732422]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2758598327637,22.2758293151855,22.2756900787354,22.2756595611572,22.2755489349365,22.2754802703857,22.2754096984863,22.2752799987793,22.2753486633301],"lat":[60.4519500732422,60.4519500732422,60.4519500732422,60.4519386291504,60.4518966674805,60.4518699645996,60.4518394470215,60.451789855957,60.4517402648926]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2753486633301,22.2754001617432,22.2754096984863,22.2754993438721,22.2755603790283,22.2755088806152,22.2754192352295,22.275369644165,22.2753791809082,22.2754096984863,22.2754192352295,22.2754592895508,22.2754898071289],"lat":[60.4517402648926,60.4517097473145,60.4516983032227,60.4516487121582,60.4516067504883,60.4515686035156,60.4515266418457,60.4514694213867,60.4513778686523,60.4512786865234,60.4512367248535,60.4511871337891,60.4511871337891]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2754898071289,22.2754592895508,22.2755489349365,22.2757987976074,22.2758502960205,22.27587890625,22.2757587432861],"lat":[60.4511871337891,60.4511871337891,60.451057434082,60.4508781433105,60.4508171081543,60.4506797790527,60.4506797790527]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2757587432861,22.2757301330566,22.2756195068359,22.2755489349365,22.2755393981934,22.2753391265869,22.2752990722656,22.2752799987793,22.2749996185303,22.2750091552734,22.2748985290527,22.2748794555664,22.2743701934814,22.2744197845459],"lat":[60.4506797790527,60.4506797790527,60.4505996704102,60.4506187438965,60.4506072998047,60.4506797790527,60.4506874084473,60.4506988525391,60.4504280090332,60.4504280090332,60.4503402709961,60.4503402709961,60.4500999450684,60.4500694274902]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2744197845459,22.2743701934814,22.2742900848389,22.2742500305176,22.2742290496826,22.2738800048828,22.273868560791,22.2738494873047,22.2738399505615],"lat":[60.4500694274902,60.4500999450684,60.4501571655273,60.4501876831055,60.4501800537109,60.4504203796387,60.450439453125,60.4504470825195,60.4504470825195]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2738399505615,22.2738189697266,22.2737693786621,22.2736797332764,22.2736587524414,22.2736396789551,22.2733592987061,22.273229598999,22.2731285095215,22.2726993560791,22.2726402282715,22.2726192474365,22.2725601196289,22.2725200653076,22.2724800109863,22.2721786499023,22.2716789245605,22.2715396881104,22.271068572998,22.2705001831055,22.2705497741699,22.2703990936279,22.2703399658203,22.2703189849854,22.2702503204346,22.270170211792,22.2700996398926,22.2700595855713,22.2700901031494,22.2700901031494,22.2700996398926,22.2701187133789,22.2701396942139,22.2701587677002,22.2701797485352],"lat":[60.4504470825195,60.4504699707031,60.4504089355469,60.4503288269043,60.4503479003906,60.4503593444824,60.4500389099121,60.4499092102051,60.4498100280762,60.4494094848633,60.4493675231934,60.449348449707,60.4493103027344,60.4492797851562,60.4492492675781,60.4491081237793,60.4488983154297,60.4488372802734,60.448657989502,60.448429107666,60.4483985900879,60.4483375549316,60.4483070373535,60.4483070373535,60.4482879638672,60.4482574462891,60.4482383728027,60.4482078552246,60.4481582641602,60.4481468200684,60.448127746582,60.4480895996094,60.4480781555176,60.4480590820312,60.4480476379395]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2701797485352,22.2701587677002,22.2701396942139,22.2701187133789,22.2700996398926,22.2700901031494,22.2700901031494,22.2700595855713,22.2700099945068,22.269998550415,22.2699699401855,22.2699203491211,22.2694301605225,22.269359588623,22.2693386077881,22.2693195343018,22.2692794799805,22.2692489624023,22.2692089080811,22.2691802978516,22.2691993713379,22.2692394256592,22.2693386077881,22.2693691253662],"lat":[60.4480476379395,60.4480590820312,60.4480781555176,60.4480895996094,60.448127746582,60.4481468200684,60.4481582641602,60.4482078552246,60.4482574462891,60.4482688903809,60.4483070373535,60.448356628418,60.4486885070801,60.4487380981445,60.4487571716309,60.4487571716309,60.4487686157227,60.4487686157227,60.4487571716309,60.4487800598145,60.448787689209,60.4487991333008,60.4488296508789,60.4488372802734]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[22.2693691253662,22.2694187164307,22.2694492340088,22.2694797515869,22.2694301605225,22.2696285247803,22.2701091766357,22.270679473877,22.2708797454834,22.2710590362549,22.2712287902832,22.271369934082,22.2714595794678,22.2715396881104,22.2716102600098,22.2717990875244,22.272008895874,22.2721900939941,22.2723999023438,22.2725296020508,22.2727298736572,22.272798538208,22.272819519043,22.2728691101074,22.2729187011719,22.2729396820068,22.27294921875,22.2730503082275,22.2730693817139,22.273099899292,22.2731285095215,22.2731685638428,22.2734394073486],"lat":[60.4488372802734,60.4488487243652,60.448860168457,60.4488677978516,60.4488983154297,60.4489669799805,60.4491271972656,60.4493103027344,60.4493675231934,60.4494400024414,60.4495086669922,60.4495697021484,60.4496192932129,60.4496574401855,60.4496994018555,60.4497985839844,60.4499778747559,60.4501686096191,60.4504203796387,60.4505882263184,60.4508399963379,60.4508972167969,60.4509201049805,60.4509086608887,60.4508895874023,60.4509086608887,60.450927734375,60.4510498046875,60.4510803222656,60.4511070251465,60.4511489868164,60.4511795043945,60.4514389038086]}]]],null,"Route",{"interactive":true,"className":"","stroke":true,"color":"#ff5500","weight":6,"opacity":0.9,"fill":false,"fillColor":"#ff5500","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[60.4520523684599,22.2788236780899,11,null,"Route",{"interactive":true,"className":"","stroke":true,"color":"white","weight":2,"opacity":0.5,"fill":true,"fillColor":"#2f855a","fillOpacity":1},null,null,"START: 1",null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[60.4520523684599,22.2788236780899,{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,"Route",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"START",{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"style":{"font-size":"12px","font-weight":"900","color":"white","background-color":"#2f855a","padding":"4px 8px","border-radius":"6px"},"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[60.4514447212062,22.2734192367007,11,null,"Route",{"interactive":true,"className":"","stroke":true,"color":"white","weight":2,"opacity":0.5,"fill":true,"fillColor":"#e53e3e","fillOpacity":1},null,null,"END: 11",null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[60.4514447212062,22.2734192367007,{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,"Route",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"END",{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"style":{"font-size":"12px","font-weight":"900","color":"white","background-color":"#e53e3e","padding":"4px 8px","border-radius":"6px"},"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["Attraction","Restaurant","Route"],{"collapsed":false,"autoZIndex":true,"position":"topright","position.1":"topright"}]}],"limits":{"lat":[60.4477180630102,60.4545165736554],"lng":[22.26439864726,22.2844489145254]},"fitBounds":[60.4477180630102,22.26439864726,60.4545165736554,22.2844489145254,[]]},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p><strong>Important dates</strong></p>
-<ul>
-<li><del><strong>November 24</strong>: Call for abstracts opens</del></li>
-<li><del><strong>January 30</strong>: Call for abstracts closes</del></li>
-<li><del><strong>February 13</strong>: Call for abstracts closes (final extended deadline)</del></li>
-<li><del><strong>April 8</strong>: Late-breaking poster abstract submission opens</del></li>
-<li><del><strong>May 3</strong>: Late-breaking poster abstract submission closes</del></li>
-</ul>
-<!--
-[Submit your abstract here!](https://forms.gle/rPQjjxF8KB2fPmBp7){target="_blank"}
--->
+<section id="after-the-walking-tour" class="level2">
+<h2 class="anchored" data-anchor-id="after-the-walking-tour">After the Walking Tour</h2>
+<p>After the tour, there is no scheduled program. You are free to continue the evening at nearby restaurants or bars. Below are some recommended options within walking distance.</p>
+<section id="recommended-places-nearby" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-places-nearby">Recommended places nearby</h3>
+<p>After the walking tour, there is no program. You can go to restaurant or have a drink. Below you will find couple good options:</p>
+<section id="oobu" class="level4">
+<h4 class="anchored" data-anchor-id="oobu">Oobu</h4>
+<div style="float: left; width: 25%; margin: 0 1rem 1rem 0;">
+<p><img src="../images/walking_tour/oobu.jpg" style="width: 100%; border-radius: 10px;"></p>
+<div style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">
+<p>© Oobu</p>
 </div>
 </div>
-<!--
-::: callout-important
+<p>A restaurant specializing in classic Finnish cuisine. Finnish <strong>lohikeitto</strong> (salmon soup) is an absolute must for visitors who want to experience authentic Finnish flavors.</p>
+<p><strong>Website:</strong> <a href="https://www.oobu.fi/eng/home.html" target="_blank">oobu.fi</a></p>
+<div style="clear: both;">
 
-The submission system requires all submitters to create an account.
-If you do not already have an account in _OpenReview_, we strongly
-recommend doing this at least **two weeks before** the
-abstract deadline. This is especially important for non-academic
-institutions, as account verification may take some time.
-
-If you are submitting close to the deadline, you are still very
-welcome to do so! Please create your account as soon as possible.
-Academic accounts typically do not experience any delays, but early
-profile creation is encouraged for everyone.
-
-If you encounter any issues, please contact us at
-[eurobioc@bioconductor.org](mailto:eurobioc@bioconductor.org)
-
-:::
--->
-</section>
-<section id="submission-types" class="level2">
-<h2 class="anchored" data-anchor-id="submission-types">Submission types</h2>
-<section id="short-talk" class="level3">
-<h3 class="anchored" data-anchor-id="short-talk">Short talk</h3>
-<p>Around 10 min short talk immediately followed by questions, focused on a package, or on a research or technological question that motivates software development. Presentations seeking collaboration or input from the community are encouraged.</p>
-</section>
-<section id="poster" class="level3">
-<h3 class="anchored" data-anchor-id="poster">Poster</h3>
-<p>Classical portrait printed A0-poster to be showcased during poster session.</p>
-</section>
-<section id="workshop" class="level3">
-<h3 class="anchored" data-anchor-id="workshop">Workshop</h3>
-<p>Around 1.5 hour hands-on interactive workshop illustrating the use of a software package or workflow, where participants are expected to have the time and opportunity to follow along and perform analysis themselves.</p>
-</section>
-<section id="flash-talk" class="level3">
-<h3 class="anchored" data-anchor-id="flash-talk">Flash talk</h3>
-<p>Flash talks are very short presentations (5 min or less) that may be submitted up until the day of the session, granted on a first come, first served basis.</p>
-<p>Slides must be either publicly accessible online or uploaded to a shared Google Drive. Presenters will not be allowed to connect their own laptop. We advise presenters to keep presentations simple (e.g., avoid animations where possible).</p>
-<p>Conference delegates already scheduled to present a short talk or poster are welcome to submit flashtalks.</p>
-</section>
-<section id="birds-of-a-feather" class="level3">
-<h3 class="anchored" data-anchor-id="birds-of-a-feather">Birds-of-a-feather</h3>
-<p>Birds-of-a-feather sessions are free-format, organizer-lead interactive discussions on a topic relevant to the Bioconductor community. Birds-of-a-feather sessions should be proposed before the beginning of the conference, by filing an issue in <a href="https://github.com/Bioconductor/EuroBioC2026" class="uri">https://github.com/Bioconductor/EuroBioC2026</a>.</p>
-<p>In the issue, please provide information about the plan and intended outcomes of the session, as well as the name and contact information of the organizer(s). You may refer to <a href="https://github.com/Bioconductor/EuroBioC2025/issues" class="uri">https://github.com/Bioconductor/EuroBioC2025/issues</a> for examples submitted last year.</p>
-</section>
-</section>
-<section id="pre-conference-workshops" class="level2">
-<h2 class="anchored" data-anchor-id="pre-conference-workshops">Pre-conference workshops</h2>
-<div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span><strong>Call for pre-conference workshops closed</strong>
+</section>
+<section id="mantun-grilli" class="level4">
+<h4 class="anchored" data-anchor-id="mantun-grilli">Mantun Grilli</h4>
+<div style="float: right; width: 35%; margin: 0 1rem 1rem 0;">
+<p><img src="../images/walking_tour/mantun_grilli.jpg" style="width: 100%; border-radius: 10px;"></p>
+<div style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">
+<p>© Mantun Grilli</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p><strong>Important dates</strong></p>
-<ul>
-<li><strong>December 5</strong>: Call for pre-conference workshops opens</li>
-<li><strong>January 30</strong>: Call for pre-conference workshops closes</li>
-</ul>
-<!--
-[Please submit your interest here!](https://docs.google.com/forms/d/e/1FAIpQLScYOBMs0JsmoZY21mCSnWSBObm-OX7NtZi6NEjY9zNdhsqL5w/viewform){target="_blank"}
--->
+<p>A classic Finnish grill kiosk. Try traditional street food such as <strong>lihapiirakka</strong> (meat pie) or <strong>makkaraperunat</strong> (sausage and fries).</p>
+<p><strong>Website:</strong> <a href="https://www.mantungrilli.fi/" target="_blank">mantungrilli.fi</a></p>
+<div style="clear: both;">
+
 </div>
-</div>
-<p>On-site workshops on June 1–2, 2026, in Turku, Finland, prior to the main conference. Please note that these workshops are <strong>separate from the main conference workshops</strong>.</p>
-<p>If you’re interested in hosting a workshop, please submit your interest. Selections will be based on relevance and alignment with the workshop and conference themes.</p>
 </section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions?</h2>
-<p>Do not hesitate to contact the <a href="organizers.html">organizers</a> at <a href="mailto:eurobioc@bioconductor.org">eurobioc@bioconductor.org</a> if you have a question about an abstract submission.</p>
+<section id="hesburger" class="level4">
+<h4 class="anchored" data-anchor-id="hesburger">Hesburger</h4>
+<div style="float: left; width: 25%; margin: 0 1rem 1rem 0;">
+<p><img src="../images/walking_tour/hesburger.jpg" style="width: 100%; border-radius: 10px;"></p>
+<div style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">
+<p>© Hesburger</p>
+</div>
+</div>
+<p>A fast-food chain originating from Turku. Similar to McDonald’s, but locally founded and very popular in Finland.</p>
+<p><strong>Website:</strong> <a href="https://www.hesburger.com//" target="_blank">hesburger.com</a></p>
+<div style="clear: both;">
+
+</div>
+</section>
+<section id="brewery-restaurant-koulu" class="level4">
+<h4 class="anchored" data-anchor-id="brewery-restaurant-koulu">Brewery Restaurant Koulu</h4>
+<div style="float: right; width: 25%; margin: 0 1rem 1rem 0;">
+<p><img src="../images/walking_tour/koulu.jpg" style="width: 100%; border-radius: 10px;"></p>
+<div style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">
+<p>© Brewery Restaurant Koulu</p>
+</div>
+</div>
+<p>A restaurant located in a former school building. Offers a cozy atmosphere with good food and a selection of beers and ciders.</p>
+<p><strong>Website:</strong> <a href="https://www.panimoravintolakoulu.fi/?lang=en" target="_blank">panimoravintolakoulu.fi</a></p>
+<div style="clear: both;">
+
+</div>
+</section>
+<section id="cathedral-terrace" class="level4">
+<h4 class="anchored" data-anchor-id="cathedral-terrace">Cathedral Terrace</h4>
+<div style="float: right; width: 35%; margin: 0 1rem 1rem 0;">
+<p><img src="../images/walking_tour/cathedral_terrace.jpg" style="width: 100%; border-radius: 10px;"></p>
+<div style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">
+<p>© Roosa Karhu</p>
+</div>
+</div>
+<p>A summer terrace located right below Turku Cathedral. Offers food, drinks, and often live music in a relaxed outdoor setting.</p>
+<p><strong>Website:</strong> <a href="https://kirkkopuistonterassi.com/" target="_blank">kirkkopuistonterassi.com</a></p>
+<div style="clear: both;">
+
+</div>
+</section>
+<section id="river-boats" class="level4">
+<h4 class="anchored" data-anchor-id="river-boats">River boats</h4>
+<div style="float: left; width: 45%; margin: 0 1rem 1rem 0;">
+<p><img src="../images/walking_tour/jokilaivat.jpg" style="width: 100%; border-radius: 10px;"></p>
+<div style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">
+<p>© turkulaiset.fi</p>
+</div>
+</div>
+<p>A collection of stationary riverboats along the Aura River serving food and drinks. Each boat has its own style, but all offer a unique riverside atmosphere.</p>
+<div style="clear: both;">
+
+</div>
+</section>
+<section id="bonus-riverside-pussikaljat-loose-translation-beer-in-a-bag" class="level4">
+<h4 class="anchored" data-anchor-id="bonus-riverside-pussikaljat-loose-translation-beer-in-a-bag">Bonus: Riverside “pussikaljat” (loose translation: beer in a bag)</h4>
+<p>Buy drinks and snacks from a nearby shop and head to the riverside to enjoy the atmosphere. This is a relaxed and very Turku way to spend the evening along the Aura River.</p>
 
 
+</section>
+</section>
 </section>
 </section>
 
