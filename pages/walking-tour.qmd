@@ -1,10 +1,10 @@
 # Walking tour
 
 On Thursday evening, we will host an optional walking tour free of charge. The
-tour starts at 19:00 next to the Turku Cathedral, in the heart of old Turku.
+tour starts at **19:00** next to the Turku Cathedral, in the heart of old Turku.
 
 We will walk through nearby historical attractions while learning about the
-city’s history and culture. The tour lasts approximately one hour.
+city’s history and culture. The tour lasts **approximately one hour**.
 
 ```{r}
 #| label: map_route
