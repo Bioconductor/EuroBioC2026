@@ -12,9 +12,11 @@ Scandic Plaza,https://www.scandichotels.com/en/hotelreservation/select-rate?room
 Sokos Hotel Kupittaa,https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-kupittaa,60.4506456869537,22.2964396844318,accommodation
 Sokos Hotel Seurahuone,https://www.sokoshotels.fi/en/hotels/turku/solo-sokos-hotel-turun-seurahuone,60.4490372896326,22.2610074977219,accommodation
 Sokos Hotel Wiklund,https://www.sokoshotels.fi/en/hotels/turku/original-sokos-hotel-wiklund,60.4520621015847,22.2691931945021,accommodation
-1,,60.4423613285261,22.1988207049437,route
-8,,60.4507696422287,22.2952108423842,route
+1,,60.4423613285261,22.1988207049437,stop
+8,,60.4507696422287,22.2952108423842,stop
 2,,60.4508725441387,22.2464926587985,route
 3,,60.4461503644884,22.2533173649603,route
+4,,60.45113541038032, 22.268118318251528,stop
 4,,60.4530890630715,22.2736589654686,route
 5,,60.4533766543766,22.2867876302825,route
+

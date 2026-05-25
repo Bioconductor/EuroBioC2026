@@ -149,7 +149,6 @@ The departure location is **Joukahaisenkatu 1**.
 #| warning: false
 
 source(file.path("..", "R", "create_a_map.R"))
-
 create_route_map(file.path("..", "data", "to_dinner.csv"))
 ```
 
@@ -167,7 +166,8 @@ See the [travel information](travel-information.qmd#local-transportation) page f
 
 Return transportation has been arranged for all participants. The buses will
 depart from the dinner venue at **23:00**, taking you back to the
-conference area. **It is also possible to get off at stops along the way.**
+**conference venue**. The return bus will stop at the
+**Market Square in the city center**.
 
 If you prefer to leave earlier or travel independently, there are also several
 convenient options available. Local buses run frequently from nearby stops, and

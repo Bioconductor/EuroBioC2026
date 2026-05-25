@@ -304,13 +304,21 @@ create_route_map <- function(data.path, osrm.profile = "car") {
   # SPLIT DATA
   # -------------------------------------------------
 
+  # Route geometry points
   route_points <- places |>
-    filter(type == "Route") |>
+    filter(type %in% c("Route", "Stop")) |>
     mutate(order_num = as.numeric(name)) |>
     arrange(order_num)
 
+  # Visible stops only
+  stop_points <- places |>
+    filter(type == "Stop") |>
+    mutate(order_num = as.numeric(name)) |>
+    arrange(order_num)
+
+  # Normal places
   place_points <- places |>
-    filter(type != "Route")
+    filter(!(type %in% c("Route", "Stop")))
 
   # -------------------------------------------------
   # MAP BASE
@@ -373,42 +381,45 @@ create_route_map <- function(data.path, osrm.profile = "car") {
   # ROUTE (LINES + START + END TOGETHER)
   # -------------------------------------------------
 
-  if (nrow(route_points) >= 1) {
+  if (nrow(route_points) >= 2) {
 
-    overlay_groups <- c(overlay_groups, "Route")
+  overlay_groups <- c(overlay_groups, "Route")
 
-    if (nrow(route_points) >= 2) {
-      # ROUTE LINES
-      for (i in 1:(nrow(route_points) - 1)) {
+    # ROUTE LINES
+    for (i in 1:(nrow(route_points) - 1)) {
 
-        from <- route_points[i, ]
-        to <- route_points[i + 1, ]
+      from <- route_points[i, ]
+      to <- route_points[i + 1, ]
 
-        route <- osrmRoute(
-          src = data.frame(lon = from$lng, lat = from$lat),
-          dst = data.frame(lon = to$lng, lat = to$lat),
-          overview = "full",
-          osrm.profile = osrm.profile
-        )
+      route <- osrmRoute(
+        src = data.frame(lon = from$lng, lat = from$lat),
+        dst = data.frame(lon = to$lng, lat = to$lat),
+        overview = "full",
+        osrm.profile = osrm.profile
+      )
 
-        if (!is.null(route) && nrow(route) > 0) {
-          map <- map |>
-            addPolylines(
-              data = route,
-              color = "#ff5500",
-              weight = 6,
-              opacity = 0.9,
-              group = "Route"
-            )
-        }
+      if (!is.null(route) && nrow(route) > 0) {
+        map <- map |>
+          addPolylines(
+            data = route,
+            color = "#ff5500",
+            weight = 6,
+            opacity = 0.9,
+            group = "Route"
+          )
       }
     }
 
+  }
 
+  # -------------------------------------------------
+  # ROUTE STOPS (START / STOP / END)
+  # -------------------------------------------------
 
-    # ROUTE ENDPOINTS (IN SAME LAYER)
-    start_pt <- route_points[1, ]
-    end_pt <- route_points[nrow(route_points), ]
+  if (nrow(stop_points) > 0) {
+
+    # First stop
+    start_pt <- stop_points[1, ]
 
     map <- map |>
       addCircleMarkers(
@@ -442,7 +453,51 @@ create_route_map <- function(data.path, osrm.profile = "car") {
         )
       )
 
-    if (nrow(route_points) >= 2) {
+    # Intermediate stops
+    if (nrow(stop_points) > 2) {
+
+      middle_pts <- stop_points[2:(nrow(stop_points) - 1), ]
+
+      map <- map |>
+        addCircleMarkers(
+          data = middle_pts,
+          lng = ~lng,
+          lat = ~lat,
+          radius = 9,
+          color = "white",
+          weight = 2,
+          fillColor = "#dd6b20",
+          fillOpacity = 1,
+          popup = ~paste0("STOP: ", name),
+          group = "Route"
+        ) |>
+        addLabelOnlyMarkers(
+          data = middle_pts,
+          lng = ~lng,
+          lat = ~lat,
+          label = "STOP",
+          group = "Route",
+          labelOptions = labelOptions(
+            noHide = TRUE,
+            direction = "top",
+            textOnly = TRUE,
+            style = list(
+              "font-size" = "11px",
+              "font-weight" = "800",
+              "color" = "white",
+              "background-color" = "#dd6b20",
+              "padding" = "3px 7px",
+              "border-radius" = "6px"
+            )
+          )
+        )
+    }
+
+    # Last stop
+    if (nrow(stop_points) >= 2) {
+
+      end_pt <- stop_points[nrow(stop_points), ]
+
       map <- map |>
         addCircleMarkers(
           lng = end_pt$lng,
@@ -475,7 +530,6 @@ create_route_map <- function(data.path, osrm.profile = "car") {
           )
         )
     }
-
   }
 
   # -------------------------------------------------
