@@ -373,34 +373,38 @@ create_route_map <- function(data.path, osrm.profile = "car") {
   # ROUTE (LINES + START + END TOGETHER)
   # -------------------------------------------------
 
-  if (nrow(route_points) >= 2) {
+  if (nrow(route_points) >= 1) {
 
     overlay_groups <- c(overlay_groups, "Route")
 
-    # ROUTE LINES
-    for (i in 1:(nrow(route_points) - 1)) {
+    if (nrow(route_points) >= 2) {
+      # ROUTE LINES
+      for (i in 1:(nrow(route_points) - 1)) {
 
-      from <- route_points[i, ]
-      to <- route_points[i + 1, ]
+        from <- route_points[i, ]
+        to <- route_points[i + 1, ]
 
-      route <- osrmRoute(
-        src = data.frame(lon = from$lng, lat = from$lat),
-        dst = data.frame(lon = to$lng, lat = to$lat),
-        overview = "full",
-        osrm.profile = osrm.profile
-      )
+        route <- osrmRoute(
+          src = data.frame(lon = from$lng, lat = from$lat),
+          dst = data.frame(lon = to$lng, lat = to$lat),
+          overview = "full",
+          osrm.profile = osrm.profile
+        )
 
-      if (!is.null(route) && nrow(route) > 0) {
-        map <- map |>
-          addPolylines(
-            data = route,
-            color = "#ff5500",
-            weight = 6,
-            opacity = 0.9,
-            group = "Route"
-          )
+        if (!is.null(route) && nrow(route) > 0) {
+          map <- map |>
+            addPolylines(
+              data = route,
+              color = "#ff5500",
+              weight = 6,
+              opacity = 0.9,
+              group = "Route"
+            )
+        }
       }
     }
+
+
 
     # ROUTE ENDPOINTS (IN SAME LAYER)
     start_pt <- route_points[1, ]
@@ -436,37 +440,42 @@ create_route_map <- function(data.path, osrm.profile = "car") {
             "border-radius" = "6px"
           )
         )
-      ) |>
-      addCircleMarkers(
-        lng = end_pt$lng,
-        lat = end_pt$lat,
-        radius = 11,
-        color = "white",
-        weight = 2,
-        fillColor = "#e53e3e",
-        fillOpacity = 1,
-        popup = paste0("END: ", end_pt$name),
-        group = "Route"
-      ) |>
-      addLabelOnlyMarkers(
-        lng = end_pt$lng,
-        lat = end_pt$lat,
-        label = "END",
-        group = "Route",
-        labelOptions = labelOptions(
-          noHide = TRUE,
-          direction = "top",
-          textOnly = TRUE,
-          style = list(
-            "font-size" = "12px",
-            "font-weight" = "900",
-            "color" = "white",
-            "background-color" = "#e53e3e",
-            "padding" = "4px 8px",
-            "border-radius" = "6px"
+      )
+
+    if (nrow(route_points) >= 2) {
+      map <- map |>
+        addCircleMarkers(
+          lng = end_pt$lng,
+          lat = end_pt$lat,
+          radius = 11,
+          color = "white",
+          weight = 2,
+          fillColor = "#e53e3e",
+          fillOpacity = 1,
+          popup = paste0("END: ", end_pt$name),
+          group = "Route"
+        ) |>
+        addLabelOnlyMarkers(
+          lng = end_pt$lng,
+          lat = end_pt$lat,
+          label = "END",
+          group = "Route",
+          labelOptions = labelOptions(
+            noHide = TRUE,
+            direction = "top",
+            textOnly = TRUE,
+            style = list(
+              "font-size" = "12px",
+              "font-weight" = "900",
+              "color" = "white",
+              "background-color" = "#e53e3e",
+              "padding" = "4px 8px",
+              "border-radius" = "6px"
+            )
           )
         )
-      )
+    }
+
   }
 
   # -------------------------------------------------

@@ -137,8 +137,21 @@ create_a_map(show_attractions = FALSE, show_transport = FALSE, show_accommodatio
 
 ### Organized transport
 
-Buses are arranged for all registered participants. They depart from the
-conference venue at 18:00, and the journey takes about 20 minutes.
+Buses are arranged for all registered participants. They depart at **18:00**
+from near the conference venue, and the journey takes approximately 20 minutes.
+
+The departure location is **Joukahaisenkatu 1**.
+
+```{r}
+#| label: dinner_start
+#| echo: false
+#| message: false
+#| warning: false
+
+source(file.path("..", "R", "create_a_map.R"))
+
+create_route_map(file.path("..", "data", "to_dinner.csv"))
+```
 
 ### Other options
 
@@ -153,8 +166,8 @@ See the [travel information](travel-information.qmd#local-transportation) page f
 ## How to get back?
 
 Return transportation has been arranged for all participants. The buses will
-depart from the dinner venue at **23:00**, taking you directly back to the
-conference area.
+depart from the dinner venue at **23:00**, taking you back to the
+conference area. **It is also possible to get off at stops along the way.**
 
 If you prefer to leave earlier or travel independently, there are also several
 convenient options available. Local buses run frequently from nearby stops, and
