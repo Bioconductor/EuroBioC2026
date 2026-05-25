@@ -1,6 +1,6 @@
 name,link,lat,lng,type
 Villa Marjaniemi,https://www.villamarjaniemi.fi/en-gb/home,60.442691,22.198651,venue
-BioCity Turku,https://biocityturku.fi/,60.449245,22.293052,venue
+BioCity Turku,https://biocityturku.fi/,60.449479552168754, 22.29281098580882,venue
 Bore,https://cloud.hotellinx.com/NetReservationsBore/Home/Availability,60.4353819801594,22.2340500537468,accommodation
 Centro hotel,https://centrohotel.com/en/,60.4532987456388,22.271397999774,accommodation
 Forenom Aparthotel,https://www.forenom.com/aparthotels/turku/forenom-aparthotel-turku/411/?checkin=%222026-06-02%22&checkout=%222026-06-05%22&occupants=1,60.4506040333536,22.2627397064884,accommodation

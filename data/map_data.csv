@@ -1,6 +1,6 @@
 "name","link","lat","lng","type"
 "Villa Marjaniemi","https://www.villamarjaniemi.fi/en-gb/home",60.442691,22.198651,"venue"
-"BioCity Turku","https://biocityturku.fi/",60.449245,22.293052,"venue"
+"BioCity Turku","https://biocityturku.fi/",60.449479552168754, 22.29281098580882,"venue"
 "Bore","https://cloud.hotellinx.com/NetReservationsBore/Home/Availability",60.4353819801594,22.2340500537468,"accommodation"
 "Bus station","https://www.foli.fi/en",60.45672,22.26681,"transport"
 "Central railway station","https://www.vr.fi/en",60.45656,22.26076,"transport"
