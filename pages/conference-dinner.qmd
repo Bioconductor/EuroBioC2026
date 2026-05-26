@@ -32,7 +32,7 @@ optional sauna, and informal outdoor activities.
 - **18:00** – Buses depart from the conference venue  
 - **19:00** – Dinner  
 - **20:30** – Sauna, networking, and outdoor games  
-- **23:00** – Buses return
+- **00:00** – Buses return
 
 <div style="clear: both;"></div>
 
@@ -80,7 +80,6 @@ Please note the following:
 
 - **Swimwear is required at all times** in the sauna and swimming areas.
 - Separate sauna times are arranged for women and men, followed by an inclusive sauna session open to everyone regardless of gender identity.
-- Participation in the mixed/inclusive sauna session is entirely optional.
 - Respect other participants’ privacy, personal space, and boundaries at all times.
 - Photography is not allowed in sauna or swimming areas.
 - Swimming is only allowed together with others for safety reasons. Please do not swim alone.
@@ -165,7 +164,7 @@ See the [travel information](travel-information.qmd#local-transportation) page f
 ## How to get back?
 
 Return transportation has been arranged for all participants. The buses will
-depart from the dinner venue at **23:00**, taking you back to the
+depart from the dinner venue at **00:00**, taking you back to the
 **conference venue**. The return bus will stop at the
 **Market Square in the city center**.
 
