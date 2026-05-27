@@ -17,6 +17,20 @@ source(file.path("..", "R", "create_a_map.R"))
 create_a_map()
 ```
 
+This is the outside of the BioCity building.
+
+![](../images/venue/biocity1.jpg){width="70%"}
+
+Please enter through the main entrance shown below.
+
+![](../images/venue/biocity2.jpg){width="70%"}
+
+After entering the building, walk straight ahead for approximately 20 meters.
+You will find the registration and information desk there on the left, where
+conference staff will assist you further.
+
+![](../images/venue/biocity.gif)
+
 ## How to travel to Turku
 
 In Turku and the Southwest Finland region, it’s easy for travellers to get
