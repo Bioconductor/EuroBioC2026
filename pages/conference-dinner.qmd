@@ -86,9 +86,9 @@ Please note the following:
 - Everyone is expected to follow the conference Code of Conduct during all social activities, including the sauna.
 
 ### Sauna schedule
-- 20:30–21:15 – Women’s sauna
-- 21:15–22:00 – Men’s sauna
-- 22:00–22:45 – Inclusive mixed sauna (open to all genders)
+- 21:30–22:15 – Women’s sauna
+- 22:15–23:00 – Men’s sauna
+- 23:00–23:45 – Inclusive mixed sauna (open to all genders)
 
 You are also welcome to simply enjoy the outdoor activities and networking
 without attending the sauna.
@@ -171,6 +171,10 @@ depart from the dinner venue at **00:00**, taking you back to the
 If you prefer to leave earlier or travel independently, there are also several
 convenient options available. Local buses run frequently from nearby stops, and
 taxis are readily available in the area.
+
+Based on the current timetable, the available local bus departures are at
+21:19, 22:19, and 23:19. Please allow a few extra minutes to walk to the stop.
+You can check the exact departure times via [Föli's website](https://reittiopas.foli.fi/reitti/Selected%20location%3A%3A60.439819281069006%2C22.20349788665772/Kauppatori%2C%20Kauppatori%20VI%2C%20Turku%3A%3A60.451693%2C22.26669?locale=en&setTime=true&time=1780509600){target="_blank"}.
 
 See the [travel information](travel-information.qmd#local-transportation) page for more details on local transportation.
 
