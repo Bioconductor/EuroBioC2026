@@ -1,28 +1,12 @@
-# Schedule
-
-::: {.callout-tip appearance="simple"}
-See the schedule for the pre-conference events [here](pre-conference.qmd).
-:::
-
-```{r}
-#| results: asis
-#| echo: false
-#| warning: false
-#| message: false
-source("../R/schedule.R")
-render_detailed_program(
-  program_csv = "../data/program.csv",
-  sessions_csv = "../data/sessions.csv"
-)
-```
-
-
-## Streaming
+# Streaming
 
 EuroBioC2026 offers **free** live streaming for conference sessions.
 
 Each session room has its own link. Please use the links in the table below to
 join the appropriate stream.
+
+For the complete conference timetable, session details, and room information,
+see the [programme](schedule.qmd).
 
 ### Live stream links
 

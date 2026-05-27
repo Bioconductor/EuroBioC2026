@@ -30,6 +30,7 @@ website:
         menu:
           - href: pages/travel-information.qmd
           - href: pages/about-turku.qmd
+          - href: pages/streaming.qmd
           - href: pages/organizers.qmd
           - href: pages/submissions.qmd
           - href: pages/registration.qmd
