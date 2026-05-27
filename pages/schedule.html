@@ -279,6 +279,7 @@ Keynote
 Helena Kilpinen
 </td>
 <td style="text-align:left;width: 44%; background-color: rgba(227, 242, 253, 255) !important;">
+Morphological profiling of in vitro neurons: Visualizing complexity in cellular disease models
 </td>
 </tr>
 <tr>
@@ -368,18 +369,6 @@ High-throughput sequencing technologies are increasingly used across Africa in p
 <tr>
 <td style="text-align:left;width: 12%; background-color: rgba(255, 249, 196, 255) !important;padding-left: 2em;" indentlevel="1">
 10:35
-</td>
-<td style="text-align:left;width: 18%; background-color: rgba(255, 249, 196, 255) !important;">
-Group photo
-</td>
-<td style="text-align:left;width: 26%; background-color: rgba(255, 249, 196, 255) !important;">
-</td>
-<td style="text-align:left;width: 44%; background-color: rgba(255, 249, 196, 255) !important;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 12%; background-color: rgba(255, 249, 196, 255) !important;padding-left: 2em;" indentlevel="1">
-10:45
 </td>
 <td style="text-align:left;width: 18%; background-color: rgba(255, 249, 196, 255) !important;">
 Break
@@ -574,6 +563,18 @@ Author(s): Sophie-Marie Wind
 12:15
 </td>
 <td style="text-align:left;width: 18%; background-color: rgba(255, 249, 196, 255) !important;">
+Group photo
+</td>
+<td style="text-align:left;width: 26%; background-color: rgba(255, 249, 196, 255) !important;">
+</td>
+<td style="text-align:left;width: 44%; background-color: rgba(255, 249, 196, 255) !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 12%; background-color: rgba(255, 249, 196, 255) !important;padding-left: 2em;" indentlevel="1">
+12:30
+</td>
+<td style="text-align:left;width: 18%; background-color: rgba(255, 249, 196, 255) !important;">
 Lunch
 </td>
 <td style="text-align:left;width: 26%; background-color: rgba(255, 249, 196, 255) !important;">
@@ -729,6 +730,7 @@ Keynote
 Anders Krogh
 </td>
 <td style="text-align:left;width: 44%; background-color: rgba(227, 242, 253, 255) !important;">
+A Deep Generative Model for Gene Expression and Multimodal Data
 </td>
 </tr>
 <tr>
@@ -1264,6 +1266,7 @@ Keynote
 Levi Waldron
 </td>
 <td style="text-align:left;width: 44%; background-color: rgba(227, 242, 253, 255) !important;">
+Bioconductor in the age of AI. What do we do now?
 </td>
 </tr>
 <tr>
@@ -2153,26 +2156,6 @@ Author(s): Arindam Ghosh,Teemu Rintala,Vittorio Fortino
 </div>
 <div>
 Traditional gene regulatory network inference methods from transcriptomic data typically yields an aggregate network that obscures any inter-patient heterogeneity, which is a critical barrier in precision oncology. While patient-specific network construction strategies exist, they work by identifying network information gain or loss between a reference and perturbed network, highlighting the differential gene pair interactions for each sample. Here, we present a novel approach that directly infers patient-level regulatory networks from population transcriptomic data using a machine learning-based approach. Our method, inspired from the tool GENIE3, is based on the assumption that gene regulation can be inferred from predictive relationships between genes. We train a series of Random Forest regressor models to predict the expression of each target gene using the expression of given regulator genes. By tracing the sequence of genes in each patient’s decision path in the trees of the forest, we derive a quantitative measurement of the importance of the regulator genes for that specific patient. This importance score infers the strength of the network edge connecting the said regulator to the target in the patient. In a pilot study, we observed that features derived from patient-specific networks created from TCGA breast cancer data were informative for classifying patient sub-types. We believe our method would open new avenues for the characterization of patient-specific cancer driver genes, identification of novel targets, drug repurposing and drug response prediction. Moreover, the proposed framework is directly aligned with the Bioconductor ecosystem, as it builds on transcriptomic data structures, integrates naturally with existing gene regulatory network and machine learning workflows, and could be implemented as a Bioconductor package to enable patient-level network inference for the broader genomics community.
-</div>
-</div>
-</details>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 28%; ">
-35 Dimitri Meistermann
-</td>
-<td style="text-align:left;width: 72%; ">
-<details class="schedule-details">
-<summary>
-Gene Set Differential Scoring enables reliable, modular and intuitive functional enrichment
-</summary>
-<div class="schedule-details-body">
-<div class="schedule-details-authors">
-Author(s): Dimitri Meistermann,Morgane Frapin,Claudius F Kratochwil
-</div>
-<div>
-The advent of high-throughput sequencing has led to an unprecedented increase in the quantity of output produced by analyses, such as a list of genes, ranging from dozens to thousands. Overrepresentation analysis (ORA) has emerged to provide a functional means of interpreting these genes by combining them in gene sets associated with specific functions, thereby summarizing these lists by putative biological roles. Functional class scoring (FCS) algorithms, such as gene set enrichment analysis (GSEA), have followed. They have the advantage of conserving a more detailed structure of gene lists by classifying genes according to a score of interest. However, both ORA and FCS approaches have been heavily criticized for their lack of interpretability and limited use in complex datasets. A significant barrier to improving ORA and FCS is the substantial information lost from the count table to the methods’ input, e.g., a contingency table or a score vector for FCS. This problem has been solved by single-sample scoring (3S) methods, such as GSVA and PLAGE. Here, I present a novel 3S method, GSDS, which first transforms the input matrix in the context of RNA-seq by converting a count table into a gene set activation score matrix. For each sample and gene set in the provided database (GO, KEGG, etc.), we calculate the first principal component of a PCA performed on the gene set matrix and all samples. We then use this vector as the gene set activation score. Using a PCA to summarize expression within a pathway allows to 1/Obtain an activation score that can describe a complex gene set containing downregulation relationships. 2/ it identifies the genes that contributed the most to computing the activation score. In the case of pathways, this allows for an easy interpretation of whether a positive activation score means that the pathway is “biologically” on or off. Ultimately, we can perform differential analyses on the activation score matrix to obtain differentially scored gene sets. The activation score matrix can also be reused for downstream analyses, making GSDS a modular approach for specific needs. Plotting the activation scores directly is an intuitive way to visualize the gene set behavior between samples. GSDS is implemented in an R package available on GitHub (https://github.com/DimitriMeistermann/GSDS).
 </div>
 </div>
 </details>
