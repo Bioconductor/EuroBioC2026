@@ -15,26 +15,3 @@ render_detailed_program(
   sessions_csv = "../data/sessions.csv"
 )
 ```
-
-
-## Streaming
-
-EuroBioC2026 offers **free** live streaming for conference sessions.
-
-Each session room has its own link. Please use the links in the table below to
-join the appropriate stream.
-
-### Live stream links
-
-| Session | Presidentti Auditorium | Ministeri Hall | Tellervo Hall |
-|---|---|---|---|
-| **Day 1 – Morning** | [Link TBD]() | No programme | No programme |
-| **Day 1 – Afternoon** | [Link TBD]() | [Link TBD]() | [Link TBD]() |
-| **Day 2 – Morning** | [Link TBD]() | No programme | No programme |
-| **Day 2 – Afternoon** | [Link TBD]() | [Link TBD]() | [Link TBD]() |
-| **Day 3 – Morning** | [Link TBD]() | No programme | No programme |
-
-## Recordings
-
-Recordings from streamed sessions will be made available after the conference on
-the [Bioconductor YouTube channel](https://www.youtube.com/@bioconductor).
