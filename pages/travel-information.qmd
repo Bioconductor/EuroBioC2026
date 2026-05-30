@@ -38,7 +38,7 @@ conference staff will assist you further.
 - **Time zone:** UTC+3 (Eastern European Summer Time, EEST).
 :::
 
-::: {.callout-note title="Weather Forecast"}
+::: {.callout-note title="Weather forecast"}
 
 <iframe
   src="https://en.ilmatieteenlaitos.fi/local-weather/turku"
