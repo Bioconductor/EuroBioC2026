@@ -10,6 +10,10 @@ see the [programme](schedule.qmd).
 
 ## Live stream links
 
+::: {.callout-note}
+The links will be added here on Tuesday 2nd of June.
+:::
+
 | Session | Presidentti Auditorium | Ministeri Hall | Tellervo Hall |
 |---|---|---|---|
 | **Day 1 – Morning** | [Link TBD]() | No programme | No programme |
