@@ -31,6 +31,15 @@ conference staff will assist you further.
 
 ![](../images/venue/biocity.gif)
 
+::: {.callout-note title="Practical information"}
+
+- **Free Wi-Fi** is available throughout the venue.
+- **Power outlets** are available (European Type C plugs).
+- **Time zone:** UTC+3 (Eastern European Summer Time, EEST).
+- **Weather forecast:** [Finnish Meteorological Institute](https://en.ilmatieteenlaitos.fi/local-weather/turku)
+
+:::
+
 ## How to travel to Turku
 
 In Turku and the Southwest Finland region, it’s easy for travellers to get
