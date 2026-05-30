@@ -36,7 +36,16 @@ conference staff will assist you further.
 - **Free Wi-Fi** is available throughout the venue.
 - **Power outlets** are available (European Type C plugs).
 - **Time zone:** UTC+3 (Eastern European Summer Time, EEST).
-- **Weather forecast:** [Finnish Meteorological Institute](https://en.ilmatieteenlaitos.fi/local-weather/turku)
+:::
+
+::: {.callout-note title="Weather Forecast"}
+
+<iframe
+  src="https://en.ilmatieteenlaitos.fi/local-weather/turku"
+  width="100%"
+  height="700"
+  style="border:0;">
+</iframe>
 
 :::
 
