@@ -476,19 +476,19 @@ Cells alter the RNA isoforms they produce through changes in transcription initi
 <td style="text-align:left;width: 18%; ">
 </td>
 <td style="text-align:left;width: 26%; ">
-Justin T. Landis
+Tuomas Borman
 </td>
 <td style="text-align:left;width: 44%; ">
 <details class="schedule-details">
 <summary>
-Transcript Grouping: Utilizing tidyomics pipeline with plyxp to summarize expression informed by transcript similarity
+Orchestrating Microbiome Analysis with Bioconductor
 </summary>
 <div class="schedule-details-body">
 <div class="schedule-details-authors">
-Author(s): Justin T. Landis,Michael I Love
+Author(s): Tuomas Borman,Leo M Lahti
 </div>
 <div>
-Traditional transcript analysis, such as differential expression or differential splicing, is typically resolved at either the gene or transcript level. Using the <code>plyxp</code> package, we provide a framework to summarize isoforms within genes, enabling an alternative analysis that falls between these levels. The <code>plyxp</code> package, part of the tidyomics project, enables common <code>dplyr</code> operations on SummarizedExperiment objects, including mutation, filtering, grouping, and summarization. <code>plyxp</code>’s flexible framework provides the backend for numerous tidySummarizedExperiment operations and has potential for expansion into the treeSummarizedExperiment class. We demonstrate an RNA-seq analysis pipeline where genomic features are aggregated according to hierarchical clustering of transcripts based on exon structure.
+Computational methods are essential tools for modern microbiome research. Yet, challenges such as lack of standardization, reproducibility, and transparency often limit reliable analysis and interpretation. Bioconductor addresses these challenges through a global, community-driven network that provides a robust, open-source ecosystem of high-quality tools. The presentation highlights how collaborative development supports microbiome research. In this domain, a growing ecosystem of packages builds on shared Bioconductor data structures such as TreeSummarizedExperiment, which extends the widely adopted SummarizedExperiment class. By relying on interoperable classes and consistent design principles, tools developed by different groups can work seamlessly together. For users, this reduces time spent on data wrangling, broadens access to well-established statistical methods, and facilitates the application and benchmarking of approaches developed across different fields. The collaborative nature of the ecosystem ensures that methods and workflows continue to advance through contributions and shared expertise from a diverse community of developers and users. This common foundation enables robust and evidence-based analysis workflows while supporting methodological innovation. It lowers barriers for collaboration between package authors, encourages method reuse, and accelerates cross-disciplinary exchange. As microbiome research progresses toward multi-omics integration, longitudinal studies, and other increasingly complex study designs, interoperable infrastructure supported by an engaged community becomes increasingly critical for scalable and reproducible analyses.
 </div>
 </div>
 </details>
@@ -759,19 +759,19 @@ Short talks
 <td style="text-align:left;width: 18%; ">
 </td>
 <td style="text-align:left;width: 26%; ">
-Tuomas Borman
+Justin T. Landis
 </td>
 <td style="text-align:left;width: 44%; ">
 <details class="schedule-details">
 <summary>
-Orchestrating Microbiome Analysis with Bioconductor
+Transcript Grouping: Utilizing tidyomics pipeline with plyxp to summarize expression informed by transcript similarity
 </summary>
 <div class="schedule-details-body">
 <div class="schedule-details-authors">
-Author(s): Tuomas Borman,Leo M Lahti
+Author(s): Justin T. Landis,Michael I Love
 </div>
 <div>
-Computational methods are essential tools for modern microbiome research. Yet, challenges such as lack of standardization, reproducibility, and transparency often limit reliable analysis and interpretation. Bioconductor addresses these challenges through a global, community-driven network that provides a robust, open-source ecosystem of high-quality tools. The presentation highlights how collaborative development supports microbiome research. In this domain, a growing ecosystem of packages builds on shared Bioconductor data structures such as TreeSummarizedExperiment, which extends the widely adopted SummarizedExperiment class. By relying on interoperable classes and consistent design principles, tools developed by different groups can work seamlessly together. For users, this reduces time spent on data wrangling, broadens access to well-established statistical methods, and facilitates the application and benchmarking of approaches developed across different fields. The collaborative nature of the ecosystem ensures that methods and workflows continue to advance through contributions and shared expertise from a diverse community of developers and users. This common foundation enables robust and evidence-based analysis workflows while supporting methodological innovation. It lowers barriers for collaboration between package authors, encourages method reuse, and accelerates cross-disciplinary exchange. As microbiome research progresses toward multi-omics integration, longitudinal studies, and other increasingly complex study designs, interoperable infrastructure supported by an engaged community becomes increasingly critical for scalable and reproducible analyses.
+Traditional transcript analysis, such as differential expression or differential splicing, is typically resolved at either the gene or transcript level. Using the <code>plyxp</code> package, we provide a framework to summarize isoforms within genes, enabling an alternative analysis that falls between these levels. The <code>plyxp</code> package, part of the tidyomics project, enables common <code>dplyr</code> operations on SummarizedExperiment objects, including mutation, filtering, grouping, and summarization. <code>plyxp</code>’s flexible framework provides the backend for numerous tidySummarizedExperiment operations and has potential for expansion into the treeSummarizedExperiment class. We demonstrate an RNA-seq analysis pipeline where genomic features are aggregated according to hierarchical clustering of transcripts based on exon structure.
 </div>
 </div>
 </details>
@@ -1767,26 +1767,6 @@ Author(s): Léopold Guyot,Laurent Gatto,Christophe Vanderaa
 </div>
 <div>
 Quantitative proteomics generates complex datasets that contain multiple data levels, from PSMs to peptides to proteins. QFeatures is an R/Bioconductor package designed to simplify the management, processing, exploration, and analysis of such datasets. At the heart of QFeatures is a data infrastructure based on quantitative sets and set links, that record the relationships between the sets. Each analysis step creates a new set linked to its parent(s), enabling transparent tracking of transformations, filtering and aggregations. This is particularly powerful for aggregating data from PSMs to peptides to proteins, as QFeatures allows researchers to trace and visualise intensity values across multiple levels, facilitating the exploration of the data in a fully reproducible manner. QFeatures is also designed to work seamlessly with other Bioconductor proteomics packages, such as msqrob2 for proteomics statistical modeling and scp for single-cell proteomics. By combining a robust infrastructure and interoperability with other packages, QFeatures allows researchers to handle quantitative proteomics datasets efficiently and reproducibly.
-</div>
-</div>
-</details>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 28%; ">
-18 Madeline Vast
-</td>
-<td style="text-align:left;width: 72%; ">
-<details class="schedule-details">
-<summary>
-glycomix : a package for pre-processing and extracting biological signal from CE-LIF glycomics data
-</summary>
-<div class="schedule-details-body">
-<div class="schedule-details-authors">
-Author(s): Madeline Vast,Bradley Turner,Kelsey Morgan Wheeler,Olga Sokolovskaya,Anastasiya Grebin,Louis-David Piron,Douglas Kwon,Katharina Ribbeck,Laura Symul
-</div>
-<div>
-Mucus and mucin-linked glycans play central roles in human health, notably by mediating the interactions between microbiomes and their host. Further, glycosylation is one of the most common, yet understudied, post-translational protein modifications which affects the physical and biochemical properties of glycoproteins. In glycomics studies, glycans are typically analysed after separation from their protein. Traditionally, released glycans have been analysed using mass spectrometry-based methods. However, these methods are costly and have a low throughput. Capillary electrophoresis with laser induced fluorescence (CE-LIF) exhibits comparable high sensitivity to traditional methods in the field but at a reduced cost, enabling its use in larger-scale studies. Here, we propose a method to extract peaks intensity values from raw CE-LIF traces to quantify biological differences between samples. Raw CE-LIF traces exhibit several technical artefacts such as batch- and sample-specific intensity and temporal drifts, and spikes, which need to be accounted for in analyses. Our approach is to model the observed signal as a temporal monotonic transformation of a mixture of glycan-derived peaks, expected technical peaks from labelling agents and spiked-in reference compounds, and batch-specific nuisance signals. We assume peaks can be modelled as parametric curves with shape parameters that are shared across samples. Priors for these parameters for biological and technical peaks are described in a peak catalogue along with functional annotations to facilitate interpretation of newly generated results. Each step of the proposed workflow for pre-processing and extracting biological signals to convert raw signals contained within <em>.CDF</em> files into tables of feature intensities (<em>SummarizedExperiment</em>) is implemented as an independent function of the <em>glycomix</em> R package. Applied to data obtained from vaginal mucus samples, our analyses demonstrated differences in glycan composition of participants with a healthy (<em>Lactobacillus</em>-dominated) vs.&nbsp;dysbiotic (composed of diverse anaerobes) vaginal microbiota.
 </div>
 </div>
 </details>
