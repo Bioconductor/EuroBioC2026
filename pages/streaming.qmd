@@ -8,19 +8,11 @@ join the appropriate stream.
 For the complete conference timetable, session details, and room information,
 see the [programme](schedule.qmd).
 
-## Live stream links
-
-::: {.callout-note}
-The links will be added here on Tuesday 2nd of June.
-:::
-
-| Session | Presidentti Auditorium | Ministeri Hall | Tellervo Hall |
-|---|---|---|---|
-| **Day 1 – Morning** | [Link TBD]() | No programme | No programme |
-| **Day 1 – Afternoon** | [Link TBD]() | [Link TBD]() | [Link TBD]() |
-| **Day 2 – Morning** | [Link TBD]() | No programme | No programme |
-| **Day 2 – Afternoon** | [Link TBD]() | [Link TBD]() | [Link TBD]() |
-| **Day 3 – Morning** | [Link TBD]() | No programme | No programme |
+| Session room | Stream link |
+|--------------|-------------|
+| Presidentti  | [https://utu.zoom.us/j/62224935664](https://utu.zoom.us/j/62224935664) |
+| Ministeri    | [https://utu.zoom.us/j/69930439987](https://utu.zoom.us/j/69930439987) |
+| Tellervo     | [https://utu.zoom.us/j/63995894726](https://utu.zoom.us/j/63995894726) |
 
 # Recordings
 
