@@ -36,6 +36,7 @@ conference staff will assist you further.
 - **Free Wi-Fi** is available throughout the venue.
 - **Power outlets** are available (European Type C plugs).
 - **Time zone:** UTC+3 (Eastern European Summer Time, EEST).
+- **Discussion channel:** Join the [Bioconductor Zulip](https://chat.bioconductor.org){target="_blank"} (#eurobioc2026-turku-conference)
 :::
 
 ::: {.callout-note title="Weather forecast"}
