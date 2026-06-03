@@ -78,7 +78,7 @@ countdown_timer("2026-06-03 09:00:00", "2026-06-05 14:00:00")
 - ~~**May 3**: Registration closes~~
 - ~~**May 18**: Call for late-breaking poster abstract closes (final extended deadline)~~
 - ~~**May 18**: Registration closes (final extended deadline)~~
-- <span class="deadline"><strong>June 1-2:</strong> Workshop and hackathon</span>
+- ~~**June 1-2**: Workshop and hackathon~~
 - <span class="deadline"><strong>June 3-5:</strong> The EuroBioC2026 conference!</span>
 :::
 
