@@ -1,9 +1,5 @@
 # Conference dinner
 
-::: {.callout-important}
-If you are late, call Tuomas: +358 40 522 5386
-:::
-
 ::: {.callout-note}
 Registration for the conference dinner is done through the conference registration form. The dinner costs €10. See **[registration](registration.qmd)** for details.
 :::
