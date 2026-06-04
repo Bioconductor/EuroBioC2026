@@ -5,6 +5,8 @@
 ::: {.callout-tip icon=false}
 ## **Call is open**
 
+Submission open until Thursday 4 June, 23:59.
+
 - [Flash talk submission form](https://docs.google.com/forms/d/e/1FAIpQLSe8DQGZUGLPTMnkaWOxhJjT4Jaanq5F1rLzAK0kcEeXQkEEJw/viewform){target="_blank"}
 - [Suggest BoF session by filling an issue on GitHub](https://github.com/Bioconductor/EuroBioC2026/issues){target="_blank"}
 :::
@@ -69,7 +71,7 @@ opportunity to follow along and perform analysis themselves.
 ### Flash talk
 
 Flash talks are very short presentations (5 min or less) that may be submitted
-up until the day of the session, granted on a first come, first served basis.
+during the conference, granted on a first come, first served basis.
 
 Slides must be either publicly accessible online or uploaded to a shared Google
 Drive. Presenters will not be allowed to connect their own laptop. We advise
