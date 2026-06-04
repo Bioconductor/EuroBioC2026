@@ -1,8 +1,12 @@
 # Schedule
 
+<!--
+
 ::: {.callout-tip appearance="simple"}
 See the schedule for the pre-conference events [here](pre-conference.qmd).
 :::
+
+-->
 
 ```{r}
 #| results: asis
