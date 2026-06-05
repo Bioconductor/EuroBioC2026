@@ -1,16 +1,5 @@
 # Submissions
 
-## Submission during conference
-
-::: {.callout-tip icon=false}
-## **Call is open**
-
-Submission open until Thursday 4 June, 23:59.
-
-- [Flash talk submission form](https://docs.google.com/forms/d/e/1FAIpQLSe8DQGZUGLPTMnkaWOxhJjT4Jaanq5F1rLzAK0kcEeXQkEEJw/viewform){target="_blank"}
-- [Suggest BoF session by filling an issue on GitHub](https://github.com/Bioconductor/EuroBioC2026/issues){target="_blank"}
-:::
-
 ## Call for abstracts
 
 ::: {.callout-important icon=false}

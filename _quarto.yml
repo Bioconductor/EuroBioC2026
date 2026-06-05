@@ -19,10 +19,10 @@ website:
     right:
       - href: pages/schedule.qmd
       - href: pages/speakers.qmd
-      - href: pages/submissions.qmd
-      #- href: pages/registration.qmd
+      # - href: pages/submissions.qmd
+      # - href: pages/registration.qmd
       #- href: pages/pre-conference.qmd
-      # - href: pages/conference-dinner.qmd
+      - href: pages/conference-dinner.qmd
       - href: pages/walking-tour.qmd
       #- href: pages/sticker-contest.qmd
       - href: pages/partners.qmd
@@ -32,10 +32,10 @@ website:
           - href: pages/about-turku.qmd
           - href: pages/streaming.qmd
           - href: pages/organizers.qmd
-          # - href: pages/submissions.qmd
+          - href: pages/submissions.qmd
           - href: pages/registration.qmd
           - href: pages/pre-conference.qmd
-          - href: pages/conference-dinner.qmd
+          # - href: pages/conference-dinner.qmd
           - href: pages/sticker-contest.qmd
           - href: pages/hexwall.qmd
           - href: pages/past-events.qmd
