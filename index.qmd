@@ -35,6 +35,8 @@ impacting computational biology.
 
 <div style="clear: both;"></div>
 
+<!--
+
 ::: {.promo-banner}
 
 ### Live streaming available
@@ -44,6 +46,8 @@ Can't attend in-person? Join us online **for free!**
 See more information from [here](pages/streaming.qmd).
 
 :::
+
+-->
 
 :::
 
@@ -79,7 +83,10 @@ countdown_timer("2026-06-03 09:00:00", "2026-06-05 14:00:00")
 - ~~**May 18**: Call for late-breaking poster abstract closes (final extended deadline)~~
 - ~~**May 18**: Registration closes (final extended deadline)~~
 - ~~**June 1-2**: Workshop and hackathon~~
+- ~~**June 3-5**: The EuroBioC2026 conference!~~
+<!--
 - <span class="deadline"><strong>June 3-5:</strong> The EuroBioC2026 conference!</span>
+-->
 :::
 
 ::: {.column width="5%"}

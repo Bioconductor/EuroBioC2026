@@ -3,7 +3,7 @@ countdown_timer <- function(start_datetime,
                             end_datetime,
                             label = "Conference starts in",
                             start_message = "The conference has started 🎉",
-                            end_message = "The conference has ended. Thank you for joining us!") {
+                            end_message = "The conference has ended. Thank you for joining us! ❤️") {
 
   start_target <- format(as.POSIXct(start_datetime), "%Y-%m-%dT%H:%M:%S")
   end_target <- format(as.POSIXct(end_datetime), "%Y-%m-%dT%H:%M:%S")
