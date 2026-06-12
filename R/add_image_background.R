@@ -96,15 +96,16 @@ df <- data.frame(
     name = c(
         "EuroBioC2022.png", "EuroBioC2023.png",
         "EuroBioC2024.png", "EuroBioC2025.png",
-        "eurobioc2025_group.jpg", "eurobioc2025_1.jpg", "eurobioc2025_2.jpg",
+        "EuroBioC2026_alt.png", "BioC25th.png",
+        "eurobioc2026_group1.jpg", "eurobioc2026_group2.jpg", "eurobioc2026_group3.jpg", "eurobioc2026_group4.jpg",
         "aurajoki.jpg", "posankka.png", "aurajoki-kesa-2023-2.jpg",
         "aurajoki-kesa-2023-3.jpg", "Föri_NETTIKOKO.jpg",
         "tuomiokirkko-kesa-2023-1.jpg", "Turku_Castle.jpg",
         "Suomen Joutsen_NETTIKOKO.jpg"
     ),
-    edge_fade = c(60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60),
-    center_fade = c(20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20),
-    glow_fade = c(20, 20, 20, 20, 0.0001, 0.0001, 0.0001, 0.0001, 20, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001)
+    edge_fade = c(60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60),
+    center_fade = c(20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20),
+    glow_fade = c(20, 20, 20, 20, 20, 20, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 20, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001)
 )
 
 for (i in seq_len(nrow(df))) {

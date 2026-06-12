@@ -24,6 +24,7 @@ website:
       #- href: pages/pre-conference.qmd
       - href: pages/conference-dinner.qmd
       - href: pages/walking-tour.qmd
+      - href: pages/photo-gallery.qmd
       #- href: pages/sticker-contest.qmd
       - href: pages/partners.qmd
       - text: About

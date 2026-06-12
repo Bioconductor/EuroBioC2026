@@ -4,6 +4,24 @@
 - image: "images/carousel/posankka.jpg"
   link: "https://en.wikipedia.org/wiki/Posankka"
 
+- image: "images/carousel/EuroBioC2026_alt.png"
+  link: "https://eurobioc2026.bioconductor.org"
+
+- image: "images/carousel/BioC25th.png"
+  link: "https://bioconductor.org"
+
+- image: "images/carousel/eurobioc2026_group1.jpg"
+  link: "https://eurobioc2026.bioconductor.org"
+
+- image: "images/carousel/eurobioc2026_group2.jpg"
+  link: "https://eurobioc2026.bioconductor.org"
+
+- image: "images/carousel/eurobioc2026_group3.jpg"
+  link: "https://eurobioc2026.bioconductor.org"
+
+- image: "images/carousel/eurobioc2026_group4.jpg"
+  link: "https://eurobioc2026.bioconductor.org"
+
 - image: "images/carousel/Föri_NETTIKOKO.jpg"
   link: "https://en.wikipedia.org/wiki/F%C3%B6ri"
 
@@ -15,12 +33,6 @@
 
 - image: "images/carousel/aurajoki.jpg"
   link: "https://en.wikipedia.org/wiki/Aurajoki"
-
-- image: "images/carousel/eurobioc2025_group.jpg"
-
-- image: "images/carousel/eurobioc2025_1.jpg"
-
-- image: "images/carousel/eurobioc2025_2.jpg"
 
 - image: "images/carousel/EuroBioC2025.png"
   link: "https://eurobioc2025.bioconductor.org"

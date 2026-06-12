@@ -49,6 +49,61 @@ See more information from [here](pages/streaming.qmd).
 
 -->
 
+::: {.promo-banner}
+
+## EuroBioC2026 by the numbers
+
+<div class="stats">
+
+<div class="stat">
+<div class="value">147</div>
+<div class="label">In-person attendees</div>
+</div>
+
+<div class="stat">
+<div class="value">23</div>
+<div class="label">Countries</div>
+</div>
+
+<div class="stat">
+<div class="value">4</div>
+<div class="label">Keynotes</div>
+</div>
+
+<div class="stat">
+<div class="value">25</div>
+<div class="label">Speakers</div>
+</div>
+
+<div class="stat">
+<div class="value">68</div>
+<div class="label">Posters</div>
+</div>
+
+<div class="stat">
+<div class="value">6</div>
+<div class="label">Workshops</div>
+</div>
+
+<div class="stat">
+<div class="value">9</div>
+<div class="label">Flash talks</div>
+</div>
+
+<div class="stat">
+<div class="value">3</div>
+<div class="label">B-o-F sessions</div>
+</div>
+
+<div class="stat">
+<div class="value">∞</div>
+<div class="label">Online attendees</div>
+</div>
+
+</div>
+
+:::
+
 :::
 
 ::: {.column width="4%"}
@@ -105,7 +160,7 @@ countdown_timer("2026-06-03 09:00:00", "2026-06-05 14:00:00")
 source("R/carousel.R")
 carousel(
     "gallery-carousel",
-    5555, # flip time in ms
+    3000, # flip time in ms
     yaml.load_file("data/carousel.yml")
 )
 ```

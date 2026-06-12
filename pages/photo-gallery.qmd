@@ -1,0 +1,21 @@
+# Photo gallery
+
+::: {.callout-tip title="Full resolution photos and videos"}
+
+High-resolution photos will be archived on
+[Zenodo](https://zenodo.org/communities/bioconductor/records?q=&l=list&p=1&s=10&sort=newest)
+in the coming weeks, and
+recordings of conference sessions will be published on the
+[Bioconductor YouTube channel](https://www.youtube.com/user/bioconductor) (follow the channel to get notified).
+
+
+:::
+
+```{r}
+#| echo: false
+#| warning: false
+#| results: asis
+#| label: photo_gallery
+source("../R/photo_gallery.R")
+.create_photo_gallery()
+```
