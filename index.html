@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-366475380f919c0e72b7ffbd356b4a23.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5ef592e6598216875de6b9923525a6f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,6 +114,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./pages/walking-tour.html"> 
 <span class="menu-text">Walking tour</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./pages/photo-gallery.html"> 
+<span class="menu-text">Photo gallery</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./pages/partners.html"> 
@@ -207,13 +211,90 @@ See more information from [here](pages/streaming.qmd).
 :::
 
 -->
+<section id="eurobioc2026-by-the-numbers" class="promo-banner">
+<h2>EuroBioC2026 by the numbers</h2>
+<div class="stats">
+<div class="stat">
+<div class="value">
+147
+</div>
+<div class="label">
+In-person attendees
+</div>
+</div>
+<div class="stat">
+<div class="value">
+23
+</div>
+<div class="label">
+Countries
+</div>
+</div>
+<div class="stat">
+<div class="value">
+4
+</div>
+<div class="label">
+Keynotes
+</div>
+</div>
+<div class="stat">
+<div class="value">
+25
+</div>
+<div class="label">
+Speakers
+</div>
+</div>
+<div class="stat">
+<div class="value">
+68
+</div>
+<div class="label">
+Posters
+</div>
+</div>
+<div class="stat">
+<div class="value">
+6
+</div>
+<div class="label">
+Workshops
+</div>
+</div>
+<div class="stat">
+<div class="value">
+9
+</div>
+<div class="label">
+Flash talks
+</div>
+</div>
+<div class="stat">
+<div class="value">
+3
+</div>
+<div class="label">
+B-o-F sessions
+</div>
+</div>
+<div class="stat">
+<div class="value">
+∞
+</div>
+<div class="label">
+Online attendees
+</div>
+</div>
+</div>
+</section>
 </div><div class="column" style="width:4%;">
 
 </div><div class="column" style="width:43%;">
 <div style="text-align:center;">
 <p><br>
 </p>
-<div id="countdown-1780906079" class="countdown-box">
+<div id="countdown-1781254657" class="countdown-box">
 <div class="countdown-label">
 Conference starts in
 </div>
@@ -258,8 +339,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const startDate = new Date("2026-06-03T09:00:00").getTime();
   const endDate = new Date("2026-06-05T14:00:00").getTime();
 
-  const el = document.querySelector("#countdown-1780906079 .countdown-time");
-  const labelEl = document.querySelector("#countdown-1780906079 .countdown-label");
+  const el = document.querySelector("#countdown-1781254657 .countdown-time");
+  const labelEl = document.querySelector("#countdown-1781254657 .countdown-label");
 
   function updateCountdown() {
 
@@ -298,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function() {
       labelEl.style.display = "none";
 
       el.className = "countdown-done";
-      el.innerHTML = "The conference has ended. Thank you for joining us! ❤️";
+      el.innerHTML = "The conference has ended. <i>Kiitos</i> for joining us! ❤️";
 
       clearInterval(timer);
     }
@@ -349,9 +430,12 @@ document.addEventListener("DOMContentLoaded", function() {
 <button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
 <button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
 <button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="12" aria-label="Slide 13"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="13" aria-label="Slide 14"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="14" aria-label="Slide 15"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="15" aria-label="Slide 16"></button>
 </div>
 <div class="carousel-inner">
-<div class="carousel-item active" data-bs-interval="5555">
+<div class="carousel-item active" data-bs-interval="3000">
 <a href="https://en.wikipedia.org/wiki/Turku_Cathedral">
 <img src="images/carousel/tuomiokirkko-kesa-2023-1.jpg" width="50%" class="d-block mx-auto">
 </a>
@@ -359,7 +443,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://en.wikipedia.org/wiki/Posankka">
 <img src="images/carousel/posankka.jpg" width="50%" class="d-block mx-auto">
 </a>
@@ -367,7 +451,55 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
+<a href="https://eurobioc2026.bioconductor.org">
+<img src="images/carousel/EuroBioC2026_alt.png" width="50%" class="d-block mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-bold" style="color:white"></p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="3000">
+<a href="https://bioconductor.org">
+<img src="images/carousel/BioC25th.png" width="50%" class="d-block mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-bold" style="color:white"></p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="3000">
+<a href="https://eurobioc2026.bioconductor.org">
+<img src="images/carousel/eurobioc2026_group1.jpg" width="50%" class="d-block mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-bold" style="color:white"></p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="3000">
+<a href="https://eurobioc2026.bioconductor.org">
+<img src="images/carousel/eurobioc2026_group2.jpg" width="50%" class="d-block mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-bold" style="color:white"></p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="3000">
+<a href="https://eurobioc2026.bioconductor.org">
+<img src="images/carousel/eurobioc2026_group3.jpg" width="50%" class="d-block mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-bold" style="color:white"></p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="3000">
+<a href="https://eurobioc2026.bioconductor.org">
+<img src="images/carousel/eurobioc2026_group4.jpg" width="50%" class="d-block mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-bold" style="color:white"></p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://en.wikipedia.org/wiki/F%C3%B6ri">
 <img src="images/carousel/Föri_NETTIKOKO.jpg" width="50%" class="d-block mx-auto">
 </a>
@@ -375,7 +507,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://en.wikipedia.org/wiki/Turku_Castle">
 <img src="images/carousel/Turku_Castle.jpg" width="50%" class="d-block mx-auto">
 </a>
@@ -383,7 +515,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://en.wikipedia.org/wiki/Suomen_Joutsen">
 <img src="images/carousel/Suomen Joutsen_NETTIKOKO.jpg" width="50%" class="d-block mx-auto">
 </a>
@@ -391,7 +523,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://en.wikipedia.org/wiki/Aurajoki">
 <img src="images/carousel/aurajoki.jpg" width="50%" class="d-block mx-auto">
 </a>
@@ -399,31 +531,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
-<a>
-<img src="images/carousel/eurobioc2025_group.jpg" width="50%" class="d-block mx-auto">
-</a>
-<div class="carousel-caption d-none d-md-block">
-<p class="fw-bold" style="color:white"></p>
-</div>
-</div>
-<div class="carousel-item" data-bs-interval="5555">
-<a>
-<img src="images/carousel/eurobioc2025_1.jpg" width="50%" class="d-block mx-auto">
-</a>
-<div class="carousel-caption d-none d-md-block">
-<p class="fw-bold" style="color:white"></p>
-</div>
-</div>
-<div class="carousel-item" data-bs-interval="5555">
-<a>
-<img src="images/carousel/eurobioc2025_2.jpg" width="50%" class="d-block mx-auto">
-</a>
-<div class="carousel-caption d-none d-md-block">
-<p class="fw-bold" style="color:white"></p>
-</div>
-</div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://eurobioc2025.bioconductor.org">
 <img src="images/carousel/EuroBioC2025.png" width="50%" class="d-block mx-auto">
 </a>
@@ -431,7 +539,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://eurobioc2024.bioconductor.org">
 <img src="images/carousel/EuroBioC2024.png" width="50%" class="d-block mx-auto">
 </a>
@@ -439,7 +547,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://eurobioc2023.bioconductor.org">
 <img src="images/carousel/EuroBioC2023.png" width="50%" class="d-block mx-auto">
 </a>
@@ -447,7 +555,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p class="fw-bold" style="color:white"></p>
 </div>
 </div>
-<div class="carousel-item" data-bs-interval="5555">
+<div class="carousel-item" data-bs-interval="3000">
 <a href="https://eurobioc2022.bioconductor.org">
 <img src="images/carousel/EuroBioC2022.png" width="50%" class="d-block mx-auto">
 </a>
