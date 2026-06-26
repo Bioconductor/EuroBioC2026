@@ -1,13 +1,11 @@
 # Photo gallery
 
-::: {.callout-tip title="Full resolution photos and videos"}
+::: {.callout-tip title="Full-resolution photos and videos"}
 
-High-resolution photos will be archived on
-[Zenodo](https://zenodo.org/communities/bioconductor/records?q=&l=list&p=1&s=10&sort=newest)
-in the coming weeks, and
-recordings of conference sessions will be published on the
-[Bioconductor YouTube channel](https://www.youtube.com/user/bioconductor) (follow the channel to get notified).
-
+High-resolution photos are available on
+[Zenodo](https://zenodo.org/records/20642845),
+and recordings of the conference sessions are available on the
+[Bioconductor YouTube channel](https://www.youtube.com/playlist?list=PLdl4u5ZRDMQSeTgs5bOmbGmSMWVZits14).
 
 :::
 
